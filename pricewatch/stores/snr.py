@@ -9,7 +9,7 @@ from __future__ import annotations
 import logging
 import re
 import time
-from urllib.parse import urljoin
+from urllib.parse import quote_plus, urljoin
 
 import requests
 from bs4 import BeautifulSoup, Tag
@@ -260,9 +260,45 @@ def set_delivery_address(s: requests.Session, address: dict) -> dict | None:
     return info
 
 
+SEARCH = BASE + "/product/search/results"
+
+
+def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay) -> int:
+    """Walks one listing (category or search) page by page. Stops when a page brings nothing new
+    for THIS listing — products already seen in another listing do not end it early."""
+    here: set[str] = set()
+    for page in range(1, max_pages + 1):
+        url = page_url(page)
+        try:
+            r = s.get(url, timeout=30)
+            r.raise_for_status()
+        except requests.RequestException as e:
+            log.warning("S&R %s: %s", url, e)
+            break
+        items = parse_listing(r.text, promo=promo, member=member)
+        if not items and page == 1 and product_link_count(r.text):
+            log.warning("S&R %s: products listed but prices hidden (log in to see them)", label)
+            break
+        fresh = [p for p in items if p.url not in here]
+        for p in items:
+            here.add(p.url)
+            # Keep the promo info when a product shows up in a normal and a promo listing
+            if p.url in seen and seen[p.url].promo and not p.promo:
+                continue
+            seen[p.url] = p
+        log.info("S&R %s page %d: %d products", label, page, len(items))
+        time.sleep(delay)
+        if not fresh:
+            break  # end of the listing
+    return len(here)
+
+
 def fetch_all(member: bool = False, max_pages: int = 15, delay: float = 3.0,
               address: dict | None = None, credentials: tuple[str, str] | None = None,
+              queries: list[str] | None = None, search_pages: int = 4,
               session: requests.Session | None = None) -> list[Product]:
+    """Category pages first, then the site's own search for every watchlist query, so products
+    filed under a category we do not scan (e.g. onion powder) are still found."""
     s = session or requests.Session()
     s.headers.update(HEADERS)
     if credentials:
@@ -271,27 +307,13 @@ def fetch_all(member: bool = False, max_pages: int = 15, delay: float = 3.0,
         set_delivery_address(s, address)
     seen: dict[str, Product] = {}
     for path, promo in CATEGORIES.items():
-        for page in range(1, max_pages + 1):
-            url = f"{BASE}{path}" + (f"?page={page}" if page > 1 else "")
-            try:
-                r = s.get(url, timeout=30)
-                r.raise_for_status()
-            except requests.RequestException as e:
-                log.warning("S&R %s: %s", url, e)
-                break
-            items = parse_listing(r.text, promo=promo, member=member)
-            if not items and page == 1 and product_link_count(r.text):
-                log.warning("S&R %s: products listed but prices hidden (log in to see them)",
-                            path.rsplit("/", 1)[-1])
-                break
-            new = [p for p in items if p.url not in seen]
-            for p in items:
-                # Keep the promo info when a product shows up in a normal and a promo category
-                if p.url in seen and seen[p.url].promo and not p.promo:
-                    continue
-                seen[p.url] = p
-            log.info("S&R %s page %d: %d products (%d new)", path.rsplit("/", 1)[-1], page, len(items), len(new))
-            time.sleep(delay)
-            if not new:
-                break  # sayfalama bitti (ya da site ?page= desteklemiyor)
+        _scan_pages(s, path.rsplit("/", 1)[-1],
+                    lambda pg, path=path: f"{BASE}{path}" + (f"?page={pg}" if pg > 1 else ""),
+                    promo, member, seen, max_pages, delay)
+    for q in queries or []:
+        before = len(seen)
+        n = _scan_pages(s, f"search '{q}'",
+                        lambda pg, q=q: f"{SEARCH}?key={quote_plus(q)}" + (f"&page={pg}" if pg > 1 else ""),
+                        None, member, seen, search_pages, delay)
+        log.info("S&R search '%s': %d results, %d not seen in categories", q, n, len(seen) - before)
     return list(seen.values())

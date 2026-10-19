@@ -68,6 +68,7 @@ items:
     brands: [mccormick]
     keywords: []             # every McCormick product for now — narrow this to the spices you use
     exclude: [dip, dressing, gift set]
+    queries: [mccormick, onion powder, garlic powder, black pepper, paprika, cinnamon, oregano, chili powder]
 
   - id: dips
     name: Dips & Sauces

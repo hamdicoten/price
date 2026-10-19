@@ -416,3 +416,30 @@ def test_publish_reuses_saved_site_id(tmp_path, monkeypatch):
     (tmp_path / "p.html").write_text("x")
     cli.publish_netlify("p.html"); cli.publish_netlify("p.html")
     assert created == [1] and deployed == ["site-9", "site-9"]   # site created once, reused after
+
+
+def test_snr_search_finds_items_outside_scanned_categories(monkeypatch):
+    card = ('<div class="item"><div class="card"><a href="/product/x/{slug}">{name}</a>'
+            '<span class="oc-price">₱{price}</span></div></div>')
+    pages = {
+        "condiments": card.format(slug="soy", name="Silver Swan Soy Sauce 1L", price="99.00"),
+        "search-onion": card.format(slug="onion", name="McCormick Onion Powder 510g", price="415.00"),
+    }
+    class S:
+        headers = {}
+        def get(self, url, timeout=None):
+            class R:
+                def raise_for_status(self): pass
+            r = R()
+            if "page=" in url:
+                r.text = "<html></html>"
+            elif "search/results" in url:
+                r.text = pages["search-onion"] if "onion" in url else "<html></html>"
+            else:
+                r.text = pages["condiments"]
+            return r
+    monkeypatch.setattr(snr, "CATEGORIES", {"/category/condiments": None})
+    prods = {p.name: p for p in snr.fetch_all(member=True, delay=0, queries=["onion powder"], session=S())}
+    assert prods["McCormick Onion Powder 510g"].price == 415.0
+    assert "Silver Swan Soy Sauce 1L" in prods
+    assert match("McCormick Onion Powder 510g", ITEMS) == ["spices"]

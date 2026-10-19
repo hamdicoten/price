@@ -30,61 +30,162 @@ settings:
     city: ""
 
 items:
+  # Groups match by PRODUCT TYPE, not brand, so store brands (Member's Value) and other
+  # alternatives show up next to the brands you buy today. The panel's search box finds a brand.
+
   # ---------------- Dairy ----------------
   - id: cheese
     name: Cheese
     category: Dairy
-    brands: [eden, magnolia]
-    keywords: [cheese, cheddar, quickmelt, cheezee, keso, quezo]
-    exclude: [chicken, ice cream, spread cracker, mayo]
+    brands: []
+    keywords: [cheese, cheddar, quickmelt, cheezee, mozzarella, parmesan, keso, quezo, cheese whiz, pizza topping]
+    exclude: [ice cream, cheesecake, cheese cake, chips, cracker, snack, ramen, noodle, curls, puffs,
+              popcorn, bread, ensaymada, burger, hotdog, sausage, chicken, bites, mayo, sauce, quezon]
+    queries: [eden cheese, magnolia cheese, cheddar cheese, mozzarella, cream cheese, parmesan]
 
   - id: cream
-    name: All-Purpose Cream
+    name: Cream
     category: Dairy
-    brands: [nestle]
-    keywords: [all purpose, all-purpose, allpurpose]
-    exclude: [ice cream, creamer, coffee-mate, coffeemate]
+    brands: []
+    keywords: [all purpose cream, all-purpose cream, allpurpose, whipping cream, heavy cream, cooking cream,
+               pasta cream, table cream, sour cream, thick cream, double cream]
+    exclude: [ice cream, cream of mushroom, cream cheese, creamer, coffee-mate, coffeemate]
+    queries: [all purpose cream, whipping cream, heavy cream, cooking cream]
 
   - id: butter
     name: Butter & Margarine
     category: Dairy
-    brands: [anchor, dari creme, daricreme, dari-creme]
-    keywords: [butter, creme, margarine]
-    exclude: [cookie, biscuit, popcorn]
-    queries: [anchor butter, dari creme]
+    brands: []
+    keywords: [butter, margarine, dari creme, daricreme, spreadable]
+    exclude: [peanut butter, peanut, buttermilk pancake, pancake, waffle, cookie, biscuit, popcorn, cracker,
+              butterscotch, chicken, shrimp, sauce, bread, cake, candy, chips, body butter, shea, lotion]
+    queries: [anchor butter, dari creme, butter, unsalted butter, margarine]
+
+  - id: milk
+    name: Milk
+    category: Dairy
+    brands: []
+    keywords: [fresh milk, full cream milk, low fat milk, non fat milk, uht milk, pure milk, whole milk,
+               evaporated milk, evaporada, condensed milk, condensada, powdered milk, milk powder,
+               barista, oat milk, almond milk, soya milk, soy milk, lactose free milk, oat beverage,
+               almond non-dairy]
+    exclude: [chocolate, strawberry, melon, banana, cocoa, milkshake, flavored, flavoured, cultured,
+              tea, coffee, candy, biscuit, cookie]
+    queries: [fresh milk, full cream milk, evaporated milk, condensed milk, oat milk, barista milk]
 
   # ---------------- Pantry ----------------
   - id: pasta
     name: Pasta
     category: Pantry
-    brands: [ideal, del monte]
-    keywords: [spaghetti, pasta, penne, macaroni, elbow, fettuccine, linguine]
-    exclude: [sauce]
+    brands: []
+    keywords: [spaghetti, pasta, penne, macaroni, elbow, fettuccine, fettucine, linguine, fusilli, lasagna]
+    exclude: [sauce, soup, noodle soup, salad, cup, cream]
+    queries: [ideal spaghetti, del monte spaghetti, spaghetti, penne, macaroni]
+
+  - id: sweeteners
+    name: Sugar & syrups
+    category: Pantry
+    brands: []
+    keywords: [sugar, syrup, honey, muscovado, sweetener]
+    exclude: [sugar free gum, candy, cookie, biscuit, cereal, chips, drink, juice, soda, cola, cough,
+              yogurt, milkshake, 0% sugar, chocolate chips]
+    queries: [white sugar, brown sugar, muscovado, syrup, honey]
+
+  - id: oil
+    name: Cooking oil
+    category: Pantry
+    brands: []
+    keywords: [vegetable oil, cooking oil, canola oil, palm oil, coconut oil, olive oil, corn oil, sunflower oil]
+    exclude: [chili oil, sesame, spray, hair, body, massage, baby oil, pants, diaper, skin, soap]
+    queries: [vegetable oil, cooking oil, canola oil, olive oil]
+
+  - id: flour
+    name: Flour, baking & toppings
+    category: Pantry
+    brands: []
+    keywords: [flour, pancake mix, waffle mix, baking powder, baking soda, cake mix, muffin mix, yeast,
+               cornstarch, chocolate chips, chocolate compound, cocoa powder, topping, sprinkles]
+    exclude: [chips flavor, cracker, snack, noodle, pizza]
+    queries: [all purpose flour, pancake mix, baking powder, cocoa powder, chocolate syrup]
+
+  - id: spreads
+    name: Spreads & jams
+    category: Pantry
+    brands: []
+    keywords: [peanut butter, hazelnut spread, chocolate spread, biscoff, biscuit spread, jam, conserve,
+               fruit preserve, nutella, coconut jam]
+    exclude: [cookie, biscuit 96g, wafer, cracker, candy]
+    queries: [peanut butter, hazelnut spread, jam]
+
+  - id: rice
+    name: Rice
+    category: Pantry
+    brands: []
+    keywords: [rice]
+    exclude: [rice flour, rice noodle, rice cake, rice cracker, rice vinegar, rice wine, crispies,
+              cereal, puffs, chips, cooker, krispies]
+    queries: [rice 25kg, jasmine rice, dinorado, sinandomeng]
+
+  - id: coffee
+    name: Coffee
+    category: Pantry
+    brands: []
+    keywords: [coffee beans, ground coffee, whole bean, instant coffee, espresso, coffee powder, barako]
+    exclude: [coffee mate, coffeemate, creamer, candy, cookie, cake, liqueur, mug, maker, machine, filter]
+    queries: [coffee beans, ground coffee, espresso]
 
   # ---------------- Spices & Sauces ----------------
   - id: spices
-    name: Spices
+    name: McCormick range
     category: Spices & Sauces
     brands: [mccormick]
-    keywords: []             # every McCormick product for now — narrow this to the spices you use
+    keywords: []
     exclude: [dip, dressing, gift set]
-    queries: [mccormick, onion powder, garlic powder, black pepper, paprika, cinnamon, oregano, chili powder]
+    queries: [mccormick]
 
   - id: spice_basics
     name: Basic spices (any brand)
     category: Spices & Sauces
-    brands: []               # any brand — S&R's own Member's Value, Badia, McCormick, ...
-    keywords: [onion powder, garlic powder, black pepper, ground pepper, white pepper, paprika,
-               cinnamon, oregano, chili powder, cumin, nutmeg, basil leaves, rosemary, thyme]
-    exclude: [chips, cracker, snack, noodle, chicken, pork, beef, sauce, marinade]
-    queries: [onion powder, garlic powder, black pepper, paprika, cinnamon, oregano, chili powder]
+    brands: []               # any brand — S&R Member's Value, Badia, McCormick, ...
+    # Stores name the same spice differently ("Ground Onion" vs "Onion Powder"), so list the forms.
+    keywords: [ground onion, onion powder, onion granules, granulated onion, dehydrated onion, onion flakes,
+               ground garlic, garlic powder, garlic granules, granulated garlic, garlic flakes, garlic salt,
+               black pepper, white pepper, ground pepper, peppercorn, lemon pepper, crushed red pepper, cayenne,
+               ground chili, chili powder, chili flakes, chilli powder, chilli flakes,
+               paprika, cinnamon, oregano, cumin, nutmeg, turmeric, star anise, bay leaves, bay leaf,
+               basil flakes, basil leaves, dried basil, rosemary, thyme, parsley flakes, dried parsley,
+               curry powder, ground cloves, whole cloves, cardamom, ground ginger, ginger powder]
+    exclude: [chips, cracker, snack, noodle, sauce, marinade, chicken, pork, beef, cookie, candy, tea,
+              drink, syrup, oil, mayo, dip, dressing, bread, roll, cereal, bun, gum]
+    queries: [ground onion, onion powder, ground garlic, garlic powder, black pepper, paprika, cinnamon,
+              oregano, chili powder, turmeric, basil, parsley]
+
+  - id: salt
+    name: Salt
+    category: Spices & Sauces
+    brands: []
+    keywords: [salt]
+    exclude: [salted, unsalted, garlic salt, low salt, less salt, chips, peanut, butter, cracker, nuts,
+              bath, scrub, lamp, caramel, egg, sauce, soy]
+    queries: [salt, iodized salt, sea salt]
 
   - id: dips
-    name: Dips & Sauces
+    name: Mayo, dressings & dips
     category: Spices & Sauces
-    brands: [del monte, mccormick]
-    keywords: [dip, dressing, sauce, salsa]
-    exclude: [spaghetti, pasta]
+    brands: []
+    keywords: [mayonnaise, mayo, dressing, ranch, thousand island, caesar, salsa, dip, cheese sauce, aioli]
+    exclude: [chips, cracker, noodle, chicken spread, tuna]
+    queries: [mayonnaise, dressing, del monte dip, mccormick dip, salsa]
+
+  - id: condiments
+    name: Sauces & condiments
+    category: Spices & Sauces
+    brands: []
+    keywords: [soy sauce, oyster sauce, fish sauce, vinegar, ketchup, liquid seasoning, pesto, alfredo,
+               spaghetti sauce, tomato sauce, pasta sauce, hot sauce, chili garlic, sriracha, gochujang,
+               worcestershire, barbecue sauce, bbq sauce, teriyaki]
+    exclude: [chips, noodle, ramen, capsule, vitamin, party pack]
+    queries: [soy sauce, oyster sauce, vinegar, ketchup, tomato sauce, pasta sauce, hot sauce]
 
   # ---------------- Chicken ----------------
   - id: chicken
@@ -164,6 +265,15 @@ items:
     keywords: [paper cup, plastic cup, cup lid, drinking straw, straws, coffee cup]
     exclude: [cup noodle, cupcake, measuring cup]
     queries: [paper cup, plastic cup, drinking straw]
+
+  - id: kitchen_disposables
+    name: Gloves, wraps & bags
+    category: Café Supplies
+    brands: []
+    keywords: [gloves, cling wrap, stretch film, aluminum foil, aluminium foil, baking paper, parchment,
+               freezer bags, sandwich bags, ziplock, zip lock, aluminum trays, aluminum tray]
+    exclude: [gardening, boxing, kitchen glove set]
+    queries: [disposable gloves, cling wrap, aluminum foil, freezer bags]
 
   - id: containers
     name: Take-out containers

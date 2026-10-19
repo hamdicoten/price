@@ -314,7 +314,7 @@ def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay, 
 
 def fetch_all(member: bool = False, max_pages: int = 15, delay: float = 3.0,
               address: dict | None = None, credentials: tuple[str, str] | None = None,
-              queries: list[str] | None = None, search_pages: int = 4,
+              queries: list[str] | None = None, search_pages: int = 2,
               session: requests.Session | None = None) -> list[Product]:
     """Category pages first, then the site's own search for every watchlist query, so products
     filed under a category we do not scan (e.g. onion powder) are still found."""

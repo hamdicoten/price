@@ -36,7 +36,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     environment:
       name: github-pages
       url: ${{ steps.pages.outputs.page_url }}

@@ -45,7 +45,7 @@ def test_unit_price_unknown_size():
     ("Anchor Butter Salted 227g", ["butter"]),
     ("Dari Creme Classic 200g", ["butter"]),
     ("Del Monte Spaghetti 900g", ["pasta"]),
-    ("Del Monte Spaghetti Sauce Filipino Style 1kg", []),
+    ("Del Monte Spaghetti Sauce Filipino Style 1kg", ["condiments"]),
     ("Ideal Elbow Macaroni 400g", ["pasta"]),
     ("Wolf Blass Bilyara Shiraz 750mL", []),
 ])
@@ -176,7 +176,7 @@ def test_landmark_parse_real_response():
     p = prods["Kraft Eden Cheddar Cheese 430g"]
     assert p.price == 245.0
     assert p.url.startswith("https://www.landmark.ph/products/")
-    assert match("Eden Mayo with Creamy Cheese 80ml", ITEMS) == []
+    assert match("Eden Mayo with Creamy Cheese 80ml", ITEMS) == ["dips"]
     assert unit_price(p.price, parse_size(p.name)) == (569.77, "₱/kg")
 
 
@@ -325,7 +325,7 @@ def test_digest_does_not_mix_units():
     b = Product("waltermart", "b", "Nestle All Purpose Cream 250ml x 2s", 126.5)
     c = Product("snr", "c", "Nestle All Purpose Cream 250mL", 69.75)
     g = {"a": ["cream"], "b": ["cream"], "c": ["cream"]}
-    sec = alerts.daily_digest([a, b, c], g, ITEMS).split("*All-Purpose Cream*")[1].split("\n\n")[0]
+    sec = alerts.daily_digest([a, b, c], g, ITEMS).split("*Cream*")[1].split("\n\n")[0]
     assert "pcs" not in sec and sec.index("250ml x 2s") < sec.index("250mL")
 
 
@@ -446,3 +446,27 @@ def test_snr_search_unpriced_results_stay_visible(monkeypatch):
     assert prods == []                                           # nothing priced, nothing tracked
     hits = searchlog.HITS[("snr", "onion powder")]
     assert [h.name for h in hits] == ["Member's Value Onion Powder 400g"] and hits[0].price == 0.0
+
+
+def test_every_snr_members_value_seasoning_is_tracked():
+    # Real list from S&R → Member's Value → Seasoning & Condiments (19 Oct 2026). Every one of them
+    # is a café ingredient; none may be dropped by the watchlist rules (e.g. "Ground Onion 270g").
+    names = (ROOT / "tests/fixtures/snr_members_value_seasonings.txt").read_text(encoding="utf-8").split("\n")
+    missing = [n for n in names if n and not match(n, ITEMS)]
+    assert missing == []
+    assert match("Member's Value Ground Onion 270g", ITEMS) == ["spice_basics"]
+
+
+@pytest.mark.parametrize("name,expected", [
+    ("Member's Value Spaghetti 1kg", ["pasta"]),
+    ("Arla Whipping Cream 1000mL", ["cream"]),
+    ("Kerrygold Pure Irish Butter 227g", ["butter"]),
+    ("Arla Full Cream Milk 1L", ["milk"]),
+    ("Member's Value Creamy Peanut Butter 800g", ["spreads"]),
+    ("Emborg Perfect Pasta Cream 1L", ["cream"]),
+    ("Quezon's Best Coconut Jam 560g", ["spreads"]),
+    ("Mamy Poko Pants Coconut Oil XXL 22pcs", []),
+    ("Member's Value Disposable Gloves 500s", ["kitchen_disposables"]),
+])
+def test_type_based_groups(name, expected):
+    assert match(name, ITEMS) == expected

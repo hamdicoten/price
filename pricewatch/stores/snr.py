@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 import re
 import time
+from typing import Callable
 from urllib.parse import quote_plus, urljoin
 
 import requests
@@ -68,7 +69,7 @@ def _num(s: str) -> float:
 def canonical_url(href: str) -> str:
     """The same product is linked as /product/<category path>/<slug> on category pages and as
     /product/<slug> in search results; key it by the slug so it is counted once."""
-    path = urljoin(BASE, href).split("?")[0].rstrip("/")
+    path = urljoin(BASE, href.strip()).split("?")[0].split("#")[0].strip().rstrip("/")
     return f"{BASE}/product/{path.rsplit('/', 1)[-1]}" if "/product/" in path else path
 
 
@@ -150,7 +151,8 @@ def _unpriced_links(html: str) -> list[Product]:
     out: dict[str, Product] = {}
     for a in soup.find_all("a", href=True):
         name = a.get_text(" ", strip=True)
-        if "/product/" in a["href"] and name:
+        # "Rice, Pasta, Noodles, and Soup (3)" is a category filter link, not a product
+        if "/product/" in a["href"] and name and not re.search(r"\(\d+\)$", name):
             url = canonical_url(a["href"])
             out.setdefault(url, Product(store="snr", url=url, name=name, price=0.0))
     return list(out.values())
@@ -281,6 +283,83 @@ def set_delivery_address(s: requests.Session, address: dict) -> dict | None:
 
 SEARCH = BASE + "/product/search/results"
 
+# "₱ 199.00" (also the broken-encoding forms of ₱ and "PHP 199.00")
+_PESO_RE = re.compile(r"(?:₱|â‚±|PHP|Php)\s*([\d,]+(?:\.\d{1,2})?)")
+
+
+def _first_num(text: str) -> float | None:
+    m = re.search(r"[\d,]*\d(?:\.\d{1,2})?", text)
+    return _num(m.group(0)) if m else None
+
+
+def parse_product_page(html: str, url: str, member: bool = False) -> Product | None:
+    """Reads name and price from a single product page (used for search results whose listing
+    shows no price). The price is the first one after the product title, so prices of
+    "related products" further down the page are ignored."""
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1")
+    if h1 is None or not h1.get_text(strip=True):
+        return None
+    name = h1.get_text(" ", strip=True)
+    oc = h1.find_next(class_="oc-price")
+    if oc is not None:
+        price = _first_num(oc.get_text())
+        reg = None
+        box = oc
+        for _ in range(3):  # old price sits next to the current one
+            box = box.parent
+            if box is None:
+                break
+            og = box.select_one(".og-price")
+            if og is not None:
+                reg = _first_num(og.get_text())
+                break
+        if price:
+            return Product(store="snr", url=url, name=name, price=price,
+                           regular_price=reg if reg and reg > price else None,
+                           member_price=price if member else None)
+    # Plain text after the title: "Member Price ₱ x / Non-member Price ₱ y" or just "₱ x"
+    after = " ".join(t.strip() for t in h1.find_all_next(string=True, limit=80) if t.strip())[:600]
+    m = _MEMBER_RE.search(after)
+    if m:
+        mp = _num(m.group(1))
+        nm = _NONMEMBER_RE.search(after)
+        nmp = _num(nm.group(1)) if nm else None
+        return Product(store="snr", url=url, name=name, price=mp if member or nmp is None else nmp,
+                       member_price=mp, non_member_price=nmp)
+    m = _PESO_RE.search(after)
+    if m and _num(m.group(1)) > 0:
+        price = _num(m.group(1))
+        return Product(store="snr", url=url, name=name, price=price,
+                       member_price=price if member else None)
+    return None
+
+
+def _price_from_product_pages(s, unpriced: list[Product], member: bool, seen: dict,
+                              delay: float, limit: int) -> int:
+    """Opens product pages for search results that showed no price. Returns how many got a price."""
+    done = 0
+    for p in unpriced[:limit]:
+        try:
+            r = s.get(p.url, timeout=30)
+            r.raise_for_status()
+        except requests.RequestException as e:
+            log.warning("S&R product page %s: %s", p.url, e)
+            continue
+        got = parse_product_page(r.text, p.url, member=member)
+        if got is None:
+            log.warning("S&R product page: no price read for %s", p.name)
+        else:
+            got.name = p.name  # keep the listing name so matching stays the same
+            seen[p.url] = got
+            p.price, p.regular_price, p.member_price = got.price, got.regular_price, got.member_price
+            done += 1
+        time.sleep(delay)
+    if len(unpriced) > limit:
+        log.warning("S&R product pages: %d unpriced search results left (limit %d)", len(unpriced) - limit, limit)
+    log.info("S&R product pages: %d of %d priced", done, min(len(unpriced), limit))
+    return done
+
 
 def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay, collect=None) -> int:
     """Walks one listing (category or search) page by page. Stops when a page brings nothing new
@@ -322,9 +401,11 @@ def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay, 
 def fetch_all(member: bool = False, max_pages: int = 15, delay: float = 3.0,
               address: dict | None = None, credentials: tuple[str, str] | None = None,
               queries: list[str] | None = None, search_pages: int = 2,
-              session: requests.Session | None = None) -> list[Product]:
+              session: requests.Session | None = None,
+              wanted: Callable[[str], bool] | None = None, product_pages: int = 150) -> list[Product]:
     """Category pages first, then the site's own search for every watchlist query, so products
-    filed under a category we do not scan (e.g. onion powder) are still found."""
+    filed under a category we do not scan (e.g. onion powder) are still found. Search results
+    that show no price and that `wanted` (the watchlist) asks for are priced from their own page."""
     s = session or requests.Session()
     s.headers.update(HEADERS)
     if credentials:
@@ -344,4 +425,19 @@ def fetch_all(member: bool = False, max_pages: int = 15, delay: float = 3.0,
                         None, member, seen, search_pages, delay, collect=got)
         searchlog.record("snr", q, got)
         log.info("S&R search '%s': %d results, %d not seen in categories", q, n, len(seen) - before)
+    if wanted is not None:
+        # Same unpriced product may come back from several searches: one object per URL,
+        # so pricing it once updates every search that listed it.
+        unpriced: dict[str, Product] = {}
+        for (store, _q), hits in searchlog.HITS.items():
+            if store != "snr":
+                continue
+            for i, h in enumerate(hits):
+                if h.price:
+                    continue
+                if h.url in seen:  # priced by a category page
+                    hits[i] = seen[h.url]
+                elif wanted(h.name):
+                    hits[i] = unpriced.setdefault(h.url, h)
+        _price_from_product_pages(s, list(unpriced.values()), member, seen, delay, product_pages)
     return list(seen.values())

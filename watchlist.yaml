@@ -39,8 +39,12 @@ items:
     category: Dairy
     brands: []
     keywords: [cheese, cheddar, quickmelt, cheezee, mozzarella, parmesan, keso, quezo, cheese whiz, pizza topping]
-    exclude: [ice cream, cheesecake, cheese cake, chips, cracker, snack, ramen, noodle, curls, puffs,
-              popcorn, bread, ensaymada, burger, hotdog, sausage, chicken, bites, mayo, sauce, quezon]
+    # exclude terms match word starts ("snack" would also drop "Snacking" mozzarella), so be specific
+    exclude: [ice cream, cheesecake, cheese cake, chips, cracker, snacks, snack pack, corn snack, ramen,
+              noodle, curls, puffs, puff, popcorn, bread, ensaymada, burger patt, cheeseburger, hotdog,
+              sausage, chicken, bites, mayo, sauce, quezon, pretzel, cheese sticks, cheese stick, wraps,
+              ham &, ham and, cheese ring, cheese balls, rolls, seaweed, pringles, nachos, snackers,
+              snack cheese]
     queries: [eden cheese, magnolia cheese, cheddar cheese, mozzarella, cream cheese, parmesan]
 
   - id: cream
@@ -48,8 +52,10 @@ items:
     category: Dairy
     brands: []
     keywords: [all purpose cream, all-purpose cream, allpurpose, whipping cream, heavy cream, cooking cream,
-               pasta cream, table cream, sour cream, thick cream, double cream]
-    exclude: [ice cream, cream of mushroom, cream cheese, creamer, coffee-mate, coffeemate]
+               pasta cream, table cream, sour cream, thick cream, double cream, all purpose creamer,
+               all-purpose creamer, culinary cream, dairy cream]
+    exclude: [ice cream, cream of mushroom, cream cheese, coffee creamer, non-dairy creamer, coffee-mate,
+              coffeemate, cream soda, cream crackers]
     queries: [all purpose cream, whipping cream, heavy cream, cooking cream]
 
   - id: butter
@@ -68,9 +74,13 @@ items:
     keywords: [fresh milk, full cream milk, low fat milk, non fat milk, uht milk, pure milk, whole milk,
                evaporated milk, evaporada, condensed milk, condensada, powdered milk, milk powder,
                barista, oat milk, almond milk, soya milk, soy milk, lactose free milk, oat beverage,
-               almond non-dairy]
+               almond non-dairy, filled milk, full cream, dairy milk, sterilized milk, homogenized,
+               skim milk, skimmed, reduced fat milk, milk low fat, milk lite, lite milk, family milk,
+               condensed, evaporated, evap, creamy milk, milk 1l, milk 1 l]
     exclude: [chocolate, strawberry, melon, banana, cocoa, milkshake, flavored, flavoured, cultured,
-              tea, coffee, candy, biscuit, cookie]
+              tea, coffee, candy, biscuit, cookie, ice pop, ice candy, yogurt, cereal, soap, lotion,
+              body wash, shampoo, bar soap, choco bar, wafer, cake, cadbury, cudbury, hazelnut, cheese,
+              coco milk, coconut]
     queries: [fresh milk, full cream milk, evaporated milk, condensed milk, oat milk, barista milk]
 
   # ---------------- Pantry ----------------
@@ -79,7 +89,7 @@ items:
     category: Pantry
     brands: []
     keywords: [spaghetti, pasta, penne, macaroni, elbow, fettuccine, fettucine, linguine, fusilli, lasagna]
-    exclude: [sauce, soup, noodle soup, salad, cup, cream]
+    exclude: [sauce, soup, noodle soup, cup noodle, cups, cream, party pack, salad dressing, salad kit]
     queries: [ideal spaghetti, del monte spaghetti, spaghetti, penne, macaroni]
 
   - id: sweeteners
@@ -88,15 +98,20 @@ items:
     brands: []
     keywords: [sugar, syrup, honey, muscovado, sweetener]
     exclude: [sugar free gum, candy, cookie, biscuit, cereal, chips, drink, juice, soda, cola, cough,
-              yogurt, milkshake, 0% sugar, chocolate chips]
+              yogurt, milkshake, 0% sugar, chocolate chips, tea, citron, ginseng, ham, bacon, glazed,
+              sugar free, no sugar, less sugar, lotion, scrub, wafer, bars, bar soap, gummy, roasted, cured,
+              barbecue, bbq, sauce]
     queries: [white sugar, brown sugar, muscovado, syrup, honey]
 
   - id: oil
     name: Cooking oil
     category: Pantry
     brands: []
-    keywords: [vegetable oil, cooking oil, canola oil, palm oil, coconut oil, olive oil, corn oil, sunflower oil]
-    exclude: [chili oil, sesame, spray, hair, body, massage, baby oil, pants, diaper, skin, soap]
+    keywords: [vegetable oil, cooking oil, canola oil, palm oil, coconut oil, olive oil, corn oil, sunflower oil,
+               soya oil, soybean oil, soy oil, edible oil, refined oil, pomace, baguio oil, minola, golden fiesta,
+               cocotop, wesson oil, naturel oil, palm olein, rice bran oil, avocado oil]
+    exclude: [chili oil, sesame, spray, hair, body, massage, baby oil, pants, diaper, skin, soap,
+              in oil, w/ soya, with soya, sardines, tuna, bangus, chili paste, chips, capsule, softgel]
     queries: [vegetable oil, cooking oil, canola oil, olive oil]
 
   - id: flour
@@ -105,7 +120,8 @@ items:
     brands: []
     keywords: [flour, pancake mix, waffle mix, baking powder, baking soda, cake mix, muffin mix, yeast,
                cornstarch, chocolate chips, chocolate compound, cocoa powder, topping, sprinkles]
-    exclude: [chips flavor, cracker, snack, noodle, pizza]
+    exclude: [chips flavor, cracker, snacks, noodle, frozen pizza, pizza sauce, pizza 1, pizza 2,
+              cheese topping, pizza topping, ice cream, cupcake topper]
     queries: [all purpose flour, pancake mix, baking powder, cocoa powder, chocolate syrup]
 
   - id: spreads
@@ -130,8 +146,13 @@ items:
     name: Coffee
     category: Pantry
     brands: []
-    keywords: [coffee beans, ground coffee, whole bean, instant coffee, espresso, coffee powder, barako]
-    exclude: [coffee mate, coffeemate, creamer, candy, cookie, cake, liqueur, mug, maker, machine, filter]
+    keywords: [coffee beans, coffee bean, ground coffee, whole bean, instant coffee, espresso, coffee powder,
+               barako, arabica, robusta, coffee grind, ground roast, roast coffee, roasted coffee, coffee blend,
+               coffee econopack, coffee club, freeze dried coffee, coffee granules, decaf, nescafe classic,
+               coffee 100g, coffee 200g, coffee 250g, coffee 400g, coffee 500g, coffee 1kg]
+    exclude: [coffee mate, coffeemate, creamer, candy, cookie, cake, liqueur, mug, maker, machine, filter,
+              ice cream, drink, muffin, on the go, ready to drink, rtd, frappe, latte can, chocolate,
+              cup lid, bottle, latte, freddo, ensure, milk coffee, white coffee, 3 in 1, 3in1, 2 in 1, twin pack candy, scrub, soap, chips, wafer, biscuit]
     queries: [coffee beans, ground coffee, espresso]
 
   # ---------------- Spices & Sauces ----------------
@@ -154,9 +175,13 @@ items:
                ground chili, chili powder, chili flakes, chilli powder, chilli flakes,
                paprika, cinnamon, oregano, cumin, nutmeg, turmeric, star anise, bay leaves, bay leaf,
                basil flakes, basil leaves, dried basil, rosemary, thyme, parsley flakes, dried parsley,
-               curry powder, ground cloves, whole cloves, cardamom, ground ginger, ginger powder]
+               curry powder, ground cloves, whole cloves, cardamom, ground ginger, ginger powder,
+               pepper granules, blk pepper, whole pepper, pepper whole, pepper ground, pepper grinder,
+               pepper fine, pepper coarse, cracked pepper, onion salt, minced onion, minced garlic dried,
+               italian seasoning, mixed herbs]
     exclude: [chips, cracker, snack, noodle, sauce, marinade, chicken, pork, beef, cookie, candy, tea,
-              drink, syrup, oil, mayo, dip, dressing, bread, roll, cereal, bun, gum]
+              drink, syrup, oil, mayo, dip, dressing, bread, roll, cereal, bun, gum, caplet, capsule,
+              tablet, supplement, complex, softgel, soap, scent, lotion, latte]
     queries: [ground onion, onion powder, ground garlic, garlic powder, black pepper, paprika, cinnamon,
               oregano, chili powder, turmeric, basil, parsley]
 
@@ -166,7 +191,8 @@ items:
     brands: []
     keywords: [salt]
     exclude: [salted, unsalted, garlic salt, low salt, less salt, chips, peanut, butter, cracker, nuts,
-              bath, scrub, lamp, caramel, egg, sauce, soy]
+              bath, scrub, lamp, caramel, egg, sauce, soy, epsom, epson, flavour, flavor, pecan, almond,
+              cashew, pistachio, seeds, popcorn, crisps, fish, anchov, shrimp, beans, tuyo, dilis]
     queries: [salt, iodized salt, sea salt]
 
   - id: dips
@@ -183,7 +209,8 @@ items:
     brands: []
     keywords: [soy sauce, oyster sauce, fish sauce, vinegar, ketchup, liquid seasoning, pesto, alfredo,
                spaghetti sauce, tomato sauce, pasta sauce, hot sauce, chili garlic, sriracha, gochujang,
-               worcestershire, barbecue sauce, bbq sauce, teriyaki]
+               worcestershire, barbecue sauce, bbq sauce, teriyaki, pepper sauce, chili sauce, chilli sauce,
+               steak sauce, demi glace, gravy mix, bechamel, sambal, tabasco, calamansi juice concentrate]
     exclude: [chips, noodle, ramen, capsule, vitamin, party pack]
     queries: [soy sauce, oyster sauce, vinegar, ketchup, tomato sauce, pasta sauce, hot sauce]
 
@@ -235,18 +262,20 @@ items:
     queries: [bleach, zonrox]
 
   - id: disinfectant
-    name: Disinfectant
+    name: Disinfectant, alcohol & hand soap
     category: Cleaning
     brands: []
-    keywords: [disinfectant, disinfecting, sanitizer, alcohol 70]
-    exclude: [hand cream]
-    queries: [disinfectant, sanitizer]
+    keywords: [disinfectant, disinfecting, sanitizer, alcohol 70, 70% alcohol, ethyl alcohol, isopropyl,
+               rubbing alcohol, antibacterial hand soap, anti-bacterial hand soap, antibac hand soap,
+               hand soap]
+    exclude: [hand cream, bath soap, whitening]
+    queries: [disinfectant, sanitizer, ethyl alcohol, hand soap]
 
   - id: trashbags
     name: Garbage bags
     category: Cleaning
     brands: []
-    keywords: [garbage bag, trash bag, bin liner]
+    keywords: [garbage bag, trash bag, bin liner, garbage roll, trash roll, garbage bags, trash bags]
     queries: [garbage bag]
 
   - id: paper
@@ -262,8 +291,10 @@ items:
     name: Cups, lids & straws
     category: Café Supplies
     brands: []
-    keywords: [paper cup, plastic cup, cup lid, drinking straw, straws, coffee cup]
-    exclude: [cup noodle, cupcake, measuring cup]
+    keywords: [paper cup, plastic cup, cup lid, drinking straw, straws, coffee cup, coffeecup, hot cup,
+               cold cup, pet cup, sip lid, dome lid, flat lid, coffee filter, filter paper, baking cups,
+               cupcake liner, muffin cups, cup sleeve, cup holder, cup carrier]
+    exclude: [cup noodle, cupcake mix, measuring cup, coffee cup mug, strawberry]
     queries: [paper cup, plastic cup, drinking straw]
 
   - id: kitchen_disposables
@@ -271,7 +302,8 @@ items:
     category: Café Supplies
     brands: []
     keywords: [gloves, cling wrap, stretch film, aluminum foil, aluminium foil, baking paper, parchment,
-               freezer bags, sandwich bags, ziplock, zip lock, aluminum trays, aluminum tray]
+               freezer bags, sandwich bags, ziplock, zip lock, aluminum trays, aluminum tray, foil wrap,
+               aluminum wrap, plastic wrap, food wrap, wax paper, foil pan, foil tray, glad wrap]
     exclude: [gardening, boxing, kitchen glove set]
     queries: [disposable gloves, cling wrap, aluminum foil, freezer bags]
 
@@ -279,5 +311,8 @@ items:
     name: Take-out containers
     category: Café Supplies
     brands: []
-    keywords: [food container, take out, takeout, meal box, deli container, food tray]
+    keywords: [food container, take out, takeout, meal box, deli container, food tray, lunch box w,
+               lunch box with lid, tray w/ lid, tray with lid, clamshell, paper box, food box, bento,
+               paper bag, kraft bag, chicken box, pizza box, cake box, sauce cup, dip cup, portion cup]
+    exclude: [lunch box set, kids, insulated, stainless, glass, thermos, lock & lock, lock&lock]
     queries: [food container]

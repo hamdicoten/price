@@ -72,7 +72,8 @@ def collect(stores: list[str], items: list[WatchItem], settings: dict,
         else:
             products += snr.fetch_all(member=settings.get("snr_member", False),
                                       address=addr if any(addr.values()) else None,
-                                      credentials=creds, queries=search_queries(items))
+                                      credentials=creds, queries=search_queries(items),
+                                      wanted=lambda name: bool(match(name, items)))
     qs = search_queries(items)
     if recon_dir:
         from .stores import browser_capture

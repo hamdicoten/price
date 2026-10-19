@@ -476,3 +476,95 @@ def test_snr_same_product_from_category_and_search_is_one_url():
     a = snr.canonical_url("/product/members-value/dry-goods-condiments/members-value-ground-onion-270g")
     b = snr.canonical_url("https://www.snrshopping.com/product/members-value-ground-onion-270g?ref=search")
     assert a == b == "https://www.snrshopping.com/product/members-value-ground-onion-270g"
+    # S&R search links carry a trailing space; it must not create a second product
+    c = snr.canonical_url("/product/members-value-ground-onion-270g ")
+    assert c == a
+
+
+# Real names found in store searches that the watchlist missed (should match) or wrongly kept (should not)
+@pytest.mark.parametrize("name,expected", [
+    ("Member’s Value Real Mayonnaise 1L", ["dips"]),
+    ("Alaska All Purpose Creamer 250ml", ["cream"]),
+    ("Alaska Classic Evaporated Filled Milk 360ml", ["milk"]),
+    ("Jersey Sweetened Condensed Filled Milk 1kg", ["milk"]),
+    ("Bear Brand Sterilized Milk 1L", ["milk"]),
+    ("Australia's Own Skim Dairy Milk 1L", ["milk"]),
+    ("Oatly Oat Drink Barista 1L", ["milk"]),
+    ("Arla Burger Slices Cheddar Taste 200g", ["cheese"]),
+    ("Arla Mozzarella Cheese for Salads, Cooking & Snacking 200g", ["cheese"]),
+    ("Eden Filled Cheese Spread Original 430g", ["cheese"]),
+    ("BC Coffee Club Arabica Blend 300g", ["coffee"]),
+    ("Culinary Exchange Supremo Coffee Grind 400g", ["coffee"]),
+    ("Gourmet Farms Coffee Batangas Baraco Whole Beans 500g", ["coffee"]),
+    ("Kick-Start Philippine Barako Coffee Strong, Bold & Smooth Whole Bean Coffee 400g", ["coffee"]),
+    ("Jolly Soya Oil 2L", ["oil"]),
+    ("Baguio Refined Edible Oil Bottle 1gal", ["oil"]),
+    ("Green Cross 70% Ethyl Alcohol 1L Pump", ["disinfectant"]),
+    ("Reynolds Foil Wrap 8M", ["kitchen_disposables"]),
+    ("Edison Bio Garbage Roll Black Large 20s", ["trashbags"]),
+    ("Brew Rite Coffee Filter #4 Cone 40s", ["cups"]),
+    ("Eco Innovators Coffeecup Waves Wall w/ Lid Tall 12oz 10s", ["cups"]),
+    ("Greenware Tray w/ Lid Small 470ml 10s", ["containers"]),
+    ("Molini Pizzuti Pizza Flour 1kg", ["flour"]),
+    ("Royal Salad Macaroni 1kg", ["pasta"]),
+    ("UFC Whole Pepper 30g", ["spice_basics"]),
+    ("Tabasco Red Pepper Sauce 150ml", ["condiments"]),
+    # not ingredients
+    ("Rinbee Cheese Sticks 85g", []),
+    ("S&R Ham & Cheese Wraps", []),
+    ("Pringles Cheese 107g", []),
+    ("Hiland Sea Salt Caramel Espresso Ice Cream 1.41L", []),
+    ("Tylr Espresso On The Go", []),
+    ("Balance Grow Honey Citron Tea 1kg", []),
+    ("Purefoods Honeycured Bacon 400g", []),
+    ("Dr Teals Pure Epson Salt 2.72 kg", []),
+    ("Sungrains Roasted Pecan Himalayan Salt Flavour 454g", []),
+    ("Century Tuna Flakes in Vegetable Oil 180g", []),
+    ("Cadbury Dairy Milk Hazelnut 62g", []),
+    ("Nature's Truth Glucosamine Chondroitin MSM & Turmeric Complex 90 caplets", []),
+])
+def test_search_audit_fixes(name, expected):
+    assert match(name, ITEMS) == expected
+
+
+def test_snr_product_page_price_after_title():
+    html = ('<html><body><nav><span class="oc-price">₱1.00</span></nav>'
+            "<h1>Member's Value Ground Onion 270g</h1><div>Member's Value</div><div>₱ 199.00</div>"
+            '<section>Related <a href="/product/x">X</a> ₱ 55.00</section></body></html>')
+    p = snr.parse_product_page(html, "u", member=True)
+    assert p.name == "Member's Value Ground Onion 270g" and p.price == 199.0
+    logged = ('<h1>Jose\'s Coffee Beans 1kg</h1><div class="pr"><span class="og-price">₱ 1,050.00</span>'
+              '<span class="oc-price">₱ 899.00</span></div>')
+    q = snr.parse_product_page(logged, "u", member=True)
+    assert (q.price, q.regular_price) == (899.0, 1050.0)
+    assert snr.parse_product_page("<h1>Out of stock thing</h1><p>Sold out</p>", "u") is None
+
+
+def test_snr_unpriced_watchlist_hits_get_price_from_product_page(monkeypatch):
+    from pricewatch import searchlog
+    searchlog.reset()
+    opened = []
+    class S:
+        headers = {}
+        def get(self, url, timeout=None):
+            class R:
+                def raise_for_status(self): pass
+            r = R()
+            if "search/results" in url and "page=" not in url:
+                r.text = ('<div><a href="/product/jose-coffee-beans-1kg ">Jose\'s Coffee Beans 1kg</a></div>'
+                          '<div><a href="/product/espresso-muffins">S&R Espresso Walnut Muffins 4pcs</a></div>'
+                          '<div><a href="/product/search/results?key=x&c=9">Rice, Pasta, Noodles, and Soup (3)</a></div>')
+            elif url.endswith("/product/jose-coffee-beans-1kg"):
+                opened.append(url)
+                r.text = "<h1>Jose's Coffee Beans 1kg</h1><span>₱ 899.00</span>"
+            else:
+                opened.append(url) if "/product/" in url and "search" not in url else None
+                r.text = "<html></html>"
+            return r
+    monkeypatch.setattr(snr, "CATEGORIES", {})
+    prods = snr.fetch_all(member=True, delay=0, queries=["coffee beans"], session=S(),
+                          wanted=lambda n: bool(match(n, ITEMS)))
+    assert [(p.name, p.price) for p in prods] == [("Jose's Coffee Beans 1kg", 899.0)]
+    assert opened == ["https://www.snrshopping.com/product/jose-coffee-beans-1kg"]   # muffins not opened
+    hits = {h.name: h.price for h in searchlog.HITS[("snr", "coffee beans")]}
+    assert hits == {"Jose's Coffee Beans 1kg": 899.0, "S&R Espresso Walnut Muffins 4pcs": 0.0}

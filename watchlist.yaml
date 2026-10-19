@@ -70,6 +70,15 @@ items:
     exclude: [dip, dressing, gift set]
     queries: [mccormick, onion powder, garlic powder, black pepper, paprika, cinnamon, oregano, chili powder]
 
+  - id: spice_basics
+    name: Basic spices (any brand)
+    category: Spices & Sauces
+    brands: []               # any brand — S&R's own Member's Value, Badia, McCormick, ...
+    keywords: [onion powder, garlic powder, black pepper, ground pepper, white pepper, paprika,
+               cinnamon, oregano, chili powder, cumin, nutmeg, basil leaves, rosemary, thyme]
+    exclude: [chips, cracker, snack, noodle, chicken, pork, beef, sauce, marinade]
+    queries: [onion powder, garlic powder, black pepper, paprika, cinnamon, oregano, chili powder]
+
   - id: dips
     name: Dips & Sauces
     category: Spices & Sauces

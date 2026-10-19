@@ -35,7 +35,7 @@ def test_unit_price_unknown_size():
 
 # ---------- matcher ----------
 @pytest.mark.parametrize("name,expected", [
-    ("McCormick Ground Cinnamon 454g", ["spices"]),
+    ("McCormick Ground Cinnamon 454g", ["spices", "spice_basics"]),
     ("McCormick Garlic Dip 300g", ["dips"]),
     ("Eden Cheese Original 430g", ["cheese"]),
     ("Magnolia Quickmelt Cheese 440g", ["cheese"]),
@@ -390,4 +390,14 @@ def test_snr_search_finds_items_outside_scanned_categories(monkeypatch):
     prods = {p.name: p for p in snr.fetch_all(member=True, delay=0, queries=["onion powder"], session=S())}
     assert prods["McCormick Onion Powder 510g"].price == 415.0
     assert "Silver Swan Soy Sauce 1L" in prods
-    assert match("McCormick Onion Powder 510g", ITEMS) == ["spices"]
+    assert match("McCormick Onion Powder 510g", ITEMS) == ["spices", "spice_basics"]
+
+
+@pytest.mark.parametrize("name,expected", [
+    ("Member's Value Onion Powder 400g", ["spice_basics"]),
+    ("McCormick Onion Powder 48g", ["spices", "spice_basics"]),
+    ("Badia Garlic Powder 680g", ["spice_basics"]),
+    ("Jack 'n Jill Onion Rings Chips 60g", []),
+])
+def test_basic_spices_any_brand(name, expected):
+    assert match(name, ITEMS) == expected

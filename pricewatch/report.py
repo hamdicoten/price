@@ -166,6 +166,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
 .empty p{margin:0;max-width:68ch}
 .empty p+p{color:var(--muted)}
 .no-hits{margin:0;padding:16px;color:var(--muted)}
+.section.lifted .section-head h2::after{content:" · search results";font:500 14px var(--body);color:var(--muted)}
 footer{border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:13px}
 @media (prefers-reduced-motion: no-preference){.search,.chip-btn{transition:background .15s,border-color .15s,box-shadow .15s}}
 """
@@ -179,6 +180,15 @@ JS = """
   var cat='all';
   try{ var saved=localStorage.getItem('pw-cat'); if(saved && document.querySelector('.chip-btn[data-c="'+saved+'"]')) cat=saved; }catch(e){}
   function norm(s){return (s||'').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'');}
+  // While a search is typed, the product list moves right under the search box; it goes back when cleared.
+  var allSec=document.getElementById('all-products'), toolbar=document.querySelector('.toolbar');
+  var home=allSec?{parent:allSec.parentNode, next:allSec.nextSibling}:null, lifted=false;
+  function place(searching){
+    if(!allSec||!toolbar||searching===lifted) return;
+    if(searching){ toolbar.parentNode.insertBefore(allSec, toolbar.nextSibling); }
+    else { home.parent.insertBefore(allSec, home.next); }
+    allSec.classList.toggle('lifted', searching); lifted=searching;
+  }
   function apply(){
     var q=norm(input.value).trim(), terms=q?q.split(/\\s+/):[], shown=0, products=0;
     items.forEach(function(el){
@@ -195,6 +205,7 @@ JS = """
     });
     chips.forEach(function(c){c.setAttribute('aria-pressed', c.getAttribute('data-c')===cat?'true':'false');});
     clear.hidden=!input.value;
+    place(!!q);
     result.textContent = (q||cat!=='all') ? products+' tracked product'+(products===1?'':'s')+' match' : '';
   }
   chips.forEach(function(c){c.addEventListener('click',function(){cat=c.getAttribute('data-c');
@@ -441,7 +452,7 @@ def render(data: dict, items: list[WatchItem], generated: datetime | None = None
         up = _unit(r["price"], r["name"])
         return (categories.index(cs[0]) if cs else 99, up[0] if up else float("inf"), r["name"].lower())
 
-    out.append('<section class="section" aria-labelledby="h-all" data-filterable><div class="section-head">'
+    out.append('<section class="section" id="all-products" aria-labelledby="h-all" data-filterable><div class="section-head">'
                '<h2 id="h-all">All tracked products</h2>'
                '<span class="hint">Every product matched today · cheapest unit price first within a category</span></div>'
                '<div class="box"><table><thead><tr><th>Product</th><th>Category</th><th>Store</th>'

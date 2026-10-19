@@ -1,0 +1,117 @@
+# Daily price scan in the cloud — no computer needs to be on, nothing to pay.
+# Scans the stores, saves the price history back into this repo (data/prices.db),
+# publishes the panel on GitHub Pages and (optionally) sends the Telegram digest.
+#
+# One-time setup:
+#   Settings → Pages → Build and deployment → Source: "GitHub Actions"
+#   Settings → Secrets and variables → Actions → New repository secret:
+#     SNR_EMAIL, SNR_PASSWORD                 S&R login (member prices)
+#     TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID    optional — digest and alerts
+#
+# Public repositories get unlimited free Actions minutes and free Pages hosting.
+# The daily commit of data/prices.db also keeps the schedule active (GitHub pauses
+# schedules in repos with no activity for 60 days).
+
+name: Price Watch
+
+on:
+  schedule:
+    - cron: "10 23 * * *"     # 23:10 UTC = 07:10 Manila (UTC+8), before the morning shopping run
+  workflow_dispatch:          # "Run workflow" button for a manual scan
+    inputs:
+      force:
+        description: "Re-scan stores already scanned today"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write             # commit the updated price history
+  pages: write                # publish the panel
+  id-token: write             # required by the Pages deployment
+
+concurrency:
+  group: pricewatch
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    env:
+      TZ: Asia/Manila         # "today" is the Manila date, not UTC
+      PYTHONIOENCODING: utf-8
+      SNR_EMAIL: ${{ secrets.SNR_EMAIL }}
+      SNR_PASSWORD: ${{ secrets.SNR_PASSWORD }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Tests
+        run: python -m pytest -q
+
+      - name: Scan, alert and build the panel
+        run: |
+          mkdir -p logs
+          ARGS="--digest --report"
+          if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          python -m pricewatch.cli run $ARGS 2>&1 | tee logs/run.log
+
+      - name: Save price history
+        if: always()
+        run: |
+          [ -f data/prices.db ] || { echo "No database yet."; exit 0; }
+          git config user.name  "price-watch-bot"
+          git config user.email "price-watch-bot@users.noreply.github.com"
+          git add data/prices.db
+          if git diff --cached --quiet; then
+            echo "No new prices to save."
+          else
+            git commit -m "prices: $(date +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Prepare the site
+        if: always()
+        run: |
+          mkdir -p _site
+          if [ -f reports/price-watch.html ]; then
+            cp reports/price-watch.html _site/index.html
+          else
+            python -m pricewatch.cli report --report-out _site/index.html
+          fi
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+
+      - uses: actions/configure-pages@v5
+        if: always()
+
+      - uses: actions/upload-pages-artifact@v3
+        if: always()
+        with:
+          path: _site
+
+      - name: Publish the panel
+        id: pages
+        if: always()
+        uses: actions/deploy-pages@v4
+
+      - name: Keep the log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-log-${{ github.run_number }}
+          path: logs/run.log
+          retention-days: 14

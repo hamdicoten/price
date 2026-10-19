@@ -1,0 +1,110 @@
+[
+ {
+  "id": "34638",
+  "handle": "kraft-cheddar-cheese-160gm-2",
+  "availableForSale": true,
+  "title": "Kraft Eden Cheddar Cheese 165g",
+  "sku": "MKT-30369",
+  "priceRange": {
+   "maxVariantPrice": {
+    "amount": 105,
+    "currencyCode": "Php"
+   },
+   "minVariantPrice": {
+    "amount": 105,
+    "currencyCode": "Php"
+   },
+   "priceHtml": "<span class=\"woocommerce-Price-amount amount\"><bdi>₱105.00 – ₱105.00</bdi></span>"
+  }
+ },
+ {
+  "id": "34639",
+  "handle": "kraft-eden-filled-cheese-160gm-2",
+  "availableForSale": true,
+  "title": "Eden Filled Cheese Spread Original 160g",
+  "sku": "MKT-30370",
+  "priceRange": {
+   "maxVariantPrice": {
+    "amount": 56.5,
+    "currencyCode": "Php"
+   },
+   "minVariantPrice": {
+    "amount": 56.5,
+    "currencyCode": "Php"
+   },
+   "priceHtml": "<span class=\"woocommerce-Price-amount amount\"><bdi>₱56.50 – ₱56.50</bdi></span>"
+  }
+ },
+ {
+  "id": "34640",
+  "handle": "kraft-eden-filled-cheese-430gm-2",
+  "availableForSale": true,
+  "title": "Eden Filled Cheese Spread Original 430g",
+  "sku": "MKT-30371",
+  "priceRange": {
+   "maxVariantPrice": {
+    "amount": 146.5,
+    "currencyCode": "Php"
+   },
+   "minVariantPrice": {
+    "amount": 146.5,
+    "currencyCode": "Php"
+   },
+   "priceHtml": "<span class=\"woocommerce-Price-amount amount\"><bdi>₱146.50 – ₱146.50</bdi></span>"
+  }
+ },
+ {
+  "id": "34641",
+  "handle": "kraft-cheddar-cheese-440gm-2",
+  "availableForSale": true,
+  "title": "Kraft Eden Cheddar Cheese 430g",
+  "sku": "MKT-30372",
+  "priceRange": {
+   "maxVariantPrice": {
+    "amount": 245,
+    "currencyCode": "Php"
+   },
+   "minVariantPrice": {
+    "amount": 245,
+    "currencyCode": "Php"
+   },
+   "priceHtml": "<span class=\"woocommerce-Price-amount amount\"><bdi>₱245.00 – ₱245.00</bdi></span>"
+  }
+ },
+ {
+  "id": "34674",
+  "handle": "eden-cheese-original-900gm-2",
+  "availableForSale": true,
+  "title": "Eden Filled Cheese Spread Original 900g",
+  "sku": "MKT-30415",
+  "priceRange": {
+   "maxVariantPrice": {
+    "amount": 310,
+    "currencyCode": "Php"
+   },
+   "minVariantPrice": {
+    "amount": 310,
+    "currencyCode": "Php"
+   },
+   "priceHtml": "<span class=\"woocommerce-Price-amount amount\"><bdi>₱310.00 – ₱310.00</bdi></span>"
+  }
+ },
+ {
+  "id": "34675",
+  "handle": "eden-mayo-80ml-2",
+  "availableForSale": true,
+  "title": "Eden Mayo with Creamy Cheese 80ml",
+  "sku": "MKT-30416",
+  "priceRange": {
+   "maxVariantPrice": {
+    "amount": 35.5,
+    "currencyCode": "Php"
+   },
+   "minVariantPrice": {
+    "amount": 35.5,
+    "currencyCode": "Php"
+   },
+   "priceHtml": "<span class=\"woocommerce-Price-amount amount\"><bdi>₱35.50 – ₱35.50</bdi></span>"
+  }
+ }
+]

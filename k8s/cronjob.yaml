@@ -1,0 +1,67 @@
+# kubectl create namespace pricewatch
+# kubectl -n pricewatch create secret generic telegram \
+#   --from-literal=TELEGRAM_BOT_TOKEN=... --from-literal=TELEGRAM_CHAT_ID=...
+# kubectl -n pricewatch create secret generic snr \
+#   --from-literal=SNR_EMAIL=... --from-literal=SNR_PASSWORD=...
+# (or feed them from Vault via Vault Agent / external-secrets)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pricewatch-data
+  namespace: pricewatch
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pricewatch-watchlist
+  namespace: pricewatch
+data:
+  watchlist.yaml: |
+    # paste watchlist.yaml here (or render it from the repo with ArgoCD)
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pricewatch
+  namespace: pricewatch
+spec:
+  # Every day at 07:10 Manila time — alerts and digest arrive before shopping
+  schedule: "10 7 * * *"
+  timeZone: "Asia/Manila"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      activeDeadlineSeconds: 1800
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: pricewatch
+              image: ghcr.io/CHANGE_ME/bns-pricewatch:0.1.0
+              args: ["run", "--db", "/data/prices.db", "--watchlist", "/config/watchlist.yaml", "--digest"]
+              envFrom:
+                - secretRef:
+                    name: telegram
+                - secretRef:
+                    name: snr
+              resources:
+                requests: { cpu: 200m, memory: 512Mi }
+                limits:   { memory: 1Gi }
+              volumeMounts:
+                - { name: data,   mountPath: /data }
+                - { name: config, mountPath: /config }
+          volumes:
+            - name: data
+              persistentVolumeClaim:
+                claimName: pricewatch-data
+            - name: config
+              configMap:
+                name: pricewatch-watchlist

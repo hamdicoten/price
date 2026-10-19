@@ -1,0 +1,284 @@
+{
+ "total": 7,
+ "items": [
+  {
+   "id": "1564405684702545001",
+   "store_id": "1949",
+   "like_code": "21761",
+   "department_id": [
+    "1496154"
+   ],
+   "unit_price": 158.0,
+   "popularity": 4,
+   "upc": "1480535831905",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "14805358319056",
+   "reference_ids": [
+    "14805358319056",
+    "04805358319059"
+   ],
+   "name": "Magnolia Cream Cheese Original Spread | 220g",
+   "size": "pc",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.995,
+   "cover_image": "1564405684702545001/add13c8e0e583369d75ccf8bf91dcbf0",
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "identifier": "14805358319056",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/bakery_breakfast/jams_spreads/magnolia_cream_cheese_original_spread_220g/p/1564405684702545001"
+  },
+  {
+   "id": "1564405684702545014",
+   "store_id": "1949",
+   "like_code": "68671",
+   "department_id": [
+    "1496137"
+   ],
+   "unit_price": 36.0,
+   "popularity": 4,
+   "upc": "1480535837303",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "14805358373034",
+   "reference_ids": [
+    "14805358373034",
+    "04805358373037"
+   ],
+   "name": "Magnolia Daily Quezo Cheese | 160g",
+   "size": "pc",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.978,
+   "cover_image": "1564405684702545014/3d68302a848fbc411f89280402e59e5a",
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "identifier": "14805358373034",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/dairy_eggs/cheese/magnolia_daily_quezo_cheese_160g/p/1564405684702545014"
+  },
+  {
+   "id": "8195570",
+   "store_id": "1949",
+   "like_code": "21750",
+   "department_id": [
+    "1496154"
+   ],
+   "unit_price": 202.0,
+   "popularity": 4,
+   "upc": "1480535832706",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "14805358327068",
+   "reference_ids": [
+    "14805358327068",
+    "04805358327061"
+   ],
+   "name": "Magnolia Cheezee Spread Pimiento | 480g",
+   "size": "pc",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.942,
+   "cover_image": "8195570/45276a8cf1df1944f98a47db106ed759",
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "identifier": "14805358327068",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/bakery_breakfast/jams_spreads/magnolia_cheezee_spread_pimiento_480g/p/8195570"
+  },
+  {
+   "id": "8195569",
+   "store_id": "1949",
+   "like_code": "21748",
+   "department_id": [
+    "1496154"
+   ],
+   "unit_price": 108.0,
+   "popularity": 4,
+   "upc": "1480535832705",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "14805358327051",
+   "reference_ids": [
+    "14805358327051",
+    "00813327010146",
+    "04805358000797",
+    "04805358000803",
+    "04805358327054"
+   ],
+   "name": "Magnolia Cheezee Spread Pimiento | 235g",
+   "size": "pc",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.942,
+   "cover_image": "8195569/465f70e7bd274624392e5839d6b14ab5",
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "identifier": "14805358327051",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/bakery_breakfast/jams_spreads/magnolia_cheezee_spread_pimiento_235g/p/8195569"
+  },
+  {
+   "id": "1564405684702545010",
+   "store_id": "1949",
+   "like_code": "21745",
+   "department_id": [
+    "1496154"
+   ],
+   "unit_price": 56.0,
+   "popularity": 4,
+   "upc": "1480535832702",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "14805358327020",
+   "reference_ids": [
+    "14805358327020",
+    "04805358327023"
+   ],
+   "name": "Magnolia Cheezee Spread Pimiento | 120g",
+   "size": "pc",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.899,
+   "cover_image": "1564405684702545010/1bedc675159946899775f2256de86ae4",
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "identifier": "14805358327020",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/bakery_breakfast/jams_spreads/magnolia_cheezee_spread_pimiento_120g/p/1564405684702545010"
+  },
+  {
+   "id": "1564405684702532018",
+   "store_id": "1949",
+   "like_code": "262169",
+   "department_id": [
+    "1496137"
+   ],
+   "popularity": 999999,
+   "upc": "200002621698",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "02000026216988",
+   "reference_ids": [
+    "02000026216988"
+   ],
+   "name": "Magnolia Cheese 185gr 2s+cheddar 185gr",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.833,
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "cover_image": "fp_dpt_generic/2a9b3ef460d517994244f67d3cffc98e",
+   "is_place_holder_cover_image": true,
+   "identifier": "02000026216988",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/dairy_eggs/cheese/magnolia_cheese_185gr_2s_cheddar_185gr/p/1564405684702532018"
+  },
+  {
+   "id": "1564405684702544972",
+   "store_id": "1949",
+   "like_code": "262447",
+   "department_id": [
+    "1496137"
+   ],
+   "popularity": 999999,
+   "upc": "480535800304",
+   "status_id": "1",
+   "fulfillment_type_ids": [
+    "1",
+    "2"
+   ],
+   "reference_id": "04805358003040",
+   "reference_ids": [
+    "04805358003040"
+   ],
+   "name": "Magnolia Cheese 185gr+chocolait 110ml",
+   "substitution_type_ids": [
+    "21873569",
+    "21873571",
+    "21873572",
+    "21873573",
+    "21873570",
+    "22809208"
+   ],
+   "relevance": -0.833,
+   "enforce_product_inventory": false,
+   "has_featured_offer": false,
+   "status": "available",
+   "cover_image": "fp_dpt_generic/2a9b3ef460d517994244f67d3cffc98e",
+   "is_place_holder_cover_image": true,
+   "identifier": "04805358003040",
+   "quantity_initial": 1.0,
+   "fulfillment_type_id": "1",
+   "canonical_url": "https://www.waltermartdelivery.com.ph/shop/shop_by_category/dairy_eggs/cheese/magnolia_cheese_185gr_chocolait_110ml/p/1564405684702544972"
+  }
+ ]
+}

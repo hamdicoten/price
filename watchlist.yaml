@@ -1,0 +1,163 @@
+# Brew & Savour — watchlist
+#
+# Each item is one ingredient group. Brands inside a group are alternatives to each other;
+# the daily digest shows the cheapest UNIT price (₱/kg, ₱/L) in each group.
+#
+# category: heading the item is shown under (panel filter chips + Telegram digest)
+# brands:   product name must contain one of these. Leave EMPTY for unbranded items (fresh meat)
+# keywords: product name must contain one of these (empty = every product of the brand)
+# exclude:  product name must NOT contain any of these
+# queries:  search terms for stores searched by keyword (WalterMart, Landmark)
+#
+# Keep `id` stable once prices are recorded — it links the price history.
+
+settings:
+  snr_member: true           # S&R account is a member; logged-in prices are member prices
+  drop_threshold: 0.15       # alert when price is 15% below its 30-day median
+  history_days: 30
+  min_history_for_low: 7     # days of history needed before "lowest price" alerts
+  min_low_gap: 0.05          # a new low must beat the previous low by at least 5%
+  realert_days: 7            # do not repeat the same alert at the same price within 7 days
+  waltermart_store_id: "7638"   # WalterMart Mabalacat (closest online branch to Capas)
+  landmark_substore: mkt        # Landmark Makati
+  # S&R: logging in (SNR_EMAIL / SNR_PASSWORD) shows prices in every category.
+  # No address needed; fill this only if branch-specific prices are ever required.
+  snr_address:
+    company_name: ""
+    building_no: ""
+    street: ""
+    barangay: ""
+    city: ""
+
+items:
+  # ---------------- Dairy ----------------
+  - id: cheese
+    name: Cheese
+    category: Dairy
+    brands: [eden, magnolia]
+    keywords: [cheese, cheddar, quickmelt, cheezee, keso, quezo]
+    exclude: [chicken, ice cream, spread cracker, mayo]
+
+  - id: cream
+    name: All-Purpose Cream
+    category: Dairy
+    brands: [nestle]
+    keywords: [all purpose, all-purpose, allpurpose]
+    exclude: [ice cream, creamer, coffee-mate, coffeemate]
+
+  - id: butter
+    name: Butter & Margarine
+    category: Dairy
+    brands: [anchor, dari creme, daricreme, dari-creme]
+    keywords: [butter, creme, margarine]
+    exclude: [cookie, biscuit, popcorn]
+    queries: [anchor butter, dari creme]
+
+  # ---------------- Pantry ----------------
+  - id: pasta
+    name: Pasta
+    category: Pantry
+    brands: [ideal, del monte]
+    keywords: [spaghetti, pasta, penne, macaroni, elbow, fettuccine, linguine]
+    exclude: [sauce]
+
+  # ---------------- Spices & Sauces ----------------
+  - id: spices
+    name: Spices
+    category: Spices & Sauces
+    brands: [mccormick]
+    keywords: []             # every McCormick product for now — narrow this to the spices you use
+    exclude: [dip, dressing, gift set]
+
+  - id: dips
+    name: Dips & Sauces
+    category: Spices & Sauces
+    brands: [del monte, mccormick]
+    keywords: [dip, dressing, sauce, salsa]
+    exclude: [spaghetti, pasta]
+
+  # ---------------- Chicken ----------------
+  - id: chicken
+    name: Chicken cuts
+    category: Chicken
+    brands: []
+    keywords: [chicken breast, chicken fillet, chicken thigh, chicken leg, chicken wing, whole chicken,
+               dressed chicken, chicken drumstick, chicken quarter, chicken tenders]
+    exclude: [seasoning, mix, coating, sauce, cube, broth, powder, flavor, noodle, nugget, gravy, canned]
+    queries: [chicken breast, chicken thigh, whole chicken, chicken wings]
+
+  # ---------------- Pork ----------------
+  - id: pork
+    name: Pork cuts
+    category: Pork
+    brands: []
+    keywords: [pork belly, liempo, pork chop, ground pork, pork shoulder, kasim, pigue, pork loin,
+               pork ribs, spareribs, pork cubes]
+    exclude: [seasoning, mix, sauce, flavor, cube, broth, luncheon, canned, sausage, longganisa]
+    queries: [pork belly, ground pork, pork chop, pork shoulder]
+
+  # ---------------- Beef ----------------
+  - id: beef
+    name: Beef cuts
+    category: Beef
+    brands: []
+    keywords: [ground beef, beef brisket, beef cubes, beef shank, sirloin, ribeye, beef steak,
+               beef tapa, beef chuck, beef short ribs]
+    exclude: [seasoning, mix, sauce, flavor, cube, broth, corned, canned, jerky, noodle]
+    queries: [ground beef, beef brisket, beef cubes, sirloin]
+
+  # ---------------- Cleaning ----------------
+  - id: dishwashing
+    name: Dishwashing liquid
+    category: Cleaning
+    brands: []
+    keywords: [dishwashing, dish washing, dishwash]
+    exclude: [machine, sponge]
+    queries: [dishwashing liquid]
+
+  - id: bleach
+    name: Bleach
+    category: Cleaning
+    brands: []
+    keywords: [bleach]
+    exclude: [hair, teeth, whitening cream]
+    queries: [bleach, zonrox]
+
+  - id: disinfectant
+    name: Disinfectant
+    category: Cleaning
+    brands: []
+    keywords: [disinfectant, disinfecting, sanitizer, alcohol 70]
+    exclude: [hand cream]
+    queries: [disinfectant, sanitizer]
+
+  - id: trashbags
+    name: Garbage bags
+    category: Cleaning
+    brands: []
+    keywords: [garbage bag, trash bag, bin liner]
+    queries: [garbage bag]
+
+  - id: paper
+    name: Paper towels & tissue
+    category: Cleaning
+    brands: []
+    keywords: [paper towel, kitchen towel, table napkin, tissue, napkin]
+    exclude: [wet wipes, baby wipes]
+    queries: [paper towel, table napkin]
+
+  # ---------------- Café supplies ----------------
+  - id: cups
+    name: Cups, lids & straws
+    category: Café Supplies
+    brands: []
+    keywords: [paper cup, plastic cup, cup lid, drinking straw, straws, coffee cup]
+    exclude: [cup noodle, cupcake, measuring cup]
+    queries: [paper cup, plastic cup, drinking straw]
+
+  - id: containers
+    name: Take-out containers
+    category: Café Supplies
+    brands: []
+    keywords: [food container, take out, takeout, meal box, deli container, food tray]
+    queries: [food container]

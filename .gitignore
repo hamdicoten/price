@@ -6,5 +6,4 @@ recon/
 recon_copy/
 reports/
 *.zip
-data/netlify-site-id.txt
 # data/prices.db IS committed: it is the price history the cloud job builds on

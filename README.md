@@ -59,23 +59,17 @@ the same product across stores, cheapest unit price per group, and every tracked
 scan → alerts → digest → price history committed to `data/prices.db` → panel published on GitHub Pages.
 In a **public** repository both Actions minutes and Pages hosting are free and unlimited.
 
-1. Create a **public** repository on github.com (e.g. `bns-pricewatch`) and push this folder,
+1. Create a **public** repository on github.com (here: `hamdicoten/price`) and push this folder,
    including `data/prices.db` (the history collected so far).
 2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
 3. Settings → Secrets and variables → Actions → add `SNR_EMAIL`, `SNR_PASSWORD`
    (optional: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`). Secrets are never visible in the public repo.
 4. Actions tab → **Price Watch** → **Run workflow** once. After that it runs by itself.
 
-The panel lives at `https://<github-user>.github.io/bns-pricewatch/` — anyone with the link can open it
+The panel lives at `https://hamdicoten.github.io/price/` — anyone with the link can open it
 (it only shows store prices; search engines are told not to index it).
 The daily commit keeps the schedule alive (GitHub pauses schedules after 60 days without activity).
 GitHub's runners sit in US data centres; if a store ever blocks them, the log will show it.
-
-### Netlify (optional, not recommended)
-
-`python -m pricewatch.cli publish` can deploy the panel to Netlify as an alias (branch) deploy.
-On credit-based Netlify plans every *production* deploy costs 15 credits against a hard 300/month
-limit that pauses every site on the account, so a daily production deploy is never used here.
 
 ## Credentials (local runs; the cloud uses GitHub secrets)
 

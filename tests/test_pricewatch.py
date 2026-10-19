@@ -366,58 +366,6 @@ def test_panel_has_search_and_chips(tmp_path):
     assert "On sale today" in html and "Search a product or brand" in html
 
 
-class _NetResp:
-    def __init__(self, status, body=None):
-        self.status_code, self._b, self.ok = status, body or {}, status < 400
-    def json(self):
-        return self._b
-    def raise_for_status(self):
-        if not self.ok:
-            raise RuntimeError(self.status_code)
-
-
-class _NetSession:
-    def __init__(self):
-        self.posts, self.puts = [], []
-    def post(self, url, json=None, data=None, headers=None, timeout=None):
-        self.posts.append((url, json, headers))
-        if url.endswith("/sites"):
-            return _NetResp(201, {"id": "site-123", "ssl_url": "https://bns-price-watch.netlify.app"})
-        # Netlify answers with the digests it still needs (here: only index.html)
-        return _NetResp(200, {"id": "dep-1", "name": "bns-price-watch",
-                              "required": [json["files"]["/index.html"]]})
-    def put(self, url, data=None, headers=None, timeout=None):
-        self.puts.append((url, data, headers))
-        return _NetResp(200)
-
-
-def test_netlify_alias_deploy_never_production(tmp_path):
-    import hashlib
-    from pricewatch import netlify
-    html = tmp_path / "p.html"; html.write_text("<h1>Price Watch</h1>", encoding="utf-8")
-    s = _NetSession()
-    url = netlify.deploy(str(html), "tok", "site-123", session=s)
-    assert url == "https://panel--bns-price-watch.netlify.app"
-    deploy_url, body, headers = s.posts[0]
-    assert deploy_url.endswith("/sites/site-123/deploys") and headers["Authorization"] == "Bearer tok"
-    assert body["draft"] is True and body["branch"] == "panel"          # alias deploy, not production
-    assert set(body["files"]) == {"/index.html", "/robots.txt", "/_headers"}
-    assert body["files"]["/index.html"] == hashlib.sha1(b"<h1>Price Watch</h1>").hexdigest()
-    assert [u for u, _, _ in s.puts] == ["https://api.netlify.com/api/v1/deploys/dep-1/files/index.html"]
-
-
-def test_publish_reuses_saved_site_id(tmp_path, monkeypatch):
-    from pricewatch import cli, netlify
-    monkeypatch.chdir(tmp_path)
-    monkeypatch.setenv("NETLIFY_AUTH_TOKEN", "tok"); monkeypatch.delenv("NETLIFY_SITE_ID", raising=False)
-    created, deployed = [], []
-    monkeypatch.setattr(netlify, "create_site", lambda token, **k: created.append(1) or {"id": "site-9"})
-    monkeypatch.setattr(netlify, "deploy", lambda path, token, sid, **k: deployed.append(sid) or "https://x.netlify.app")
-    (tmp_path / "p.html").write_text("x")
-    cli.publish_netlify("p.html"); cli.publish_netlify("p.html")
-    assert created == [1] and deployed == ["site-9", "site-9"]   # site created once, reused after
-
-
 def test_snr_search_finds_items_outside_scanned_categories(monkeypatch):
     card = ('<div class="item"><div class="card"><a href="/product/x/{slug}">{name}</a>'
             '<span class="oc-price">₱{price}</span></div></div>')

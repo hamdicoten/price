@@ -3,7 +3,6 @@
   python -m pricewatch.cli run --digest        # + send the daily digest
   python -m pricewatch.cli run --report        # + write reports/price-watch.html
   python -m pricewatch.cli report              # rebuild the panel from stored prices
-  python -m pricewatch.cli publish             # rebuild the panel and deploy it to Netlify
   python -m pricewatch.cli recon               # save raw pages/JSON to recon/ for debugging
 """
 from __future__ import annotations
@@ -38,26 +37,6 @@ def snr_credentials() -> tuple[str, str] | None:
     """Credentials are read ONLY from environment variables (Secret/Vault on k3s)."""
     email, pw = os.getenv("SNR_EMAIL"), os.getenv("SNR_PASSWORD")
     return (email, pw) if email and pw else None
-
-
-def publish_netlify(html_path: str) -> None:
-    """Deploys the panel; a failure is logged but never breaks the scan."""
-    token = os.getenv("NETLIFY_AUTH_TOKEN")
-    if not token:
-        logging.warning("Netlify: NETLIFY_AUTH_TOKEN not set, panel not published")
-        return
-    from . import netlify
-    id_file = Path("data/netlify-site-id.txt")   # remembers the site so every run updates the same URL
-    site_id = os.getenv("NETLIFY_SITE_ID") or (id_file.read_text().strip() if id_file.exists() else None)
-    try:
-        if not site_id:
-            site_id = netlify.create_site(token)["id"]
-            id_file.parent.mkdir(parents=True, exist_ok=True)
-            id_file.write_text(site_id)
-        url = netlify.deploy(html_path, token, site_id)
-        logging.info("Panel online → %s", url)
-    except Exception as e:  # noqa: BLE001
-        logging.error("Netlify publish failed: %s", e)
 
 
 def collect(stores: list[str], items: list[WatchItem], settings: dict,
@@ -119,7 +98,7 @@ def collect(stores: list[str], items: list[WatchItem], settings: dict,
 
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="pricewatch")
-    ap.add_argument("command", choices=["run", "recon", "report", "publish"])
+    ap.add_argument("command", choices=["run", "recon", "report"])
     ap.add_argument("--stores", default="snr,waltermart,landmark")
     ap.add_argument("--watchlist", default="watchlist.yaml")
     ap.add_argument("--db", default="data/prices.db")
@@ -128,8 +107,6 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--report", action="store_true", help="also write the HTML panel after the scan")
     ap.add_argument("--report-out", default="reports/price-watch.html")
     ap.add_argument("--force", action="store_true", help="re-scan stores already scanned today")
-    ap.add_argument("--publish", action="store_true",
-                    help="after --report, deploy the panel to Netlify (needs NETLIFY_AUTH_TOKEN)")
     args = ap.parse_args(argv)
 
     for stream in (sys.stdout, sys.stderr):  # keep ₱ and accents intact in the Windows console
@@ -146,12 +123,6 @@ def main(argv: list[str] | None = None) -> None:
     if args.command == "report":
         from . import report
         logging.info("Panel written → %s", report.write(args.db, items, args.report_out))
-        return
-
-    if args.command == "publish":
-        from . import report
-        report.write(args.db, items, args.report_out)
-        publish_netlify(args.report_out)
         return
 
     if args.command == "recon":
@@ -194,11 +165,9 @@ def main(argv: list[str] | None = None) -> None:
     notify.send(alerts.format_alerts(fired, groups_of, items))
     if args.digest:
         notify.send(alerts.daily_digest(tracked, groups_of, items))
-    if args.report or args.publish:
+    if args.report:
         from . import report
         logging.info("Panel written → %s", report.write(args.db, items, args.report_out))
-    if args.publish:
-        publish_netlify(args.report_out)
 
 
 if __name__ == "__main__":

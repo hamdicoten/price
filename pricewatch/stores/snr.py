@@ -65,6 +65,13 @@ def _num(s: str) -> float:
     return float(s.replace(",", ""))
 
 
+def canonical_url(href: str) -> str:
+    """The same product is linked as /product/<category path>/<slug> on category pages and as
+    /product/<slug> in search results; key it by the slug so it is counted once."""
+    path = urljoin(BASE, href).split("?")[0].rstrip("/")
+    return f"{BASE}/product/{path.rsplit('/', 1)[-1]}" if "/product/" in path else path
+
+
 def _card_for(anchor: Tag) -> Tag | None:
     """Walks up from the product title link to the smallest container that also holds the price."""
     node = anchor
@@ -88,7 +95,7 @@ def parse_listing(html: str, promo: str | None = None, member: bool = False) -> 
         name = a.get_text(" ", strip=True)
         if "/product/" not in href or not name:
             continue  # image links have no text; skip them
-        url = urljoin(BASE, href)
+        url = canonical_url(href)
         if url in products:
             continue
         card = _card_for(a)
@@ -144,7 +151,7 @@ def _unpriced_links(html: str) -> list[Product]:
     for a in soup.find_all("a", href=True):
         name = a.get_text(" ", strip=True)
         if "/product/" in a["href"] and name:
-            url = urljoin(BASE, a["href"])
+            url = canonical_url(a["href"])
             out.setdefault(url, Product(store="snr", url=url, name=name, price=0.0))
     return list(out.values())
 

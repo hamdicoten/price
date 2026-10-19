@@ -64,7 +64,7 @@ def test_snr_parse_listing_non_member():
     assert cin.on_sale and cin.regular_price == pytest.approx(565.95, abs=0.01)
     eden = prods["Eden Cheese Original 430g"]
     assert eden.price == 1307.25 and not eden.on_sale
-    assert eden.url == "https://www.snrshopping.com/product/new-arrival/eden-cheese-original-430g"
+    assert eden.url == "https://www.snrshopping.com/product/eden-cheese-original-430g"
 
 
 def test_snr_parse_listing_member():
@@ -470,3 +470,9 @@ def test_every_snr_members_value_seasoning_is_tracked():
 ])
 def test_type_based_groups(name, expected):
     assert match(name, ITEMS) == expected
+
+
+def test_snr_same_product_from_category_and_search_is_one_url():
+    a = snr.canonical_url("/product/members-value/dry-goods-condiments/members-value-ground-onion-270g")
+    b = snr.canonical_url("https://www.snrshopping.com/product/members-value-ground-onion-270g?ref=search")
+    assert a == b == "https://www.snrshopping.com/product/members-value-ground-onion-270g"

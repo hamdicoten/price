@@ -179,7 +179,9 @@ JS = """
   var sections=[].slice.call(document.querySelectorAll('[data-filterable]'));
   var cat='all';
   try{ var saved=localStorage.getItem('pw-cat'); if(saved && document.querySelector('.chip-btn[data-c="'+saved+'"]')) cat=saved; }catch(e){}
-  function norm(s){return (s||'').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'');}
+  // lower-case, drop accents, and ignore apostrophes/quotes so "Member's" finds "Member’s"
+  function norm(s){return (s||'').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'')
+    .replace(/[\\u2018\\u2019\\u201a\\u201b\\u2032\\u00b4`'"\\u201c\\u201d]/g,'');}
   // While a search is typed, the product list moves right under the search box; it goes back when cleared.
   var allSec=document.getElementById('all-products'), toolbar=document.querySelector('.toolbar');
   var home=allSec?{parent:allSec.parentNode, next:allSec.nextSibling}:null, lifted=false;
@@ -193,7 +195,7 @@ JS = """
     var q=norm(input.value).trim(), terms=q?q.split(/\\s+/):[], shown=0, products=0;
     items.forEach(function(el){
       var okCat = cat==='all' || el.getAttribute('data-cat').split('|').indexOf(cat)>-1;
-      var hay = el.getAttribute('data-q')||'';
+      var hay = el._hay || (el._hay = norm(el.getAttribute('data-q')));
       var okQ = terms.every(function(t){return hay.indexOf(t)>-1;});
       el.hidden = !(okCat && okQ);
       if(!el.hidden && el.hasAttribute('data-product')) products++;

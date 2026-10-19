@@ -13,6 +13,7 @@ import time
 
 import requests
 
+from .. import searchlog
 from ..models import Product
 
 log = logging.getLogger(__name__)
@@ -62,6 +63,7 @@ def _fetch_http(queries, substore, delay, session):
             if failures >= 2 and not found:
                 raise RuntimeError("Landmark rejects direct API calls") from e
             continue
+        searchlog.record("landmark", q, items)
         for p in items:
             found.setdefault(p.url, p)
         log.info("Landmark '%s': %d products", q, len(items))
@@ -97,6 +99,7 @@ def _fetch_browser(queries, substore, delay):
                 continue
             finally:
                 page.close()
+            searchlog.record("landmark", q, items)
             for p in items:
                 found.setdefault(p.url, p)
             log.info("Landmark '%s' (browser): %d products", q, len(items))

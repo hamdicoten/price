@@ -57,7 +57,17 @@ def load(db_path: str) -> dict:
            WHERE a.day = ? ORDER BY a.kind""", (last,))]
     for a in alerts:
         a["groups"] = [g for g in (a["groups"] or "").split(",") if g]
-    return {"empty": False, "day": date.fromisoformat(last), "days": days, "rows": rows, "alerts": alerts}
+    searches: dict[tuple[str, str], list[dict]] = {}
+    try:
+        for r in con.execute("""SELECT store, query, pos, url, name, price FROM search_hits
+                                WHERE day=? ORDER BY store, query, pos""", (last,)):
+            lst = searches.setdefault((r["store"], r["query"]), [])
+            if r["pos"] >= 0:
+                lst.append({"url": r["url"], "name": r["name"], "price": r["price"]})
+    except sqlite3.OperationalError:
+        pass  # database from before search logging
+    return {"empty": False, "day": date.fromisoformat(last), "days": days, "rows": rows, "alerts": alerts,
+            "searches": searches}
 
 
 CSS = """
@@ -294,6 +304,29 @@ def render(data: dict, items: list[WatchItem], generated: datetime | None = None
                    f'{escape(c)}<small>{counts[c]}</small></button>')
     out.append('</div><p class="result" id="result" aria-live="polite"></p></section>')
 
+    # Coverage: group x store, so missing items are visible
+    cov = {it.id: {s: 0 for s in stores_seen} for it in items}
+    for r in rows:
+        for g in r["groups"]:
+            if g in cov and r["store"] in cov[g]:
+                cov[g][r["store"]] += 1
+    gaps = sum(1 for g in cov.values() for n in g.values() if n == 0)
+    out.append('<section class="section" aria-labelledby="h-cov" data-filterable><div class="section-head">'
+               '<h2 id="h-cov">Coverage check</h2>'
+               f'<span class="hint">Products found per group and store · {gaps} gap{"s" if gaps != 1 else ""} — '
+               'a gap means the store may not sell it, or the scan missed it</span></div>'
+               '<div class="box"><table><thead><tr><th>Group</th><th>Category</th>'
+               + "".join(f'<th class="num">{escape(STORE_NAMES.get(s, s))}</th>' for s in stores_seen)
+               + '</tr></thead><tbody>')
+    for it in items:
+        cells = "".join(
+            f'<td class="num">{cov[it.id][s]}</td>' if cov[it.id][s]
+            else '<td class="num"><span class="chip">missing</span></td>' for s in stores_seen)
+        q = f"{it.name} {it.category} " + " ".join(STORE_NAMES.get(s, s) for s in stores_seen if not cov[it.id][s])
+        out.append(f'<tr data-cat="{_slug(it.category)}" data-q="{escape(q.lower())}">'
+                   f'<td>{escape(it.name)}</td><td class="cat">{escape(it.category)}</td>{cells}</tr>')
+    out.append('</tbody></table></div><p class="no-hits" hidden>No groups match this filter.</p></section>')
+
     # Alerts
     out.append('<section class="section" aria-labelledby="h-al" data-filterable><div class="section-head">'
                '<h2 id="h-al">Alerts</h2><span class="hint">What went to Telegram this morning</span></div>')
@@ -371,6 +404,36 @@ def render(data: dict, items: list[WatchItem], generated: datetime | None = None
                        f'<span class="w">{escape(STORE_NAMES.get(r["store"], r["store"]))} · {_peso(r["price"])}</span></li>')
         out.append('</ol></article>')
     out.append('</div><p class="no-hits" hidden>No groups match this filter.</p></section>')
+
+    # Store searches: what each search returned and what the watchlist filtered out
+    searches = data.get("searches") or {}
+    if searches:
+        tracked_urls = {r["url"] for r in rows}
+        q_items = {}
+        for it in items:
+            for q in (it.queries or []):
+                q_items.setdefault(q.lower(), it)
+        out.append('<section class="section" aria-labelledby="h-srch" data-filterable><div class="section-head">'
+                   '<h2 id="h-srch">Store searches</h2>'
+                   '<span class="hint">What each store returned · "not on watchlist" lists products the store '
+                   'found but the watchlist rules left out — tell me if one belongs</span></div>'
+                   '<div class="box"><table><thead><tr><th>Store</th><th>Search</th><th class="num">Results</th>'
+                   '<th class="num">Kept</th><th>Not on watchlist (first 8)</th></tr></thead><tbody>')
+        order = list(STORE_NAMES)
+        for (store, query), hits in sorted(searches.items(),
+                                           key=lambda kv: (order.index(kv[0][0]) if kv[0][0] in order else 9, kv[0][1])):
+            kept = sum(h["url"] in tracked_urls for h in hits)
+            left = [h for h in hits if h["url"] not in tracked_urls]
+            it = q_items.get(query.lower())
+            cat = _slug(it.category) if it else "other"
+            names = "; ".join(f'{h["name"]} ({_peso(h["price"]) if h["price"] else "price not read"})'
+                              for h in left[:8]) if left else "—"
+            res = (f'<span class="chip">no results</span>' if not hits else str(len(hits)))
+            q = f"{STORE_NAMES.get(store, store)} {query} " + " ".join(h["name"] for h in hits)
+            out.append(f'<tr data-cat="{cat}" data-q="{escape(q.lower())}">'
+                       f'<td>{store_chip(store)}</td><td>{escape(query)}</td><td class="num">{res}</td>'
+                       f'<td class="num">{kept}</td><td class="cat">{escape(names)}</td></tr>')
+        out.append('</tbody></table></div><p class="no-hits" hidden>No searches match this filter.</p></section>')
 
     # All tracked products
     def sort_key(r):

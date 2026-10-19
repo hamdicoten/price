@@ -17,6 +17,7 @@ import time
 
 import requests
 
+from .. import searchlog
 from ..models import Product
 
 log = logging.getLogger(__name__)
@@ -97,6 +98,7 @@ def fetch(queries: list[str], store_id: str = DEFAULT_STORE_ID, delay: float = 2
         except (requests.RequestException, ValueError) as e:
             log.warning("WalterMart '%s': %s", q, e)
             continue
+        searchlog.record("waltermart", q, items)
         for p in items:
             found.setdefault(p.url, p)
         log.info("WalterMart '%s' (branch %s): %d products", q, store_id, len(items))

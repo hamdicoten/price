@@ -14,7 +14,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from . import __version__, alerts, notify
+from . import __version__, alerts, notify, searchlog
 from .db import DB
 from .matcher import load_watchlist, match
 from .models import Product, WatchItem
@@ -140,7 +140,9 @@ def main(argv: list[str] | None = None) -> None:
         logging.info("Already scanned today, using stored prices: %s "
                      "(use --force to re-scan)", ", ".join(sorted(done)))
     to_fetch = [s for s in stores if s not in done]
+    searchlog.reset()
     found = collect(to_fetch, items, settings) if to_fetch else []
+    db.save_searches(today, searchlog.HITS)
 
     tracked: list[Product] = []
     groups_of: dict[str, list[str]] = {}

@@ -74,9 +74,11 @@ jobs:
         if: always()
         run: |
           [ -f data/prices.db ] || { echo "No database yet."; exit 0; }
+          # keep the latest scan log in the repo so problems can be diagnosed later (no secrets are logged)
+          [ -f logs/run.log ] && cp logs/run.log data/last-run.log
           git config user.name  "price-watch-bot"
           git config user.email "price-watch-bot@users.noreply.github.com"
-          git add data/prices.db
+          git add data/prices.db data/last-run.log 2>/dev/null || git add data/prices.db
           if git diff --cached --quiet; then
             echo "No new prices to save."
           else

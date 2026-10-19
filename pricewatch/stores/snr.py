@@ -14,6 +14,7 @@ from urllib.parse import quote_plus, urljoin
 import requests
 from bs4 import BeautifulSoup, Tag
 
+from .. import searchlog
 from ..models import Product
 
 log = logging.getLogger(__name__)
@@ -135,6 +136,17 @@ def parse_listing(html: str, promo: str | None = None, member: bool = False) -> 
             member_price=member_price, non_member_price=non_member, promo=promo,
         )
     return list(products.values())
+
+
+def _unpriced_links(html: str) -> list[Product]:
+    soup = BeautifulSoup(html, "html.parser")
+    out: dict[str, Product] = {}
+    for a in soup.find_all("a", href=True):
+        name = a.get_text(" ", strip=True)
+        if "/product/" in a["href"] and name:
+            url = urljoin(BASE, a["href"])
+            out.setdefault(url, Product(store="snr", url=url, name=name, price=0.0))
+    return list(out.values())
 
 
 def product_link_count(html: str) -> int:
@@ -263,7 +275,7 @@ def set_delivery_address(s: requests.Session, address: dict) -> dict | None:
 SEARCH = BASE + "/product/search/results"
 
 
-def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay) -> int:
+def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay, collect=None) -> int:
     """Walks one listing (category or search) page by page. Stops when a page brings nothing new
     for THIS listing — products already seen in another listing do not end it early."""
     here: set[str] = set()
@@ -276,10 +288,17 @@ def _scan_pages(s, label: str, page_url, promo, member, seen, max_pages, delay) 
             log.warning("S&R %s: %s", url, e)
             break
         items = parse_listing(r.text, promo=promo, member=member)
-        if not items and page == 1 and product_link_count(r.text):
-            log.warning("S&R %s: products listed but prices hidden (log in to see them)", label)
+        if not items and product_link_count(r.text):
+            if collect is not None and page == 1:
+                # Products are listed but no price could be read (different page layout or hidden
+                # prices). Keep their names with price 0 so the panel shows them instead of nothing.
+                collect.extend(_unpriced_links(r.text))
+            log.warning("S&R %s page %d: %d product links but no prices read", label, page,
+                        product_link_count(r.text))
             break
         fresh = [p for p in items if p.url not in here]
+        if collect is not None:
+            collect.extend(fresh)
         for p in items:
             here.add(p.url)
             # Keep the promo info when a product shows up in a normal and a promo listing
@@ -312,8 +331,10 @@ def fetch_all(member: bool = False, max_pages: int = 15, delay: float = 3.0,
                     promo, member, seen, max_pages, delay)
     for q in queries or []:
         before = len(seen)
+        got: list[Product] = []
         n = _scan_pages(s, f"search '{q}'",
                         lambda pg, q=q: f"{SEARCH}?key={quote_plus(q)}" + (f"&page={pg}" if pg > 1 else ""),
-                        None, member, seen, search_pages, delay)
+                        None, member, seen, search_pages, delay, collect=got)
+        searchlog.record("snr", q, got)
         log.info("S&R search '%s': %d results, %d not seen in categories", q, n, len(seen) - before)
     return list(seen.values())

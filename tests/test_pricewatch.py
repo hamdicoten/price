@@ -401,3 +401,48 @@ def test_snr_search_finds_items_outside_scanned_categories(monkeypatch):
 ])
 def test_basic_spices_any_brand(name, expected):
     assert match(name, ITEMS) == expected
+
+
+def test_coverage_and_search_sections(tmp_path):
+    from pricewatch import report
+    dbp = str(tmp_path / "p.db")
+    db = DB(dbp)
+    d = date(2026, 10, 20)
+    lm = Product("landmark", "l1", "McCormick Onion Powder 37g", 100.5)
+    db.record(lm, ["spices", "spice_basics"], d)
+    db.record(Product("snr", "s1", "Eden Cheese Original 430g", 145.0), ["cheese"], d)
+    db.save_searches(d, {
+        ("snr", "onion powder"): [],                                            # empty search
+        ("landmark", "onion powder"): [lm, Product("landmark", "l9", "Onion Rings Chips 60g", 35.0)],
+    })
+    db.commit()
+    html = report.render(report.load(dbp), ITEMS)
+    assert "Coverage check" in html and "Store searches" in html
+    cov = html.split('id="h-cov"')[1].split("</table>")[0]
+    row = cov.split("Basic spices (any brand)")[1].split("</tr>")[0]
+    assert "missing" in row and ">1<" in row                    # Landmark 1, S&R missing
+    srch = html.split('id="h-srch"')[1].split("</table>")[0]
+    assert "no results" in srch                                  # S&R search came back empty
+    assert "Onion Rings Chips 60g" in srch                       # filtered out, but visible
+    # re-saving the same store for the day replaces, not duplicates
+    db.save_searches(d, {("snr", "onion powder"): []}); db.commit()
+    assert db.conn.execute("select count(*) from search_hits where store='snr'").fetchone()[0] == 1
+
+
+def test_snr_search_unpriced_results_stay_visible(monkeypatch):
+    from pricewatch import searchlog
+    searchlog.reset()
+    class S:
+        headers = {}
+        def get(self, url, timeout=None):
+            class R:
+                def raise_for_status(self): pass
+            r = R()
+            r.text = ('<div><a href="/product/s/onion">Member\'s Value Onion Powder 400g</a></div>'
+                      if "search/results" in url and "page=" not in url else "<html></html>")
+            return r
+    monkeypatch.setattr(snr, "CATEGORIES", {})
+    prods = snr.fetch_all(member=True, delay=0, queries=["onion powder"], session=S())
+    assert prods == []                                           # nothing priced, nothing tracked
+    hits = searchlog.HITS[("snr", "onion powder")]
+    assert [h.name for h in hits] == ["Member's Value Onion Powder 400g"] and hits[0].price == 0.0

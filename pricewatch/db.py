@@ -30,6 +30,16 @@ CREATE TABLE IF NOT EXISTS alerts (
     price REAL NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_alerts_url ON alerts(url, day);
+CREATE TABLE IF NOT EXISTS search_hits (   -- what each store search returned that day
+    day    TEXT NOT NULL,
+    store  TEXT NOT NULL,
+    query  TEXT NOT NULL,
+    pos    INTEGER NOT NULL,                -- position in the store's results (relevance)
+    url    TEXT,
+    name   TEXT,
+    price  REAL,
+    PRIMARY KEY (day, store, query, pos)
+);
 """
 
 
@@ -93,6 +103,20 @@ class DB:
                 WHERE pr.day=? AND p.store IN ({marks})""", (day.isoformat(), *sorted(stores)))
         return [(Product(store=r[0], url=r[1], name=r[2], price=r[4], regular_price=r[5], promo=r[6]),
                  [g for g in (r[3] or "").split(",") if g]) for r in rows]
+
+    def save_searches(self, day: date, hits: dict) -> None:
+        """hits: {(store, query): [Product, ...]}. Replaces that day's rows for the stores given;
+        a query with no results is kept as a row with pos -1 so empty searches stay visible."""
+        d = day.isoformat()
+        for store in {s for s, _ in hits}:
+            self.conn.execute("DELETE FROM search_hits WHERE day=? AND store=?", (d, store))
+        for (store, query), prods in hits.items():
+            if not prods:
+                self.conn.execute("INSERT OR REPLACE INTO search_hits VALUES (?,?,?,?,?,?,?)",
+                                  (d, store, query, -1, None, None, None))
+            for i, p in enumerate(prods):
+                self.conn.execute("INSERT OR REPLACE INTO search_hits VALUES (?,?,?,?,?,?,?)",
+                                  (d, store, query, i, p.url, p.name, p.price))
 
     def commit(self) -> None:
         self.conn.commit()

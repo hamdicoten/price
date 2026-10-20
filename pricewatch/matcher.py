@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from functools import lru_cache
 
 import yaml
 
@@ -16,9 +17,14 @@ def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+@lru_cache(maxsize=None)
+def _pattern(term: str) -> re.Pattern:
+    # Compiled once per term: the watchlist has more terms than re's own cache holds
+    return re.compile(rf"(?<![a-z0-9]){re.escape(normalize(term))}")
+
+
 def _has(term: str, text: str) -> bool:
-    term = normalize(term)
-    return re.search(rf"(?<![a-z0-9]){re.escape(term)}", text) is not None
+    return _pattern(term).search(text) is not None
 
 
 def load_watchlist(path: str) -> tuple[dict, list[WatchItem]]:

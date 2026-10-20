@@ -334,9 +334,9 @@ def test_digest_does_not_mix_units():
     ("Bounty Fresh Whole Chicken approx 1.2kg", ["chicken"]),
     ("McCormick Chicken Gravy Seasoning Mix 28g", ["spices"]),   # not raw chicken
     ("Monterey Pork Belly Liempo per kg", ["pork"]),
-    ("Purefoods Pork Luncheon Meat 340g", []),
+    ("Purefoods Pork Luncheon Meat 340g", ["corned_beef"]),   # not raw pork
     ("Ground Beef Approx. 1kg", ["beef"]),
-    ("Purefoods Corned Beef 210g", []),
+    ("Purefoods Corned Beef 210g", ["corned_beef"]),           # not raw beef
     ("Joy Dishwashing Liquid Lemon 1L", ["dishwashing"]),
     ("Zonrox Bleach Original 1L", ["bleach"]),
     ("Champion Garbage Bag Large 10pcs", ["trashbags"]),
@@ -516,7 +516,6 @@ def test_snr_same_product_from_category_and_search_is_one_url():
     ("Hiland Sea Salt Caramel Espresso Ice Cream 1.41L", []),
     ("Tylr Espresso On The Go", []),
     ("Balance Grow Honey Citron Tea 1kg", []),
-    ("Purefoods Honeycured Bacon 400g", []),
     ("Dr Teals Pure Epson Salt 2.72 kg", []),
     ("Sungrains Roasted Pecan Himalayan Salt Flavour 454g", []),
     ("Century Tuna Flakes in Vegetable Oil 180g", []),
@@ -568,3 +567,30 @@ def test_snr_unpriced_watchlist_hits_get_price_from_product_page(monkeypatch):
     assert opened == ["https://www.snrshopping.com/product/jose-coffee-beans-1kg"]   # muffins not opened
     hits = {h.name: h.price for h in searchlog.HITS[("snr", "coffee beans")]}
     assert hits == {"Jose's Coffee Beans 1kg": 899.0, "S&R Espresso Walnut Muffins 4pcs": 0.0}
+
+
+# Items from the café's inventory list (Oct 2026)
+@pytest.mark.parametrize("name,expected", [
+    ("Purefoods Honeycured Bacon 400g", ["bacon"]),               # bacon, not a sweetener
+    ("Hershey's Chocolate Syrup 1.36kg", ["sweeteners", "drink_sauces"]),
+    ("Ever Whip Non Dairy Whipping Cream 1030g", ["cream"]),
+    ("Sunbest Coffee Jelly 540g", ["coffee_jelly"]),
+    ("Steuarts Tea The Original Ceylon Tea Black Tea 200g 100 Bags", ["tea_matcha"]),
+    ("Del Monte Tipco Orange Medley Juice 1L", ["juice"]),
+    ("Capri Black Olives Pitted 3,050g", ["canned_pantry"]),
+    ("Figaro Capers in Vinegar 240g", ["canned_pantry"]),
+    ("Pampangas Best Chicken Tocino 450g", ["cured_meat"]),
+    ("CDO Funtastyk Pork Longganisa 440g", ["cured_meat"]),
+    ("Farmer's Best Mixed Vegetable 500g", ["frozen"]),
+    ("Village Go French Baguette 300g", ["bread"]),
+    ("Pride Detergent Powder Kalamansi 1000g", ["laundry"]),
+    ("Domex Floor Cleaner Anti-bacterial 1L", ["surface_cleaners"]),
+    ("Zim Glass Cleaner Strawberry Refill 500ml", ["surface_cleaners"]),
+    ("Force Shield Antibac Disinfecting Wipes Fresh Scent 50 pulls", ["wipes_fresheners"]),
+    ("Master Chef 100% Pure Cornstarch 1kg", ["flour"]),
+    ("Member's Value Chicken Wings Cut-ups approx. 2kg", ["chicken"]),
+    ("Oishi Potato Fries Plain Salted 90g", []),
+    ("McCormick Buffalo Wings Barbeque 70g", ["spices"]),
+])
+def test_inventory_items(name, expected):
+    assert match(name, ITEMS) == expected

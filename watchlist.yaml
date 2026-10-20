@@ -45,7 +45,7 @@ items:
               sausage, chicken, bites, mayo, sauce, quezon, pretzel, cheese sticks, cheese stick, wraps,
               ham &, ham and, cheese ring, cheese balls, rolls, seaweed, pringles, nachos, snackers,
               snack cheese]
-    queries: [eden cheese, magnolia cheese, cheddar cheese, mozzarella, cream cheese, parmesan]
+    queries: [eden cheese, magnolia cheese, cheddar cheese, mozzarella, cream cheese, parmesan, grated parmesan]
 
   - id: cream
     name: Cream
@@ -56,7 +56,7 @@ items:
                all-purpose creamer, culinary cream, dairy cream]
     exclude: [ice cream, cream of mushroom, cream cheese, coffee creamer, non-dairy creamer, coffee-mate,
               coffeemate, cream soda, cream crackers]
-    queries: [all purpose cream, whipping cream, heavy cream, cooking cream]
+    queries: [all purpose cream, whipping cream, heavy cream, cooking cream, ever whip]
 
   - id: butter
     name: Butter & Margarine
@@ -112,17 +112,18 @@ items:
                cocotop, wesson oil, naturel oil, palm olein, rice bran oil, avocado oil]
     exclude: [chili oil, sesame, spray, hair, body, massage, baby oil, pants, diaper, skin, soap,
               in oil, w/ soya, with soya, sardines, tuna, bangus, chili paste, chips, capsule, softgel]
-    queries: [vegetable oil, cooking oil, canola oil, olive oil]
+    queries: [vegetable oil, cooking oil, canola oil, olive oil, pomace olive oil]
 
   - id: flour
     name: Flour, baking & toppings
     category: Pantry
     brands: []
     keywords: [flour, pancake mix, waffle mix, baking powder, baking soda, cake mix, muffin mix, yeast,
-               cornstarch, chocolate chips, chocolate compound, cocoa powder, topping, sprinkles]
+               cornstarch, corn starch, potato starch, tapioca starch, chocolate chips, chocolate compound,
+               cocoa powder, topping, sprinkles]
     exclude: [chips flavor, cracker, snacks, noodle, frozen pizza, pizza sauce, pizza 1, pizza 2,
               cheese topping, pizza topping, ice cream, cupcake topper]
-    queries: [all purpose flour, pancake mix, baking powder, cocoa powder, chocolate syrup]
+    queries: [all purpose flour, pancake mix, baking powder, baking soda, cornstarch, potato starch, cocoa powder]
 
   - id: spreads
     name: Spreads & jams
@@ -131,7 +132,7 @@ items:
     keywords: [peanut butter, hazelnut spread, chocolate spread, biscoff, biscuit spread, jam, conserve,
                fruit preserve, nutella, coconut jam]
     exclude: [cookie, biscuit 96g, wafer, cracker, candy]
-    queries: [peanut butter, hazelnut spread, jam]
+    queries: [peanut butter, hazelnut spread, jam, strawberry jam]
 
   - id: rice
     name: Rice
@@ -154,6 +155,49 @@ items:
               ice cream, drink, muffin, on the go, ready to drink, rtd, frappe, latte can, chocolate,
               cup lid, bottle, latte, freddo, ensure, milk coffee, white coffee, 3 in 1, 3in1, 2 in 1, twin pack candy, scrub, soap, chips, wafer, biscuit]
     queries: [coffee beans, ground coffee, espresso]
+
+  # ---------------- Counter (drinks bar) ----------------
+  - id: drink_sauces
+    name: Chocolate, caramel & coffee syrups
+    category: Counter
+    brands: []
+    keywords: [chocolate syrup, chocolate sauce, white chocolate sauce, caramel syrup, caramel sauce,
+               salted caramel sauce, hazelnut syrup, vanilla syrup, coffee syrup, flavoring syrup, flavored syrup,
+               flavoured syrup, monin, torani, davinci, da vinci, hershey's syrup, hersheys syrup, dessert sauce,
+               strawberry syrup, mocha sauce, frappe base, frappe powder]
+    exclude: [cough, pancake, ice cream, candy, cookie, cake mix, flavored drink, popcorn, honey]
+    queries: [chocolate syrup, chocolate sauce, caramel syrup, caramel sauce, hazelnut syrup, vanilla syrup,
+              white chocolate sauce, frappe powder]
+
+  - id: tea_matcha
+    name: Tea & matcha
+    category: Counter
+    brands: []
+    keywords: [matcha, black tea, green tea, assam, ceylon tea, tea bags, loose tea, jasmine tea, earl grey,
+               milk tea powder, thai tea, oolong, chai tea, chai latte]
+    exclude: [ready to drink, rtd, iced tea drink, 330ml, 350ml, 355ml, 450ml, 473ml, 500ml, 1.5l, bottle, can,
+              cookie, chocolate, kitkat, wafer, ice cream, latte milk, almond milk, soap, lotion, shampoo,
+              baking bar, mochi, cake, tissue, toothbrush, toothpaste, instant honey ginger]
+    queries: [black tea, green tea, assam tea, matcha powder, milk tea powder]
+
+  - id: coffee_jelly
+    name: Coffee jelly & toppings
+    category: Counter
+    brands: []
+    keywords: [coffee jelly, nata de coco, sago, tapioca pearl, boba, popping boba, crystal jelly, coconut gel]
+    exclude: [drink, juice, cup jelly, jelly ace, candy]
+    queries: [coffee jelly, nata de coco, tapioca pearls]
+
+  - id: juice
+    name: Juice
+    category: Counter
+    brands: []
+    keywords: [orange juice, juice concentrate, fruit juice, 100% juice, pineapple juice, mango juice,
+               apple juice, calamansi juice, lemon juice, tipco, juice drink, powdered juice, tang juice,
+               tang four seasons, orange squeezed, freshly squeezed]
+    exclude: [jelly, candy, gummy, soap, lotion, chicken, marinade, 200ml, 220ml, 250ml, 330ml, tangle, pasta,
+              air freshener]
+    queries: [orange juice, pineapple juice, mango juice, juice 1l]
 
   # ---------------- Spices & Sauces ----------------
   - id: spices
@@ -211,17 +255,78 @@ items:
                spaghetti sauce, tomato sauce, pasta sauce, hot sauce, chili garlic, sriracha, gochujang,
                worcestershire, barbecue sauce, bbq sauce, teriyaki, pepper sauce, chili sauce, chilli sauce,
                steak sauce, demi glace, gravy mix, bechamel, sambal, tabasco, calamansi juice concentrate]
-    exclude: [chips, noodle, ramen, capsule, vitamin, party pack]
-    queries: [soy sauce, oyster sauce, vinegar, ketchup, tomato sauce, pasta sauce, hot sauce]
+    exclude: [chips, noodle, ramen, capsule, vitamin, party pack, capers, caperberries, in vinegar, pickle]
+    queries: [soy sauce, oyster sauce, vinegar, ketchup, tomato sauce, pasta sauce, hot sauce, sweet chili sauce,
+              liquid seasoning, teriyaki sauce]
+
+  - id: canned_pantry
+    name: Olives, capers, sardines & canned tomato
+    category: Pantry
+    brands: []
+    keywords: [black olives, green olives, olives pitted, olives sliced, pitted olives, sliced olives, capers,
+               caperberries, spanish sardines, spanish style sardines, crushed tomato, diced tomato,
+               whole peeled tomato, peeled tomatoes, tomato paste, passata]
+    exclude: [olive oil, pomace, chips, snack, pizza]
+    queries: [black olives, capers, spanish sardines, crushed tomatoes, tomato paste]
+
+  - id: bread
+    name: Bread & baguettes
+    category: Pantry
+    brands: []
+    keywords: [baguette, french bread, sliced bread, loaf bread, white bread, wheat bread, sandwich bread,
+               tasty bread, burger buns, hotdog buns, pandesal, croissant, ciabatta, focaccia]
+    exclude: [crumbs, breading, flour, mix, stix, sticks, chips, cracker, toast crisps, pudding, spread]
+    queries: [baguette, sliced bread, burger buns, loaf bread]
+
+  # ---------------- Processed meat & frozen ----------------
+  - id: bacon
+    name: Bacon
+    category: Processed meat & frozen
+    brands: []
+    keywords: [bacon]
+    exclude: [chips, crisps, bits, spread, flavor, flavour, cracker, potato, dressing, cheese bacon, popcorn,
+              seasoning, pizza, ramen, noodle, mayo, spreadz]
+    queries: [bacon, smoked bacon, bacon 1kg]
+
+  - id: cured_meat
+    name: Tocino, longganisa & ham
+    category: Processed meat & frozen
+    brands: []
+    keywords: [tocino, longganisa, longanisa, chorizo, sliced ham, sweet ham, pork ham, chicken ham,
+               cooked ham, smoked ham, hamonado, beef tapa, pork tapa, chicken tapa, tapa flakes]
+    exclude: [chips, spread, flavor, flavour, seasoning, mix, pizza, sandwich spread, noodle, wraps, corned,
+              sauce, bolognese]
+    queries: [tocino, longganisa, ham, beef tapa]
+
+  - id: corned_beef
+    name: Corned beef & luncheon meat
+    category: Processed meat & frozen
+    brands: []
+    keywords: [corned beef, corned tuna, luncheon meat, spam, meat loaf, beef loaf]
+    exclude: [chips, cheese, flavor, flavour, pizza, noodle]
+    queries: [corned beef, luncheon meat]
+
+  - id: frozen
+    name: Frozen fries, vegetables & fish
+    category: Processed meat & frozen
+    brands: []
+    keywords: [french fries, shoestring fries, crinkle cut, straight cut, potato wedges, hash brown, hashbrown,
+               mixed vegetable, mix vegetable, mixed vegetables, mix vegetables, california mix, frozen peas,
+               green peas, corn kernel, sweet corn, cream dory, dory fillet, pangasius, basa fillet, fish fillet,
+               tilapia fillet, fish fingers, breaded fish]
+    exclude: [chips, crisps, potato fries plain, oishi, snack, seasoning, flavor, flavour, soup, noodle, canned,
+              cream style, crinkles, brownies, mix 500g, cat food, dog food, popcorn]
+    queries: [french fries, frozen fries, mixed vegetables, cream dory, fish fillet]
 
   # ---------------- Chicken ----------------
   - id: chicken
     name: Chicken cuts
     category: Chicken
     brands: []
-    keywords: [chicken breast, chicken fillet, chicken thigh, chicken leg, chicken wing, whole chicken,
-               dressed chicken, chicken drumstick, chicken quarter, chicken tenders]
-    exclude: [seasoning, mix, coating, sauce, cube, broth, powder, flavor, noodle, nugget, gravy, canned]
+    keywords: [chicken breast, chicken fillet, chicken thigh, chicken leg, chicken wing, chicken wings, whole chicken,
+               dressed chicken, chicken drumstick, chicken quarter, chicken tenders, wings cut-ups, chicken cut-ups]
+    exclude: [seasoning, mix, coating, sauce, cube, broth, powder, flavor, noodle, nugget, gravy, canned,
+              buffalo wings, chips, cat, dog, longganisa, tocino, ham]
     queries: [chicken breast, chicken thigh, whole chicken, chicken wings]
 
   # ---------------- Pork ----------------
@@ -268,8 +373,37 @@ items:
     keywords: [disinfectant, disinfecting, sanitizer, alcohol 70, 70% alcohol, ethyl alcohol, isopropyl,
                rubbing alcohol, antibacterial hand soap, anti-bacterial hand soap, antibac hand soap,
                hand soap]
-    exclude: [hand cream, bath soap, whitening]
+    exclude: [hand cream, bath soap, whitening, wipes]
     queries: [disinfectant, sanitizer, ethyl alcohol, hand soap]
+
+  - id: laundry
+    name: Laundry detergent
+    category: Cleaning
+    brands: []
+    keywords: [detergent powder, powder detergent, laundry powder, laundry detergent, liquid detergent,
+               detergent bar, fabric conditioner, fabric softener, fabcon, surf powder, pride detergent]
+    exclude: [dishwash, dish washing, dishwashing, toilet, all purpose cleaner, disinfectant spray, air freshener,
+              almond]
+    queries: [detergent powder, laundry detergent, fabric conditioner]
+
+  - id: surface_cleaners
+    name: Floor, glass & toilet cleaners
+    category: Cleaning
+    brands: []
+    keywords: [floor cleaner, glass cleaner, toilet cleaner, toilet bowl, bowl cleaner, multi-purpose cleaner,
+               multipurpose cleaner, all purpose cleaner, all-purpose cleaner, powder cleanser, degreaser,
+               kitchen cleaner, bathroom cleaner, tile cleaner, floor wax, mop]
+    exclude: [hand, face, body, lens, eyeglass, baby]
+    queries: [floor cleaner, glass cleaner, toilet bowl cleaner, all purpose cleaner, degreaser]
+
+  - id: wipes_fresheners
+    name: Disinfecting wipes & air fresheners
+    category: Cleaning
+    brands: []
+    keywords: [disinfecting wipes, antibac wipes, antibacterial wipes, cleansing wipes, heavy duty wipes,
+               air freshener, room spray, reed diffuser, diffuser oil, aroma oil, deodorizer, odor eliminator]
+    exclude: [baby wipes, wet wipes baby, feminine, makeup, car freshener 5ml, cat, litter]
+    queries: [disinfecting wipes, air freshener, diffuser oil]
 
   - id: trashbags
     name: Garbage bags
@@ -284,7 +418,7 @@ items:
     brands: []
     keywords: [paper towel, kitchen towel, table napkin, tissue, napkin]
     exclude: [wet wipes, baby wipes]
-    queries: [paper towel, table napkin]
+    queries: [paper towel, table napkin, tissue]
 
   # ---------------- Café supplies ----------------
   - id: cups
@@ -305,7 +439,7 @@ items:
                freezer bags, sandwich bags, ziplock, zip lock, aluminum trays, aluminum tray, foil wrap,
                aluminum wrap, plastic wrap, food wrap, wax paper, foil pan, foil tray, glad wrap]
     exclude: [gardening, boxing, kitchen glove set]
-    queries: [disposable gloves, cling wrap, aluminum foil, freezer bags]
+    queries: [disposable gloves, cling wrap, aluminum foil, freezer bags, stretch film]
 
   - id: containers
     name: Take-out containers

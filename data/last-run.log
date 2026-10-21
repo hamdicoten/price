@@ -1,39 +1,1274 @@
-2026-10-20 09:45:45,228 INFO pricewatch v0.11.0
-2026-10-20 09:45:45,258 INFO Already scanned today, using stored prices: landmark, snr, waltermart (use --force to re-scan)
-2026-10-20 09:45:45,271 INFO 0 products scanned, 0 matched the watchlist (+4606 stored)
-☕ *Brew & Savour — daily price digest* (20 Oct 2026)
+2026-10-21 09:30:54,886 INFO pricewatch v0.11.0
+2026-10-21 09:30:58,260 INFO S&R login: OK (final URL: https://www.snrshopping.com)
+2026-10-21 09:30:59,577 INFO S&R condiments-seasonings-1 page 1: 30 products
+2026-10-21 09:31:04,140 INFO S&R condiments-seasonings-1 page 2: 30 products
+2026-10-21 09:31:08,452 INFO S&R condiments-seasonings-1 page 3: 30 products
+2026-10-21 09:31:12,692 INFO S&R condiments-seasonings-1 page 4: 30 products
+2026-10-21 09:31:17,115 INFO S&R condiments-seasonings-1 page 5: 30 products
+2026-10-21 09:31:21,412 INFO S&R condiments-seasonings-1 page 6: 30 products
+2026-10-21 09:31:25,679 INFO S&R condiments-seasonings-1 page 7: 21 products
+2026-10-21 09:31:29,631 INFO S&R condiments-seasonings-1 page 8: 0 products
+2026-10-21 09:31:33,871 INFO S&R baking-toppings-1 page 1: 30 products
+2026-10-21 09:31:38,097 INFO S&R baking-toppings-1 page 2: 30 products
+2026-10-21 09:31:42,324 INFO S&R baking-toppings-1 page 3: 21 products
+2026-10-21 09:31:46,220 INFO S&R baking-toppings-1 page 4: 0 products
+2026-10-21 09:31:50,509 INFO S&R rice-pasta-noodles-and-soup page 1: 30 products
+2026-10-21 09:31:54,776 INFO S&R rice-pasta-noodles-and-soup page 2: 30 products
+2026-10-21 09:31:58,982 INFO S&R rice-pasta-noodles-and-soup page 3: 30 products
+2026-10-21 09:32:03,371 INFO S&R rice-pasta-noodles-and-soup page 4: 30 products
+2026-10-21 09:32:07,484 INFO S&R rice-pasta-noodles-and-soup page 5: 13 products
+2026-10-21 09:32:11,478 INFO S&R rice-pasta-noodles-and-soup page 6: 0 products
+2026-10-21 09:32:15,863 INFO S&R fresh-milk-yogurts-chilled-products-1 page 1: 30 products
+2026-10-21 09:32:20,163 INFO S&R fresh-milk-yogurts-chilled-products-1 page 2: 30 products
+2026-10-21 09:32:24,797 INFO S&R fresh-milk-yogurts-chilled-products-1 page 3: 30 products
+2026-10-21 09:32:29,108 INFO S&R fresh-milk-yogurts-chilled-products-1 page 4: 30 products
+2026-10-21 09:32:33,427 INFO S&R fresh-milk-yogurts-chilled-products-1 page 5: 30 products
+2026-10-21 09:32:37,677 INFO S&R fresh-milk-yogurts-chilled-products-1 page 6: 30 products
+2026-10-21 09:32:41,943 INFO S&R fresh-milk-yogurts-chilled-products-1 page 7: 30 products
+2026-10-21 09:32:46,116 INFO S&R fresh-milk-yogurts-chilled-products-1 page 8: 12 products
+2026-10-21 09:32:50,899 INFO S&R fresh-milk-yogurts-chilled-products-1 page 9: 0 products
+2026-10-21 09:32:55,187 INFO S&R milk-products-1 page 1: 30 products
+2026-10-21 09:32:59,130 INFO S&R milk-products-1 page 2: 14 products
+2026-10-21 09:33:03,035 INFO S&R milk-products-1 page 3: 0 products
+2026-10-21 09:33:07,299 INFO S&R dips-spreads-1 page 1: 30 products
+2026-10-21 09:33:11,397 INFO S&R dips-spreads-1 page 2: 22 products
+2026-10-21 09:33:15,957 INFO S&R dips-spreads-1 page 3: 0 products
+2026-10-21 09:33:20,318 INFO S&R chicken-1 page 1: 30 products
+2026-10-21 09:33:24,412 INFO S&R chicken-1 page 2: 15 products
+2026-10-21 09:33:28,270 INFO S&R chicken-1 page 3: 0 products
+2026-10-21 09:33:32,609 INFO S&R pork page 1: 30 products
+2026-10-21 09:33:37,250 INFO S&R pork page 2: 30 products
+2026-10-21 09:33:41,168 INFO S&R pork page 3: 6 products
+2026-10-21 09:33:45,084 INFO S&R pork page 4: 0 products
+2026-10-21 09:33:49,440 INFO S&R beef page 1: 30 products
+2026-10-21 09:33:54,072 INFO S&R beef page 2: 30 products
+2026-10-21 09:33:58,138 INFO S&R beef page 3: 16 products
+2026-10-21 09:34:02,033 INFO S&R beef page 4: 0 products
+2026-10-21 09:34:06,278 INFO S&R cleaning-products-1 page 1: 30 products
+2026-10-21 09:34:10,514 INFO S&R cleaning-products-1 page 2: 30 products
+2026-10-21 09:34:15,013 INFO S&R cleaning-products-1 page 3: 30 products
+2026-10-21 09:34:19,374 INFO S&R cleaning-products-1 page 4: 30 products
+2026-10-21 09:34:23,613 INFO S&R cleaning-products-1 page 5: 30 products
+2026-10-21 09:34:27,843 INFO S&R cleaning-products-1 page 6: 30 products
+2026-10-21 09:34:32,013 INFO S&R cleaning-products-1 page 7: 21 products
+2026-10-21 09:34:36,001 INFO S&R cleaning-products-1 page 8: 0 products
+2026-10-21 09:34:40,121 INFO S&R paper-products-1 page 1: 24 products
+2026-10-21 09:34:43,963 INFO S&R paper-products-1 page 2: 0 products
+2026-10-21 09:34:48,304 INFO S&R disposables-1 page 1: 30 products
+2026-10-21 09:34:52,577 INFO S&R disposables-1 page 2: 30 products
+2026-10-21 09:34:56,722 INFO S&R disposables-1 page 3: 24 products
+2026-10-21 09:35:00,587 INFO S&R disposables-1 page 4: 0 products
+2026-10-21 09:35:04,591 INFO S&R household-cleaning page 1: 19 products
+2026-10-21 09:35:08,453 INFO S&R household-cleaning page 2: 0 products
+2026-10-21 09:35:12,696 INFO S&R home-essentials page 1: 29 products
+2026-10-21 09:35:16,496 INFO S&R home-essentials page 2: 0 products
+2026-10-21 09:35:20,962 INFO S&R fresh-meat-seafoods page 1: 30 products
+2026-10-21 09:35:25,328 INFO S&R fresh-meat-seafoods page 2: 30 products
+2026-10-21 09:35:29,593 INFO S&R fresh-meat-seafoods page 3: 30 products
+2026-10-21 09:35:33,475 INFO S&R fresh-meat-seafoods page 4: 7 products
+2026-10-21 09:35:37,327 INFO S&R fresh-meat-seafoods page 5: 0 products
+2026-10-21 09:35:41,444 INFO S&R dry-goods-condiments page 1: 24 products
+2026-10-21 09:35:45,265 INFO S&R dry-goods-condiments page 2: 0 products
+2026-10-21 09:35:49,128 INFO S&R spreads-dressings page 1: 10 products
+2026-10-21 09:35:52,932 INFO S&R spreads-dressings page 2: 0 products
+2026-10-21 09:35:57,213 INFO S&R pantry-staples page 1: 30 products
+2026-10-21 09:36:01,204 INFO S&R pantry-staples page 2: 21 products
+2026-10-21 09:36:05,086 INFO S&R pantry-staples page 3: 0 products
+2026-10-21 09:36:09,076 INFO S&R kitchen-essentials page 1: 23 products
+2026-10-21 09:36:12,934 INFO S&R kitchen-essentials page 2: 0 products
+2026-10-21 09:36:17,802 INFO S&R price-off page 1: 30 products
+2026-10-21 09:36:22,650 INFO S&R price-off page 2: 30 products
+2026-10-21 09:36:28,000 INFO S&R price-off page 3: 30 products
+2026-10-21 09:36:33,611 INFO S&R price-off page 4: 30 products
+2026-10-21 09:36:38,483 INFO S&R price-off page 5: 30 products
+2026-10-21 09:36:43,500 INFO S&R price-off page 6: 30 products
+2026-10-21 09:36:48,260 INFO S&R price-off page 7: 30 products
+2026-10-21 09:36:53,186 INFO S&R price-off page 8: 30 products
+2026-10-21 09:36:58,448 INFO S&R price-off page 9: 30 products
+2026-10-21 09:37:03,263 INFO S&R price-off page 10: 30 products
+2026-10-21 09:37:08,043 INFO S&R price-off page 11: 30 products
+2026-10-21 09:37:12,912 INFO S&R price-off page 12: 30 products
+2026-10-21 09:37:17,683 INFO S&R price-off page 13: 30 products
+2026-10-21 09:37:22,480 INFO S&R price-off page 14: 30 products
+2026-10-21 09:37:27,097 INFO S&R price-off page 15: 30 products
+2026-10-21 09:37:31,282 INFO S&R buy-x-take-x page 1: 30 products
+2026-10-21 09:37:35,859 INFO S&R buy-x-take-x page 2: 30 products
+2026-10-21 09:37:40,120 INFO S&R buy-x-take-x page 3: 30 products
+2026-10-21 09:37:45,082 INFO S&R buy-x-take-x page 4: 30 products
+2026-10-21 09:37:49,349 INFO S&R buy-x-take-x page 5: 30 products
+2026-10-21 09:37:53,597 INFO S&R buy-x-take-x page 6: 20 products
+2026-10-21 09:37:57,512 INFO S&R buy-x-take-x page 7: 0 products
+2026-10-21 09:38:01,629 INFO S&R item-of-the-week page 1: 1 products
+2026-10-21 09:38:06,191 INFO S&R item-of-the-week page 2: 0 products
+2026-10-21 09:38:10,930 WARNING S&R search 'eden cheese' page 1: 33 product links but no prices read
+2026-10-21 09:38:10,930 INFO S&R search 'eden cheese': 0 results, 0 not seen in categories
+2026-10-21 09:38:12,810 WARNING S&R search 'magnolia cheese' page 1: 33 product links but no prices read
+2026-10-21 09:38:12,810 INFO S&R search 'magnolia cheese': 0 results, 0 not seen in categories
+2026-10-21 09:38:14,594 WARNING S&R search 'cheddar cheese' page 1: 34 product links but no prices read
+2026-10-21 09:38:14,594 INFO S&R search 'cheddar cheese': 0 results, 0 not seen in categories
+2026-10-21 09:38:16,181 WARNING S&R search 'mozzarella' page 1: 18 product links but no prices read
+2026-10-21 09:38:16,181 INFO S&R search 'mozzarella': 0 results, 0 not seen in categories
+2026-10-21 09:38:18,129 WARNING S&R search 'cream cheese' page 1: 51 product links but no prices read
+2026-10-21 09:38:18,129 INFO S&R search 'cream cheese': 0 results, 0 not seen in categories
+2026-10-21 09:38:19,570 WARNING S&R search 'parmesan' page 1: 13 product links but no prices read
+2026-10-21 09:38:19,571 INFO S&R search 'parmesan': 0 results, 0 not seen in categories
+2026-10-21 09:38:20,914 WARNING S&R search 'grated parmesan' page 1: 9 product links but no prices read
+2026-10-21 09:38:20,914 INFO S&R search 'grated parmesan': 0 results, 0 not seen in categories
+2026-10-21 09:38:22,896 WARNING S&R search 'all purpose cream' page 1: 62 product links but no prices read
+2026-10-21 09:38:22,896 INFO S&R search 'all purpose cream': 0 results, 0 not seen in categories
+2026-10-21 09:38:24,873 WARNING S&R search 'whipping cream' page 1: 50 product links but no prices read
+2026-10-21 09:38:24,874 INFO S&R search 'whipping cream': 0 results, 0 not seen in categories
+2026-10-21 09:38:26,823 WARNING S&R search 'heavy cream' page 1: 50 product links but no prices read
+2026-10-21 09:38:26,824 INFO S&R search 'heavy cream': 0 results, 0 not seen in categories
+2026-10-21 09:38:28,830 WARNING S&R search 'cooking cream' page 1: 57 product links but no prices read
+2026-10-21 09:38:28,830 INFO S&R search 'cooking cream': 0 results, 0 not seen in categories
+2026-10-21 09:38:30,337 INFO S&R search 'ever whip' page 1: 1 products
+2026-10-21 09:38:34,885 WARNING S&R search 'ever whip' page 2: 46 product links but no prices read
+2026-10-21 09:38:34,886 INFO S&R search 'ever whip': 1 results, 1 not seen in categories
+2026-10-21 09:38:36,580 WARNING S&R search 'anchor butter' page 1: 27 product links but no prices read
+2026-10-21 09:38:36,581 INFO S&R search 'anchor butter': 0 results, 0 not seen in categories
+2026-10-21 09:38:37,880 WARNING S&R search 'dari creme' page 1: 9 product links but no prices read
+2026-10-21 09:38:37,880 INFO S&R search 'dari creme': 0 results, 0 not seen in categories
+2026-10-21 09:38:39,617 WARNING S&R search 'butter' page 1: 44 product links but no prices read
+2026-10-21 09:38:39,618 INFO S&R search 'butter': 0 results, 0 not seen in categories
+2026-10-21 09:38:41,153 WARNING S&R search 'unsalted butter' page 1: 24 product links but no prices read
+2026-10-21 09:38:41,153 INFO S&R search 'unsalted butter': 0 results, 0 not seen in categories
+2026-10-21 09:38:43,214 WARNING S&R search 'margarine' page 1: 8 product links but no prices read
+2026-10-21 09:38:43,214 INFO S&R search 'margarine': 0 results, 0 not seen in categories
+2026-10-21 09:38:45,964 WARNING S&R search 'fresh milk' page 1: 53 product links but no prices read
+2026-10-21 09:38:45,964 INFO S&R search 'fresh milk': 0 results, 0 not seen in categories
+2026-10-21 09:38:48,153 WARNING S&R search 'full cream milk' page 1: 60 product links but no prices read
+2026-10-21 09:38:48,154 INFO S&R search 'full cream milk': 0 results, 0 not seen in categories
+2026-10-21 09:38:50,031 WARNING S&R search 'evaporated milk' page 1: 40 product links but no prices read
+2026-10-21 09:38:50,031 INFO S&R search 'evaporated milk': 0 results, 0 not seen in categories
+2026-10-21 09:38:51,811 WARNING S&R search 'condensed milk' page 1: 41 product links but no prices read
+2026-10-21 09:38:51,811 INFO S&R search 'condensed milk': 0 results, 0 not seen in categories
+2026-10-21 09:38:53,698 WARNING S&R search 'oat milk' page 1: 45 product links but no prices read
+2026-10-21 09:38:53,699 INFO S&R search 'oat milk': 0 results, 0 not seen in categories
+2026-10-21 09:38:55,432 WARNING S&R search 'barista milk' page 1: 39 product links but no prices read
+2026-10-21 09:38:55,433 INFO S&R search 'barista milk': 0 results, 0 not seen in categories
+2026-10-21 09:38:56,869 WARNING S&R search 'ideal spaghetti' page 1: 11 product links but no prices read
+2026-10-21 09:38:56,869 INFO S&R search 'ideal spaghetti': 0 results, 0 not seen in categories
+2026-10-21 09:38:58,479 WARNING S&R search 'del monte spaghetti' page 1: 26 product links but no prices read
+2026-10-21 09:38:58,479 INFO S&R search 'del monte spaghetti': 0 results, 0 not seen in categories
+2026-10-21 09:38:59,835 WARNING S&R search 'spaghetti' page 1: 11 product links but no prices read
+2026-10-21 09:38:59,835 INFO S&R search 'spaghetti': 0 results, 0 not seen in categories
+2026-10-21 09:39:01,100 WARNING S&R search 'penne' page 1: 5 product links but no prices read
+2026-10-21 09:39:01,100 INFO S&R search 'penne': 0 results, 0 not seen in categories
+2026-10-21 09:39:02,603 WARNING S&R search 'macaroni' page 1: 7 product links but no prices read
+2026-10-21 09:39:02,604 INFO S&R search 'macaroni': 0 results, 0 not seen in categories
+2026-10-21 09:39:04,043 INFO S&R search 'white sugar' page 1: 1 products
+2026-10-21 09:39:08,455 INFO S&R search 'white sugar' page 2: 1 products
+2026-10-21 09:39:11,456 INFO S&R search 'white sugar': 2 results, 0 not seen in categories
+2026-10-21 09:39:12,635 INFO S&R search 'brown sugar' page 1: 3 products
+2026-10-21 09:39:17,160 WARNING S&R search 'brown sugar' page 2: 28 product links but no prices read
+2026-10-21 09:39:17,160 INFO S&R search 'brown sugar': 3 results, 0 not seen in categories
+2026-10-21 09:39:18,340 WARNING S&R search 'muscovado' page 1: 4 product links but no prices read
+2026-10-21 09:39:18,340 INFO S&R search 'muscovado': 0 results, 0 not seen in categories
+2026-10-21 09:39:19,962 WARNING S&R search 'syrup' page 1: 29 product links but no prices read
+2026-10-21 09:39:19,963 INFO S&R search 'syrup': 0 results, 0 not seen in categories
+2026-10-21 09:39:21,733 WARNING S&R search 'honey' page 1: 39 product links but no prices read
+2026-10-21 09:39:21,733 INFO S&R search 'honey': 0 results, 0 not seen in categories
+2026-10-21 09:39:24,041 WARNING S&R search 'vegetable oil' page 1: 53 product links but no prices read
+2026-10-21 09:39:24,042 INFO S&R search 'vegetable oil': 0 results, 0 not seen in categories
+2026-10-21 09:39:25,867 WARNING S&R search 'cooking oil' page 1: 43 product links but no prices read
+2026-10-21 09:39:25,868 INFO S&R search 'cooking oil': 0 results, 0 not seen in categories
+2026-10-21 09:39:27,529 WARNING S&R search 'canola oil' page 1: 32 product links but no prices read
+2026-10-21 09:39:27,529 INFO S&R search 'canola oil': 0 results, 0 not seen in categories
+2026-10-21 09:39:29,230 WARNING S&R search 'olive oil' page 1: 39 product links but no prices read
+2026-10-21 09:39:29,231 INFO S&R search 'olive oil': 0 results, 0 not seen in categories
+2026-10-21 09:39:30,935 WARNING S&R search 'pomace olive oil' page 1: 35 product links but no prices read
+2026-10-21 09:39:30,935 INFO S&R search 'pomace olive oil': 0 results, 0 not seen in categories
+2026-10-21 09:39:32,686 WARNING S&R search 'all purpose flour' page 1: 44 product links but no prices read
+2026-10-21 09:39:32,686 INFO S&R search 'all purpose flour': 0 results, 0 not seen in categories
+2026-10-21 09:39:34,337 WARNING S&R search 'pancake mix' page 1: 36 product links but no prices read
+2026-10-21 09:39:34,337 INFO S&R search 'pancake mix': 0 results, 0 not seen in categories
+2026-10-21 09:39:36,101 WARNING S&R search 'baking powder' page 1: 40 product links but no prices read
+2026-10-21 09:39:36,102 INFO S&R search 'baking powder': 0 results, 0 not seen in categories
+2026-10-21 09:39:37,998 WARNING S&R search 'baking soda' page 1: 42 product links but no prices read
+2026-10-21 09:39:37,999 INFO S&R search 'baking soda': 0 results, 0 not seen in categories
+2026-10-21 09:39:39,164 WARNING S&R search 'cornstarch' page 1: 5 product links but no prices read
+2026-10-21 09:39:39,165 INFO S&R search 'cornstarch': 0 results, 0 not seen in categories
+2026-10-21 09:39:40,872 WARNING S&R search 'potato starch' page 1: 26 product links but no prices read
+2026-10-21 09:39:40,873 INFO S&R search 'potato starch': 0 results, 0 not seen in categories
+2026-10-21 09:39:42,537 WARNING S&R search 'cocoa powder' page 1: 29 product links but no prices read
+2026-10-21 09:39:42,537 INFO S&R search 'cocoa powder': 0 results, 0 not seen in categories
+2026-10-21 09:39:44,142 WARNING S&R search 'peanut butter' page 1: 29 product links but no prices read
+2026-10-21 09:39:44,142 INFO S&R search 'peanut butter': 0 results, 0 not seen in categories
+2026-10-21 09:39:45,387 INFO S&R search 'hazelnut spread' page 1: 1 products
+2026-10-21 09:39:49,618 INFO S&R search 'hazelnut spread' page 2: 1 products
+2026-10-21 09:39:52,619 INFO S&R search 'hazelnut spread': 2 results, 0 not seen in categories
+2026-10-21 09:39:54,221 INFO S&R search 'jam' page 1: 1 products
+2026-10-21 09:39:58,533 INFO S&R search 'jam' page 2: 2 products
+2026-10-21 09:40:01,534 INFO S&R search 'jam': 3 results, 0 not seen in categories
+2026-10-21 09:40:03,230 WARNING S&R search 'strawberry jam' page 1: 35 product links but no prices read
+2026-10-21 09:40:03,230 INFO S&R search 'strawberry jam': 0 results, 0 not seen in categories
+2026-10-21 09:40:05,109 WARNING S&R search 'rice 25kg' page 1: 26 product links but no prices read
+2026-10-21 09:40:05,109 INFO S&R search 'rice 25kg': 0 results, 0 not seen in categories
+2026-10-21 09:40:06,739 WARNING S&R search 'jasmine rice' page 1: 28 product links but no prices read
+2026-10-21 09:40:06,740 INFO S&R search 'jasmine rice': 0 results, 0 not seen in categories
+2026-10-21 09:40:08,001 WARNING S&R search 'dinorado' page 1: 5 product links but no prices read
+2026-10-21 09:40:08,001 INFO S&R search 'dinorado': 0 results, 0 not seen in categories
+2026-10-21 09:40:09,247 WARNING S&R search 'sinandomeng' page 1: 7 product links but no prices read
+2026-10-21 09:40:09,247 INFO S&R search 'sinandomeng': 0 results, 0 not seen in categories
+2026-10-21 09:40:11,081 WARNING S&R search 'coffee beans' page 1: 43 product links but no prices read
+2026-10-21 09:40:11,081 INFO S&R search 'coffee beans': 0 results, 0 not seen in categories
+2026-10-21 09:40:12,464 INFO S&R search 'ground coffee' page 1: 2 products
+2026-10-21 09:40:16,768 INFO S&R search 'ground coffee' page 2: 1 products
+2026-10-21 09:40:19,768 INFO S&R search 'ground coffee': 3 results, 0 not seen in categories
+2026-10-21 09:40:21,402 WARNING S&R search 'espresso' page 1: 27 product links but no prices read
+2026-10-21 09:40:21,402 INFO S&R search 'espresso': 0 results, 0 not seen in categories
+2026-10-21 09:40:23,361 WARNING S&R search 'chocolate syrup' page 1: 37 product links but no prices read
+2026-10-21 09:40:23,362 INFO S&R search 'chocolate syrup': 0 results, 0 not seen in categories
+2026-10-21 09:40:25,537 WARNING S&R search 'chocolate sauce' page 1: 43 product links but no prices read
+2026-10-21 09:40:25,538 INFO S&R search 'chocolate sauce': 0 results, 0 not seen in categories
+2026-10-21 09:40:27,264 WARNING S&R search 'caramel syrup' page 1: 29 product links but no prices read
+2026-10-21 09:40:27,265 INFO S&R search 'caramel syrup': 0 results, 0 not seen in categories
+2026-10-21 09:40:28,731 INFO S&R search 'caramel sauce' page 1: 1 products
+2026-10-21 09:40:33,439 WARNING S&R search 'caramel sauce' page 2: 34 product links but no prices read
+2026-10-21 09:40:33,440 INFO S&R search 'caramel sauce': 1 results, 0 not seen in categories
+2026-10-21 09:40:34,681 INFO S&R search 'hazelnut syrup' page 1: 1 products
+2026-10-21 09:40:39,230 WARNING S&R search 'hazelnut syrup' page 2: 27 product links but no prices read
+2026-10-21 09:40:39,230 INFO S&R search 'hazelnut syrup': 1 results, 0 not seen in categories
+2026-10-21 09:40:40,989 WARNING S&R search 'vanilla syrup' page 1: 31 product links but no prices read
+2026-10-21 09:40:40,990 INFO S&R search 'vanilla syrup': 0 results, 0 not seen in categories
+2026-10-21 09:40:43,151 WARNING S&R search 'white chocolate sauce' page 1: 59 product links but no prices read
+2026-10-21 09:40:43,152 INFO S&R search 'white chocolate sauce': 0 results, 0 not seen in categories
+2026-10-21 09:40:44,729 WARNING S&R search 'frappe powder' page 1: 26 product links but no prices read
+2026-10-21 09:40:44,730 INFO S&R search 'frappe powder': 0 results, 0 not seen in categories
+2026-10-21 09:40:46,558 WARNING S&R search 'black tea' page 1: 61 product links but no prices read
+2026-10-21 09:40:46,559 INFO S&R search 'black tea': 0 results, 0 not seen in categories
+2026-10-21 09:40:48,430 WARNING S&R search 'green tea' page 1: 61 product links but no prices read
+2026-10-21 09:40:48,431 INFO S&R search 'green tea': 0 results, 0 not seen in categories
+2026-10-21 09:40:50,151 WARNING S&R search 'assam tea' page 1: 44 product links but no prices read
+2026-10-21 09:40:50,151 INFO S&R search 'assam tea': 0 results, 0 not seen in categories
+2026-10-21 09:40:51,798 WARNING S&R search 'matcha powder' page 1: 26 product links but no prices read
+2026-10-21 09:40:51,798 INFO S&R search 'matcha powder': 0 results, 0 not seen in categories
+2026-10-21 09:40:53,751 WARNING S&R search 'milk tea powder' page 1: 56 product links but no prices read
+2026-10-21 09:40:53,752 INFO S&R search 'milk tea powder': 0 results, 0 not seen in categories
+2026-10-21 09:40:55,483 WARNING S&R search 'coffee jelly' page 1: 43 product links but no prices read
+2026-10-21 09:40:55,483 INFO S&R search 'coffee jelly': 0 results, 0 not seen in categories
+2026-10-21 09:40:57,982 WARNING S&R search 'nata de coco' page 1: 103 product links but no prices read
+2026-10-21 09:40:57,982 INFO S&R search 'nata de coco': 0 results, 0 not seen in categories
+2026-10-21 09:40:58,884 INFO S&R search 'tapioca pearls' page 1: 0 products
+2026-10-21 09:41:01,884 INFO S&R search 'tapioca pearls': 0 results, 0 not seen in categories
+2026-10-21 09:41:03,691 WARNING S&R search 'orange juice' page 1: 36 product links but no prices read
+2026-10-21 09:41:03,691 INFO S&R search 'orange juice': 0 results, 0 not seen in categories
+2026-10-21 09:41:05,457 WARNING S&R search 'pineapple juice' page 1: 32 product links but no prices read
+2026-10-21 09:41:05,458 INFO S&R search 'pineapple juice': 0 results, 0 not seen in categories
+2026-10-21 09:41:07,469 WARNING S&R search 'mango juice' page 1: 33 product links but no prices read
+2026-10-21 09:41:07,470 INFO S&R search 'mango juice': 0 results, 0 not seen in categories
+2026-10-21 09:41:09,111 WARNING S&R search 'juice 1l' page 1: 29 product links but no prices read
+2026-10-21 09:41:09,111 INFO S&R search 'juice 1l': 0 results, 0 not seen in categories
+2026-10-21 09:41:10,680 WARNING S&R search 'mccormick' page 1: 18 product links but no prices read
+2026-10-21 09:41:10,680 INFO S&R search 'mccormick': 0 results, 0 not seen in categories
+2026-10-21 09:41:11,866 INFO S&R search 'ground onion' page 1: 2 products
+2026-10-21 09:41:16,066 INFO S&R search 'ground onion' page 2: 1 products
+2026-10-21 09:41:19,066 INFO S&R search 'ground onion': 3 results, 0 not seen in categories
+2026-10-21 09:41:20,689 WARNING S&R search 'onion powder' page 1: 37 product links but no prices read
+2026-10-21 09:41:20,689 INFO S&R search 'onion powder': 0 results, 0 not seen in categories
+2026-10-21 09:41:21,849 INFO S&R search 'ground garlic' page 1: 2 products
+2026-10-21 09:41:25,987 INFO S&R search 'ground garlic' page 2: 1 products
+2026-10-21 09:41:28,987 INFO S&R search 'ground garlic': 3 results, 0 not seen in categories
+2026-10-21 09:41:30,659 WARNING S&R search 'garlic powder' page 1: 34 product links but no prices read
+2026-10-21 09:41:30,659 INFO S&R search 'garlic powder': 0 results, 0 not seen in categories
+2026-10-21 09:41:32,027 INFO S&R search 'black pepper' page 1: 1 products
+2026-10-21 09:41:36,245 INFO S&R search 'black pepper' page 2: 1 products
+2026-10-21 09:41:39,246 INFO S&R search 'black pepper': 2 results, 0 not seen in categories
+2026-10-21 09:41:40,434 WARNING S&R search 'paprika' page 1: 4 product links but no prices read
+2026-10-21 09:41:40,434 INFO S&R search 'paprika': 0 results, 0 not seen in categories
+2026-10-21 09:41:41,631 INFO S&R search 'cinnamon' page 1: 1 products
+2026-10-21 09:41:45,669 INFO S&R search 'cinnamon' page 2: 1 products
+2026-10-21 09:41:48,669 INFO S&R search 'cinnamon': 2 results, 0 not seen in categories
+2026-10-21 09:41:49,890 WARNING S&R search 'oregano' page 1: 4 product links but no prices read
+2026-10-21 09:41:49,891 INFO S&R search 'oregano': 0 results, 0 not seen in categories
+2026-10-21 09:41:51,500 WARNING S&R search 'chili powder' page 1: 31 product links but no prices read
+2026-10-21 09:41:51,500 INFO S&R search 'chili powder': 0 results, 0 not seen in categories
+2026-10-21 09:41:52,949 WARNING S&R search 'turmeric' page 1: 14 product links but no prices read
+2026-10-21 09:41:52,950 INFO S&R search 'turmeric': 0 results, 0 not seen in categories
+2026-10-21 09:41:54,694 WARNING S&R search 'basil' page 1: 11 product links but no prices read
+2026-10-21 09:41:54,694 INFO S&R search 'basil': 0 results, 0 not seen in categories
+2026-10-21 09:41:56,230 WARNING S&R search 'parsley' page 1: 10 product links but no prices read
+2026-10-21 09:41:56,230 INFO S&R search 'parsley': 0 results, 0 not seen in categories
+2026-10-21 09:41:58,472 WARNING S&R search 'salt' page 1: 49 product links but no prices read
+2026-10-21 09:41:58,472 INFO S&R search 'salt': 0 results, 0 not seen in categories
+2026-10-21 09:42:00,142 WARNING S&R search 'iodized salt' page 1: 27 product links but no prices read
+2026-10-21 09:42:00,143 INFO S&R search 'iodized salt': 0 results, 0 not seen in categories
+2026-10-21 09:42:02,595 WARNING S&R search 'sea salt' page 1: 56 product links but no prices read
+2026-10-21 09:42:02,595 INFO S&R search 'sea salt': 0 results, 0 not seen in categories
+2026-10-21 09:42:04,524 WARNING S&R search 'mayonnaise' page 1: 24 product links but no prices read
+2026-10-21 09:42:04,525 INFO S&R search 'mayonnaise': 0 results, 0 not seen in categories
+2026-10-21 09:42:05,780 INFO S&R search 'dressing' page 1: 1 products
+2026-10-21 09:42:10,060 INFO S&R search 'dressing' page 2: 2 products
+2026-10-21 09:42:13,061 INFO S&R search 'dressing': 3 results, 0 not seen in categories
+2026-10-21 09:42:14,743 WARNING S&R search 'del monte dip' page 1: 31 product links but no prices read
+2026-10-21 09:42:14,743 INFO S&R search 'del monte dip': 0 results, 0 not seen in categories
+2026-10-21 09:42:16,324 WARNING S&R search 'mccormick dip' page 1: 21 product links but no prices read
+2026-10-21 09:42:16,325 INFO S&R search 'mccormick dip': 0 results, 0 not seen in categories
+2026-10-21 09:42:18,134 WARNING S&R search 'salsa' page 1: 25 product links but no prices read
+2026-10-21 09:42:18,134 INFO S&R search 'salsa': 0 results, 0 not seen in categories
+2026-10-21 09:42:19,379 INFO S&R search 'soy sauce' page 1: 1 products
+2026-10-21 09:42:24,013 WARNING S&R search 'soy sauce' page 2: 35 product links but no prices read
+2026-10-21 09:42:24,013 INFO S&R search 'soy sauce': 1 results, 0 not seen in categories
+2026-10-21 09:42:25,320 INFO S&R search 'oyster sauce' page 1: 1 products
+2026-10-21 09:42:29,873 WARNING S&R search 'oyster sauce' page 2: 29 product links but no prices read
+2026-10-21 09:42:29,874 INFO S&R search 'oyster sauce': 1 results, 0 not seen in categories
+2026-10-21 09:42:31,021 INFO S&R search 'vinegar' page 1: 1 products
+2026-10-21 09:42:35,252 WARNING S&R search 'vinegar' page 2: 15 product links but no prices read
+2026-10-21 09:42:35,253 INFO S&R search 'vinegar': 1 results, 0 not seen in categories
+2026-10-21 09:42:36,574 WARNING S&R search 'ketchup' page 1: 8 product links but no prices read
+2026-10-21 09:42:36,574 INFO S&R search 'ketchup': 0 results, 0 not seen in categories
+2026-10-21 09:42:37,976 INFO S&R search 'tomato sauce' page 1: 1 products
+2026-10-21 09:42:42,683 WARNING S&R search 'tomato sauce' page 2: 36 product links but no prices read
+2026-10-21 09:42:42,683 INFO S&R search 'tomato sauce': 1 results, 0 not seen in categories
+2026-10-21 09:42:44,243 INFO S&R search 'pasta sauce' page 1: 1 products
+2026-10-21 09:42:49,346 WARNING S&R search 'pasta sauce' page 2: 36 product links but no prices read
+2026-10-21 09:42:49,346 INFO S&R search 'pasta sauce': 1 results, 0 not seen in categories
+2026-10-21 09:42:50,801 INFO S&R search 'hot sauce' page 1: 1 products
+2026-10-21 09:42:55,558 WARNING S&R search 'hot sauce' page 2: 41 product links but no prices read
+2026-10-21 09:42:55,559 INFO S&R search 'hot sauce': 1 results, 0 not seen in categories
+2026-10-21 09:42:56,958 INFO S&R search 'sweet chili sauce' page 1: 1 products
+2026-10-21 09:43:02,381 WARNING S&R search 'sweet chili sauce' page 2: 50 product links but no prices read
+2026-10-21 09:43:02,382 INFO S&R search 'sweet chili sauce': 1 results, 0 not seen in categories
+2026-10-21 09:43:04,230 WARNING S&R search 'liquid seasoning' page 1: 26 product links but no prices read
+2026-10-21 09:43:04,231 INFO S&R search 'liquid seasoning': 0 results, 0 not seen in categories
+2026-10-21 09:43:05,606 INFO S&R search 'teriyaki sauce' page 1: 1 products
+2026-10-21 09:43:10,144 WARNING S&R search 'teriyaki sauce' page 2: 30 product links but no prices read
+2026-10-21 09:43:10,144 INFO S&R search 'teriyaki sauce': 1 results, 0 not seen in categories
+2026-10-21 09:43:11,787 WARNING S&R search 'black olives' page 1: 38 product links but no prices read
+2026-10-21 09:43:11,788 INFO S&R search 'black olives': 0 results, 0 not seen in categories
+2026-10-21 09:43:13,084 WARNING S&R search 'capers' page 1: 7 product links but no prices read
+2026-10-21 09:43:13,084 INFO S&R search 'capers': 0 results, 0 not seen in categories
+2026-10-21 09:43:14,713 WARNING S&R search 'spanish sardines' page 1: 21 product links but no prices read
+2026-10-21 09:43:14,714 INFO S&R search 'spanish sardines': 0 results, 0 not seen in categories
+2026-10-21 09:43:16,074 WARNING S&R search 'crushed tomatoes' page 1: 13 product links but no prices read
+2026-10-21 09:43:16,074 INFO S&R search 'crushed tomatoes': 0 results, 0 not seen in categories
+2026-10-21 09:43:17,720 WARNING S&R search 'tomato paste' page 1: 27 product links but no prices read
+2026-10-21 09:43:17,720 INFO S&R search 'tomato paste': 0 results, 0 not seen in categories
+2026-10-21 09:43:18,647 INFO S&R search 'baguette' page 1: 1 products
+2026-10-21 09:43:22,728 WARNING S&R search 'baguette' page 2: 3 product links but no prices read
+2026-10-21 09:43:22,728 INFO S&R search 'baguette': 1 results, 0 not seen in categories
+2026-10-21 09:43:23,957 INFO S&R search 'sliced bread' page 1: 1 products
+2026-10-21 09:43:28,215 INFO S&R search 'sliced bread' page 2: 2 products
+2026-10-21 09:43:31,216 INFO S&R search 'sliced bread': 3 results, 0 not seen in categories
+2026-10-21 09:43:32,247 INFO S&R search 'burger buns' page 1: 1 products
+2026-10-21 09:43:36,320 WARNING S&R search 'burger buns' page 2: 5 product links but no prices read
+2026-10-21 09:43:36,321 INFO S&R search 'burger buns': 1 results, 0 not seen in categories
+2026-10-21 09:43:37,684 INFO S&R search 'loaf bread' page 1: 1 products
+2026-10-21 09:43:42,039 INFO S&R search 'loaf bread' page 2: 1 products
+2026-10-21 09:43:45,040 INFO S&R search 'loaf bread': 2 results, 0 not seen in categories
+2026-10-21 09:43:46,809 WARNING S&R search 'bacon' page 1: 25 product links but no prices read
+2026-10-21 09:43:46,810 INFO S&R search 'bacon': 0 results, 0 not seen in categories
+2026-10-21 09:43:48,681 WARNING S&R search 'smoked bacon' page 1: 26 product links but no prices read
+2026-10-21 09:43:48,681 INFO S&R search 'smoked bacon': 0 results, 0 not seen in categories
+2026-10-21 09:43:50,287 WARNING S&R search 'bacon 1kg' page 1: 19 product links but no prices read
+2026-10-21 09:43:50,288 INFO S&R search 'bacon 1kg': 0 results, 0 not seen in categories
+2026-10-21 09:43:51,251 INFO S&R search 'tocino' page 1: 1 products
+2026-10-21 09:43:55,329 WARNING S&R search 'tocino' page 2: 3 product links but no prices read
+2026-10-21 09:43:55,330 INFO S&R search 'tocino': 1 results, 0 not seen in categories
+2026-10-21 09:43:56,621 WARNING S&R search 'longganisa' page 1: 7 product links but no prices read
+2026-10-21 09:43:56,621 INFO S&R search 'longganisa': 0 results, 0 not seen in categories
+2026-10-21 09:43:58,564 WARNING S&R search 'ham' page 1: 64 product links but no prices read
+2026-10-21 09:43:58,565 INFO S&R search 'ham': 0 results, 0 not seen in categories
+2026-10-21 09:44:00,345 WARNING S&R search 'beef tapa' page 1: 32 product links but no prices read
+2026-10-21 09:44:00,345 INFO S&R search 'beef tapa': 0 results, 0 not seen in categories
+2026-10-21 09:44:02,098 WARNING S&R search 'corned beef' page 1: 33 product links but no prices read
+2026-10-21 09:44:02,098 INFO S&R search 'corned beef': 0 results, 0 not seen in categories
+2026-10-21 09:44:04,300 WARNING S&R search 'luncheon meat' page 1: 32 product links but no prices read
+2026-10-21 09:44:04,301 INFO S&R search 'luncheon meat': 0 results, 0 not seen in categories
+2026-10-21 09:44:05,920 WARNING S&R search 'french fries' page 1: 23 product links but no prices read
+2026-10-21 09:44:05,921 INFO S&R search 'french fries': 0 results, 0 not seen in categories
+2026-10-21 09:44:08,150 WARNING S&R search 'frozen fries' page 1: 33 product links but no prices read
+2026-10-21 09:44:08,150 INFO S&R search 'frozen fries': 0 results, 0 not seen in categories
+2026-10-21 09:44:10,453 WARNING S&R search 'mixed vegetables' page 1: 37 product links but no prices read
+2026-10-21 09:44:10,453 INFO S&R search 'mixed vegetables': 0 results, 0 not seen in categories
+2026-10-21 09:44:12,409 WARNING S&R search 'cream dory' page 1: 51 product links but no prices read
+2026-10-21 09:44:12,410 INFO S&R search 'cream dory': 0 results, 0 not seen in categories
+2026-10-21 09:44:14,097 WARNING S&R search 'fish fillet' page 1: 30 product links but no prices read
+2026-10-21 09:44:14,098 INFO S&R search 'fish fillet': 0 results, 0 not seen in categories
+2026-10-21 09:44:15,877 WARNING S&R search 'chicken breast' page 1: 28 product links but no prices read
+2026-10-21 09:44:15,878 INFO S&R search 'chicken breast': 0 results, 0 not seen in categories
+2026-10-21 09:44:17,699 WARNING S&R search 'chicken thigh' page 1: 28 product links but no prices read
+2026-10-21 09:44:17,700 INFO S&R search 'chicken thigh': 0 results, 0 not seen in categories
+2026-10-21 09:44:19,468 WARNING S&R search 'whole chicken' page 1: 38 product links but no prices read
+2026-10-21 09:44:19,468 INFO S&R search 'whole chicken': 0 results, 0 not seen in categories
+2026-10-21 09:44:21,205 WARNING S&R search 'chicken wings' page 1: 28 product links but no prices read
+2026-10-21 09:44:21,206 INFO S&R search 'chicken wings': 0 results, 0 not seen in categories
+2026-10-21 09:44:22,533 INFO S&R search 'pork belly' page 1: 3 products
+2026-10-21 09:44:26,890 INFO S&R search 'pork belly' page 2: 3 products
+2026-10-21 09:44:29,890 INFO S&R search 'pork belly': 6 results, 0 not seen in categories
+2026-10-21 09:44:31,255 INFO S&R search 'ground pork' page 1: 3 products
+2026-10-21 09:44:35,534 INFO S&R search 'ground pork' page 2: 3 products
+2026-10-21 09:44:38,534 INFO S&R search 'ground pork': 6 results, 0 not seen in categories
+2026-10-21 09:44:39,783 INFO S&R search 'pork chop' page 1: 3 products
+2026-10-21 09:44:44,180 INFO S&R search 'pork chop' page 2: 3 products
+2026-10-21 09:44:47,181 INFO S&R search 'pork chop': 6 results, 0 not seen in categories
+2026-10-21 09:44:48,446 INFO S&R search 'pork shoulder' page 1: 3 products
+2026-10-21 09:44:52,780 INFO S&R search 'pork shoulder' page 2: 3 products
+2026-10-21 09:44:55,781 INFO S&R search 'pork shoulder': 6 results, 0 not seen in categories
+2026-10-21 09:44:57,602 WARNING S&R search 'ground beef' page 1: 35 product links but no prices read
+2026-10-21 09:44:57,603 INFO S&R search 'ground beef': 0 results, 0 not seen in categories
+2026-10-21 09:44:59,349 WARNING S&R search 'beef brisket' page 1: 30 product links but no prices read
+2026-10-21 09:44:59,349 INFO S&R search 'beef brisket': 0 results, 0 not seen in categories
+2026-10-21 09:45:01,394 WARNING S&R search 'beef cubes' page 1: 32 product links but no prices read
+2026-10-21 09:45:01,395 INFO S&R search 'beef cubes': 0 results, 0 not seen in categories
+2026-10-21 09:45:02,807 WARNING S&R search 'sirloin' page 1: 9 product links but no prices read
+2026-10-21 09:45:02,808 INFO S&R search 'sirloin': 0 results, 0 not seen in categories
+2026-10-21 09:45:04,289 INFO S&R search 'dishwashing liquid' page 1: 1 products
+2026-10-21 09:45:08,474 INFO S&R search 'dishwashing liquid' page 2: 2 products
+2026-10-21 09:45:11,475 INFO S&R search 'dishwashing liquid': 3 results, 0 not seen in categories
+2026-10-21 09:45:12,986 WARNING S&R search 'bleach' page 1: 13 product links but no prices read
+2026-10-21 09:45:12,986 INFO S&R search 'bleach': 0 results, 0 not seen in categories
+2026-10-21 09:45:14,258 WARNING S&R search 'zonrox' page 1: 4 product links but no prices read
+2026-10-21 09:45:14,259 INFO S&R search 'zonrox': 0 results, 0 not seen in categories
+2026-10-21 09:45:16,370 WARNING S&R search 'disinfectant' page 1: 23 product links but no prices read
+2026-10-21 09:45:16,370 INFO S&R search 'disinfectant': 0 results, 0 not seen in categories
+2026-10-21 09:45:17,650 WARNING S&R search 'sanitizer' page 1: 3 product links but no prices read
+2026-10-21 09:45:17,650 INFO S&R search 'sanitizer': 0 results, 0 not seen in categories
+2026-10-21 09:45:19,503 WARNING S&R search 'ethyl alcohol' page 1: 22 product links but no prices read
+2026-10-21 09:45:19,503 INFO S&R search 'ethyl alcohol': 0 results, 0 not seen in categories
+2026-10-21 09:45:21,410 WARNING S&R search 'hand soap' page 1: 37 product links but no prices read
+2026-10-21 09:45:21,410 INFO S&R search 'hand soap': 0 results, 0 not seen in categories
+2026-10-21 09:45:23,144 WARNING S&R search 'detergent powder' page 1: 30 product links but no prices read
+2026-10-21 09:45:23,145 INFO S&R search 'detergent powder': 0 results, 0 not seen in categories
+2026-10-21 09:45:24,920 WARNING S&R search 'laundry detergent' page 1: 24 product links but no prices read
+2026-10-21 09:45:24,920 INFO S&R search 'laundry detergent': 0 results, 0 not seen in categories
+2026-10-21 09:45:26,845 WARNING S&R search 'fabric conditioner' page 1: 36 product links but no prices read
+2026-10-21 09:45:26,845 INFO S&R search 'fabric conditioner': 0 results, 0 not seen in categories
+2026-10-21 09:45:28,227 INFO S&R search 'floor cleaner' page 1: 1 products
+2026-10-21 09:45:32,607 INFO S&R search 'floor cleaner' page 2: 1 products
+2026-10-21 09:45:35,608 INFO S&R search 'floor cleaner': 2 results, 0 not seen in categories
+2026-10-21 09:45:37,186 INFO S&R search 'glass cleaner' page 1: 2 products
+2026-10-21 09:45:41,975 INFO S&R search 'glass cleaner' page 2: 3 products
+2026-10-21 09:45:44,975 INFO S&R search 'glass cleaner': 5 results, 0 not seen in categories
+2026-10-21 09:45:47,004 WARNING S&R search 'toilet bowl cleaner' page 1: 35 product links but no prices read
+2026-10-21 09:45:47,005 INFO S&R search 'toilet bowl cleaner': 0 results, 0 not seen in categories
+2026-10-21 09:45:49,331 WARNING S&R search 'all purpose cleaner' page 1: 51 product links but no prices read
+2026-10-21 09:45:49,331 INFO S&R search 'all purpose cleaner': 0 results, 0 not seen in categories
+2026-10-21 09:45:50,563 WARNING S&R search 'degreaser' page 1: 3 product links but no prices read
+2026-10-21 09:45:50,563 INFO S&R search 'degreaser': 0 results, 0 not seen in categories
+2026-10-21 09:45:51,833 INFO S&R search 'disinfecting wipes' page 1: 2 products
+2026-10-21 09:45:56,675 WARNING S&R search 'disinfecting wipes' page 2: 24 product links but no prices read
+2026-10-21 09:45:56,675 INFO S&R search 'disinfecting wipes': 2 results, 1 not seen in categories
+2026-10-21 09:45:58,867 WARNING S&R search 'air freshener' page 1: 57 product links but no prices read
+2026-10-21 09:45:58,867 INFO S&R search 'air freshener': 0 results, 0 not seen in categories
+2026-10-21 09:46:00,937 WARNING S&R search 'diffuser oil' page 1: 32 product links but no prices read
+2026-10-21 09:46:00,937 INFO S&R search 'diffuser oil': 0 results, 0 not seen in categories
+2026-10-21 09:46:02,917 WARNING S&R search 'garbage bag' page 1: 29 product links but no prices read
+2026-10-21 09:46:02,917 INFO S&R search 'garbage bag': 0 results, 0 not seen in categories
+2026-10-21 09:46:04,763 WARNING S&R search 'paper towel' page 1: 31 product links but no prices read
+2026-10-21 09:46:04,763 INFO S&R search 'paper towel': 0 results, 0 not seen in categories
+2026-10-21 09:46:07,078 WARNING S&R search 'table napkin' page 1: 63 product links but no prices read
+2026-10-21 09:46:07,078 INFO S&R search 'table napkin': 0 results, 0 not seen in categories
+2026-10-21 09:46:08,846 WARNING S&R search 'tissue' page 1: 24 product links but no prices read
+2026-10-21 09:46:08,846 INFO S&R search 'tissue': 0 results, 0 not seen in categories
+2026-10-21 09:46:10,791 WARNING S&R search 'paper cup' page 1: 37 product links but no prices read
+2026-10-21 09:46:10,791 INFO S&R search 'paper cup': 0 results, 0 not seen in categories
+2026-10-21 09:46:12,833 WARNING S&R search 'plastic cup' page 1: 33 product links but no prices read
+2026-10-21 09:46:12,833 INFO S&R search 'plastic cup': 0 results, 0 not seen in categories
+2026-10-21 09:46:14,062 INFO S&R search 'drinking straw' page 1: 1 products
+2026-10-21 09:46:18,247 INFO S&R search 'drinking straw' page 2: 1 products
+2026-10-21 09:46:21,247 INFO S&R search 'drinking straw': 2 results, 0 not seen in categories
+2026-10-21 09:46:23,025 WARNING S&R search 'disposable gloves' page 1: 24 product links but no prices read
+2026-10-21 09:46:23,026 INFO S&R search 'disposable gloves': 0 results, 0 not seen in categories
+2026-10-21 09:46:24,562 WARNING S&R search 'cling wrap' page 1: 22 product links but no prices read
+2026-10-21 09:46:24,562 INFO S&R search 'cling wrap': 0 results, 0 not seen in categories
+2026-10-21 09:46:26,127 WARNING S&R search 'aluminum foil' page 1: 12 product links but no prices read
+2026-10-21 09:46:26,128 INFO S&R search 'aluminum foil': 0 results, 0 not seen in categories
+2026-10-21 09:46:27,645 WARNING S&R search 'freezer bags' page 1: 18 product links but no prices read
+2026-10-21 09:46:27,645 INFO S&R search 'freezer bags': 0 results, 0 not seen in categories
+2026-10-21 09:46:28,557 INFO S&R search 'stretch film' page 1: 1 products
+2026-10-21 09:46:32,669 WARNING S&R search 'stretch film' page 2: 4 product links but no prices read
+2026-10-21 09:46:32,669 INFO S&R search 'stretch film': 1 results, 0 not seen in categories
+2026-10-21 09:46:34,737 WARNING S&R search 'food container' page 1: 57 product links but no prices read
+2026-10-21 09:46:34,738 INFO S&R search 'food container': 0 results, 0 not seen in categories
+2026-10-21 09:46:35,917 WARNING S&R product page: no price read for Member's Value Soy Sauce Naturally Fermented 1L
+2026-10-21 09:46:39,695 WARNING S&R product page: no price read for Member's Value Soy Sauce Naturally Fermented 3.78L
+2026-10-21 09:46:43,564 WARNING S&R product page: no price read for Marisco Muscovado Sugar 1kg
+2026-10-21 09:46:47,358 WARNING S&R product page: no price read for S&R Honeydew Melon approx. 2kg
+2026-10-21 09:46:51,197 WARNING S&R product page: no price read for S&R Honey Smoked Bacon 1kg
+2026-10-21 09:46:55,007 WARNING S&R product page: no price read for Kirkland Signature Organic Raw Honey Bear 680g
+2026-10-21 09:46:58,793 WARNING S&R product page: no price read for Kirkland Signature Wildflower Honey 2.27kg
+2026-10-21 09:47:02,658 WARNING S&R product page: no price read for Cocotop Pure Sunflower Oil 5L
+2026-10-21 09:47:06,423 WARNING S&R product page: no price read for Cocotop RBD Coconut Oil 3L
+2026-10-21 09:47:10,208 WARNING S&R product page: no price read for Wesson Canola Oil 4.73L
+2026-10-21 09:47:14,302 WARNING S&R product page: no price read for Cocotop Pure Corn Oil 3L
+2026-10-21 09:47:18,755 WARNING S&R product page: no price read for Naturel Premium Canola and Sunflower Oil 3.3L
+2026-10-21 09:47:22,602 WARNING S&R product page: no price read for Member's Value Laundry Detergent 7kg
+2026-10-21 09:47:26,387 WARNING S&R product page: no price read for Member's Value Powder Detergent Bucket 10kg
+2026-10-21 09:47:30,193 WARNING S&R product page: no price read for Lays Potato Chips Cheddar and Sour Cream 184.2g
+2026-10-21 09:47:34,305 WARNING S&R product page: no price read for Surf Professional Laundry Powder Rose Fresh 10kg
+2026-10-21 09:47:38,769 WARNING S&R product page: no price read for Ariel Sunrise Fresh Laundry Detergent 3.35kg
+2026-10-21 09:47:42,583 WARNING S&R product page: no price read for Tide Perfect Clean With Downy Garden Bloom Laundry Powder Detergent 3500g
+2026-10-21 09:47:46,383 WARNING S&R product page: no price read for Cycles Mild Powder Detergent for Babies 1kg
+2026-10-21 09:47:50,165 WARNING S&R product page: no price read for Bio-Zip Detergent Powder Aloe Vera 6kg
+2026-10-21 09:47:53,947 WARNING S&R product page: no price read for Tide Perfect Clean Original Fresh Laundry Powder Detergent 3.72kg
+2026-10-21 09:47:57,752 WARNING S&R product page: no price read for Bio-Zip Detergent Powder Color 6kg
+2026-10-21 09:48:01,586 WARNING S&R product page: no price read for Member's Value 100% Colombian Regular Instant Coffee 200g
+2026-10-21 09:48:05,499 WARNING S&R product page: no price read for Member's Value Colombian Decaf Instant Coffee 200g
+2026-10-21 09:48:09,407 WARNING S&R product page: no price read for Jose's Vanilla Nut Whole Bean Coffee Medium Roast 1.13kg
+2026-10-21 09:48:13,257 WARNING S&R product page: no price read for Lavazza Expert Gusto Forte Roasted Coffee Beans 1kg
+2026-10-21 09:48:17,096 WARNING S&R product page: no price read for Jose's Colombia Supremo Whole Bean Coffee Medium Roast 1.13kg
+2026-10-21 09:48:20,894 WARNING S&R product page: no price read for Must Roasted Coffee Beans Arabica 1KG
+2026-10-21 09:48:24,719 WARNING S&R product page: no price read for Jose's Gourmet Coffee Whole Bean 100% Colombia Supremo Medium Roast 1.36kg
+2026-10-21 09:48:28,861 WARNING S&R product page: no price read for Must Nespresso Pods Decaffeinated Coffee 10s
+2026-10-21 09:48:32,641 WARNING S&R product page: no price read for McCoy Teas Seasonal Tea Celebrations 36 Tea Bags
+2026-10-21 09:48:36,468 WARNING S&R product page: no price read for McCoy Teas Green Tea 100pcs
+2026-10-21 09:48:40,223 WARNING S&R product page: no price read for Kirkland Signature Ito En Green Tea 100 tea bags
+2026-10-21 09:48:43,991 WARNING S&R product page: no price read for Ito En Matcha Green Tea Traditional 20 bags
+2026-10-21 09:48:47,743 WARNING S&R product page: no price read for Meltique Beef Ribeye Steak 1kg
+2026-10-21 09:48:51,625 WARNING S&R product page: no price read for McCoy Teas Tropical Fruit Black Tea 100g
+2026-10-21 09:48:55,381 WARNING S&R product page: no price read for Caffe D'Vita Matcha Green Tea Drink Mix 907.2g
+2026-10-21 09:48:59,149 WARNING S&R product page: no price read for Member's Value Liquid Laundry Detergent Tropical Fresh 4L
+2026-10-21 09:49:02,961 WARNING S&R product page: no price read for Member's Value Tropical Fresh Liquid Laundry Detergent 2.5L
+2026-10-21 09:49:06,720 WARNING S&R product page: no price read for Member's Value Fabric Conditioner with Fresh Floral Scent 4L
+2026-10-21 09:49:10,537 WARNING S&R product page: no price read for S&R Freshly Squeezed Orange Juice 500mL
+2026-10-21 09:49:14,416 WARNING S&R product page: no price read for S&R Fresh Squeezed Orange Juice 1L
+2026-10-21 09:49:18,946 WARNING S&R product page: no price read for Ocean Spray Light 50 Cranberry Juice Drink 1.89L
+2026-10-21 09:49:22,718 WARNING S&R product page: no price read for Lotte Mandarin Orange Juice Drink 1.5L
+2026-10-21 09:49:26,469 WARNING S&R product page: no price read for Del Monte Mango Juice Drink 1L x 3 packs
+2026-10-21 09:49:30,325 WARNING S&R product page: no price read for Minute Maid Apple Juice Drink 10pcs
+2026-10-21 09:49:34,197 WARNING S&R product page: no price read for Paldo Pororo Apple Juice Drink 235mL
+2026-10-21 09:49:38,122 WARNING S&R product page: no price read for Mott's Apple Juice 2.54L
+2026-10-21 09:49:41,891 WARNING S&R product page: no price read for S&R Ginger Turmeric approx 850g
+2026-10-21 09:49:45,696 WARNING S&R product page: no price read for S&R Ginger Turmeric approx. 850g
+2026-10-21 09:49:49,476 WARNING S&R product page: no price read for Figaro Sliced Black Olives 920g
+2026-10-21 09:49:53,231 WARNING S&R product page: no price read for Figaro Pitted Green Olives 920g
+2026-10-21 09:49:57,049 WARNING S&R product page: no price read for Torrent Spanish Black Olives Pitted 450g
+2026-10-21 09:50:00,847 WARNING S&R product page: no price read for Torrent Sliced Black Olives 450g
+2026-10-21 09:50:04,628 WARNING S&R product page: no price read for Figaro Capers Capottes 285g
+2026-10-21 09:50:08,456 WARNING S&R product page: no price read for I Macoritti Mini Grissini Mini Breadsticks Capers & Rosemary 250g
+2026-10-21 09:50:12,256 WARNING S&R product page: no price read for Spam Luncheon Meat 25% Less Sodium 340g
+2026-10-21 09:50:16,060 WARNING S&R product page: no price read for Spam Regular Luncheon Meat 340g
+2026-10-21 09:50:19,883 WARNING S&R product page: no price read for Spam Luncheon Meat Lite 340g
+2026-10-21 09:50:23,669 WARNING S&R product page: no price read for Prem Less Sodium Luncheon Meat 340g
+2026-10-21 09:50:27,454 WARNING S&R product page: no price read for Prem Lite Luncheon Meat 340g
+2026-10-21 09:50:31,269 WARNING S&R product page: no price read for Ranch House Premium Corned Beef Home Style 380g
+2026-10-21 09:50:35,075 WARNING S&R product page: no price read for Delimondo Ranch Style Corned Beef 380g
+2026-10-21 09:50:38,862 WARNING S&R product page: no price read for Zaragoza Spanish Style Sardines in Corn Oil 2 jars
+2026-10-21 09:50:42,707 WARNING S&R product page: no price read for Mi Cocina Spanish Style Sardines in Corn Oil Mild Spicy 2 jars
+2026-10-21 09:50:46,489 WARNING S&R product page: no price read for Delimondo Garlic and Chili Corned Beef 380g
+2026-10-21 09:50:50,287 WARNING S&R product page: no price read for Mega Sardines in Tomato Sauce with Chili 10 cans
+2026-10-21 09:50:54,084 WARNING S&R product page: no price read for Hunt's Tomato Paste 170g
+2026-10-21 09:50:57,932 WARNING S&R product page: no price read for S&R Bacon Ham approx. 650g
+2026-10-21 09:51:01,732 WARNING S&R product page: no price read for S&R Maple Cured Smoked Bacon 1kg
+2026-10-21 09:51:05,672 WARNING S&R product page: no price read for Purefoods Classic Honeycured Bacon 1kg
+2026-10-21 09:51:09,554 WARNING S&R product page: no price read for S&R American Smoked Bacon approx. 1.2kg
+2026-10-21 09:51:13,494 WARNING S&R product page: no price read for Hormel Black Label Bacon 450g
+2026-10-21 09:51:17,330 WARNING S&R product page: no price read for Virginia honey-Cured Bacon 1kg
+2026-10-21 09:51:21,136 WARNING S&R product page: no price read for Jennie-O Turkey Bacon 12oz
+2026-10-21 09:51:24,983 WARNING S&R product page: no price read for Spam with Real Hormel Bacon 340g
+2026-10-21 09:51:28,837 WARNING S&R product page: no price read for S&R Maple Cured Smoked Ham approx. 450g
+2026-10-21 09:51:32,666 WARNING S&R product page: no price read for S&R Double Smoked Ham approx. 1kg
+2026-10-21 09:51:36,566 WARNING S&R product page: no price read for Pampanga's Best The Original Tocino 1kg + 160g
+2026-10-21 09:51:40,339 WARNING S&R product page: no price read for Rosa Garlic Longganisang Hubad 1kg
+2026-10-21 09:51:44,117 WARNING S&R product page: no price read for Ranch House Premium Pork Boneless Ham Hind Leg 1kg
+2026-10-21 09:51:47,888 WARNING S&R product page: no price read for Ranch House Premium Smoked Ham 3kg
+2026-10-21 09:51:51,704 WARNING S&R product page: no price read for Purefoods Corned Beef 3-piece Pack
+2026-10-21 09:51:55,504 WARNING S&R product page: no price read for Prem Corned Beef 340g
+2026-10-21 09:51:59,300 WARNING S&R product page: no price read for Jamaican Cheezy Beef Pattie 6 Pieces
+2026-10-21 09:52:03,077 WARNING S&R product page: no price read for Palm Corned Beef with Juices 3 cans
+2026-10-21 09:52:06,864 WARNING S&R product page: no price read for Libby McNeil & Libby Cooked Corned Beef 340g
+2026-10-21 09:52:10,710 WARNING S&R product page: no price read for Ranch House Premium Beef Home Style Chili Garlic Corned Beef 380g
+2026-10-21 09:52:14,595 WARNING S&R product page: no price read for Prem Luncheon Meat Original 340g
+2026-10-21 09:52:18,533 WARNING S&R product page: no price read for Hyfun Crinkle Cut French Fries 2kg
+2026-10-21 09:52:22,497 WARNING S&R product page: no price read for McCain Battered Straight Cut Potato Fries 3/8 2.27kg
+2026-10-21 09:52:26,325 WARNING S&R product page: no price read for Zonrox Multi-Purpose Bleach 3785mL
+2026-10-21 09:52:30,142 WARNING S&R product page: no price read for Zonrox Color Safe Blossom Fresh Bleach 3.6L
+2026-10-21 09:52:34,008 WARNING S&R product page: no price read for Clorox Triple Action Liquid Bleach Original 4L
+2026-10-21 09:52:37,896 WARNING S&R product page: no price read for Lysol Crisp Linen Laundry Sanitizer 4.43L
+2026-10-21 09:52:41,906 WARNING S&R product page: no price read for Antabax Fresh Antibacterial Hand Soap 1gal
+2026-10-21 09:52:45,779 WARNING S&R product page: no price read for Softsoap Soothing Clean Aloe Vera Fresh Refill Hand Soap 1.47L
+2026-10-21 09:52:49,606 WARNING S&R product page: no price read for Antabax Antibacterial Hand Soap Fresh Scent 1L
+2026-10-21 09:52:53,414 WARNING S&R product page: no price read for Member's Value Fabric Conditioner Fresh Floral Scent 2.5L
+2026-10-21 09:52:57,272 WARNING S&R product page: no price read for Downy Aroma Floral Fabric Conditioner 8.5L
+2026-10-21 09:53:01,066 WARNING S&R product page: no price read for Ariel Sunrise Fresh Liquid Laundry Detergent 2.43kg
+2026-10-21 09:53:04,897 WARNING S&R product page: no price read for Crisscross Water-based Super Strength Engine Degreaser 4L
+2026-10-21 09:53:07,897 INFO S&R product pages: 0 of 102 priced
+2026-10-21 09:53:16,097 INFO WalterMart 'eden cheese' (branch 7638): 18 products
+2026-10-21 09:53:18,423 INFO WalterMart 'magnolia cheese' (branch 7638): 24 products
+2026-10-21 09:53:21,166 INFO WalterMart 'cheddar cheese' (branch 7638): 32 products
+2026-10-21 09:53:23,908 INFO WalterMart 'mozzarella' (branch 7638): 7 products
+2026-10-21 09:53:26,331 INFO WalterMart 'cream cheese' (branch 7638): 11 products
+2026-10-21 09:53:28,977 INFO WalterMart 'parmesan' (branch 7638): 7 products
+2026-10-21 09:53:31,842 INFO WalterMart 'grated parmesan' (branch 7638): 4 products
+2026-10-21 09:53:34,143 INFO WalterMart 'all purpose cream' (branch 7638): 23 products
+2026-10-21 09:53:36,392 INFO WalterMart 'whipping cream' (branch 7638): 4 products
+2026-10-21 09:53:38,708 INFO WalterMart 'heavy cream' (branch 7638): 7 products
+2026-10-21 09:53:41,028 INFO WalterMart 'cooking cream' (branch 7638): 45 products
+2026-10-21 09:53:43,293 INFO WalterMart 'ever whip' (branch 7638): 1 products
+2026-10-21 09:53:45,564 INFO WalterMart 'anchor butter' (branch 7638): 3 products
+2026-10-21 09:53:48,009 INFO WalterMart 'dari creme' (branch 7638): 5 products
+2026-10-21 09:53:50,486 INFO WalterMart 'butter' (branch 7638): 100 products
+2026-10-21 09:53:52,818 INFO WalterMart 'unsalted butter' (branch 7638): 9 products
+2026-10-21 09:53:55,118 INFO WalterMart 'margarine' (branch 7638): 46 products
+2026-10-21 09:53:57,760 INFO WalterMart 'fresh milk' (branch 7638): 75 products
+2026-10-21 09:54:00,083 INFO WalterMart 'full cream milk' (branch 7638): 20 products
+2026-10-21 09:54:03,393 INFO WalterMart 'evaporated milk' (branch 7638): 14 products
+2026-10-21 09:54:06,277 INFO WalterMart 'condensed milk' (branch 7638): 35 products
+2026-10-21 09:54:08,700 INFO WalterMart 'oat milk' (branch 7638): 24 products
+2026-10-21 09:54:10,874 INFO WalterMart 'barista milk' (branch 7638): 0 products
+2026-10-21 09:54:14,245 INFO WalterMart 'ideal spaghetti' (branch 7638): 3 products
+2026-10-21 09:54:16,570 INFO WalterMart 'del monte spaghetti' (branch 7638): 18 products
+2026-10-21 09:54:19,660 INFO WalterMart 'spaghetti' (branch 7638): 100 products
+2026-10-21 09:54:21,915 INFO WalterMart 'penne' (branch 7638): 7 products
+2026-10-21 09:54:24,250 INFO WalterMart 'macaroni' (branch 7638): 28 products
+2026-10-21 09:54:26,508 INFO WalterMart 'white sugar' (branch 7638): 6 products
+2026-10-21 09:54:28,904 INFO WalterMart 'brown sugar' (branch 7638): 8 products
+2026-10-21 09:54:31,581 INFO WalterMart 'muscovado' (branch 7638): 2 products
+2026-10-21 09:54:34,003 INFO WalterMart 'syrup' (branch 7638): 52 products
+2026-10-21 09:54:36,439 INFO WalterMart 'honey' (branch 7638): 79 products
+2026-10-21 09:54:38,813 INFO WalterMart 'vegetable oil' (branch 7638): 48 products
+2026-10-21 09:54:41,238 INFO WalterMart 'cooking oil' (branch 7638): 100 products
+2026-10-21 09:54:43,627 INFO WalterMart 'canola oil' (branch 7638): 32 products
+2026-10-21 09:54:46,024 INFO WalterMart 'olive oil' (branch 7638): 25 products
+2026-10-21 09:54:48,296 INFO WalterMart 'pomace olive oil' (branch 7638): 3 products
+2026-10-21 09:54:50,605 INFO WalterMart 'all purpose flour' (branch 7638): 17 products
+2026-10-21 09:54:52,653 WARNING WalterMart 'pancake mix': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=pancake+mix&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,696 WARNING WalterMart 'baking powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=baking+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,749 WARNING WalterMart 'baking soda': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=baking+soda&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,794 WARNING WalterMart 'cornstarch': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=cornstarch&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,852 WARNING WalterMart 'potato starch': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=potato+starch&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,891 WARNING WalterMart 'cocoa powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=cocoa+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,947 WARNING WalterMart 'peanut butter': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=peanut+butter&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:52,995 WARNING WalterMart 'hazelnut spread': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=hazelnut+spread&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,038 WARNING WalterMart 'jam': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=jam&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,083 WARNING WalterMart 'strawberry jam': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=strawberry+jam&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,135 WARNING WalterMart 'rice 25kg': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=rice+25kg&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,177 WARNING WalterMart 'jasmine rice': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=jasmine+rice&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,224 WARNING WalterMart 'dinorado': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=dinorado&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,267 WARNING WalterMart 'sinandomeng': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=sinandomeng&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,307 WARNING WalterMart 'coffee beans': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=coffee+beans&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,352 WARNING WalterMart 'ground coffee': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ground+coffee&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,398 WARNING WalterMart 'espresso': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=espresso&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,443 WARNING WalterMart 'chocolate syrup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=chocolate+syrup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,486 WARNING WalterMart 'chocolate sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=chocolate+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,528 WARNING WalterMart 'caramel syrup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=caramel+syrup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,569 WARNING WalterMart 'caramel sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=caramel+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,614 WARNING WalterMart 'hazelnut syrup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=hazelnut+syrup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,661 WARNING WalterMart 'vanilla syrup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=vanilla+syrup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,702 WARNING WalterMart 'white chocolate sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=white+chocolate+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,746 WARNING WalterMart 'frappe powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=frappe+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,793 WARNING WalterMart 'black tea': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=black+tea&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,832 WARNING WalterMart 'green tea': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=green+tea&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,870 WARNING WalterMart 'assam tea': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=assam+tea&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,912 WARNING WalterMart 'matcha powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=matcha+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:53,960 WARNING WalterMart 'milk tea powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=milk+tea+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,013 WARNING WalterMart 'coffee jelly': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=coffee+jelly&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,059 WARNING WalterMart 'nata de coco': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=nata+de+coco&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,108 WARNING WalterMart 'tapioca pearls': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=tapioca+pearls&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,160 WARNING WalterMart 'orange juice': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=orange+juice&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,212 WARNING WalterMart 'pineapple juice': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=pineapple+juice&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,257 WARNING WalterMart 'mango juice': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=mango+juice&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,301 WARNING WalterMart 'juice 1l': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=juice+1l&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,348 WARNING WalterMart 'mccormick': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=mccormick&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,393 WARNING WalterMart 'ground onion': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ground+onion&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,441 WARNING WalterMart 'onion powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=onion+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,612 WARNING WalterMart 'ground garlic': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ground+garlic&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,658 WARNING WalterMart 'garlic powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=garlic+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,716 WARNING WalterMart 'black pepper': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=black+pepper&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,760 WARNING WalterMart 'paprika': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=paprika&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,807 WARNING WalterMart 'cinnamon': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=cinnamon&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,850 WARNING WalterMart 'oregano': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=oregano&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,891 WARNING WalterMart 'chili powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=chili+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,937 WARNING WalterMart 'turmeric': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=turmeric&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:54,994 WARNING WalterMart 'basil': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=basil&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,034 WARNING WalterMart 'parsley': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=parsley&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,080 WARNING WalterMart 'salt': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=salt&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,121 WARNING WalterMart 'iodized salt': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=iodized+salt&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,168 WARNING WalterMart 'sea salt': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=sea+salt&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,215 WARNING WalterMart 'mayonnaise': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=mayonnaise&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,260 WARNING WalterMart 'dressing': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=dressing&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,302 WARNING WalterMart 'del monte dip': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=del+monte+dip&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,345 WARNING WalterMart 'mccormick dip': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=mccormick+dip&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,386 WARNING WalterMart 'salsa': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=salsa&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,423 WARNING WalterMart 'soy sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=soy+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,478 WARNING WalterMart 'oyster sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=oyster+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,521 WARNING WalterMart 'vinegar': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=vinegar&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,563 WARNING WalterMart 'ketchup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ketchup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,603 WARNING WalterMart 'tomato sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=tomato+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,646 WARNING WalterMart 'pasta sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=pasta+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,690 WARNING WalterMart 'hot sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=hot+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,732 WARNING WalterMart 'sweet chili sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=sweet+chili+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,790 WARNING WalterMart 'liquid seasoning': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=liquid+seasoning&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,831 WARNING WalterMart 'teriyaki sauce': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=teriyaki+sauce&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,876 WARNING WalterMart 'black olives': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=black+olives&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,921 WARNING WalterMart 'capers': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=capers&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:55,962 WARNING WalterMart 'spanish sardines': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=spanish+sardines&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,004 WARNING WalterMart 'crushed tomatoes': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=crushed+tomatoes&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,055 WARNING WalterMart 'tomato paste': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=tomato+paste&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,100 WARNING WalterMart 'baguette': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=baguette&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,149 WARNING WalterMart 'sliced bread': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=sliced+bread&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,195 WARNING WalterMart 'burger buns': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=burger+buns&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,241 WARNING WalterMart 'loaf bread': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=loaf+bread&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,291 WARNING WalterMart 'bacon': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=bacon&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,333 WARNING WalterMart 'smoked bacon': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=smoked+bacon&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,377 WARNING WalterMart 'bacon 1kg': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=bacon+1kg&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,426 WARNING WalterMart 'tocino': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=tocino&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,467 WARNING WalterMart 'longganisa': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=longganisa&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,515 WARNING WalterMart 'ham': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ham&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,564 WARNING WalterMart 'beef tapa': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=beef+tapa&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,616 WARNING WalterMart 'corned beef': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=corned+beef&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,660 WARNING WalterMart 'luncheon meat': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=luncheon+meat&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,694 WARNING WalterMart 'french fries': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=french+fries&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,753 WARNING WalterMart 'frozen fries': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=frozen+fries&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,795 WARNING WalterMart 'mixed vegetables': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=mixed+vegetables&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,839 WARNING WalterMart 'cream dory': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=cream+dory&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,886 WARNING WalterMart 'fish fillet': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=fish+fillet&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,927 WARNING WalterMart 'chicken breast': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=chicken+breast&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:56,973 WARNING WalterMart 'chicken thigh': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=chicken+thigh&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,012 WARNING WalterMart 'whole chicken': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=whole+chicken&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,057 WARNING WalterMart 'chicken wings': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=chicken+wings&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,103 WARNING WalterMart 'pork belly': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=pork+belly&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,139 WARNING WalterMart 'ground pork': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ground+pork&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,180 WARNING WalterMart 'pork chop': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=pork+chop&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,225 WARNING WalterMart 'pork shoulder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=pork+shoulder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,265 WARNING WalterMart 'ground beef': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ground+beef&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,311 WARNING WalterMart 'beef brisket': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=beef+brisket&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,365 WARNING WalterMart 'beef cubes': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=beef+cubes&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,409 WARNING WalterMart 'sirloin': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=sirloin&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,456 WARNING WalterMart 'dishwashing liquid': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=dishwashing+liquid&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,497 WARNING WalterMart 'bleach': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=bleach&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,535 WARNING WalterMart 'zonrox': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=zonrox&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,581 WARNING WalterMart 'disinfectant': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=disinfectant&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,624 WARNING WalterMart 'sanitizer': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=sanitizer&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,667 WARNING WalterMart 'ethyl alcohol': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=ethyl+alcohol&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,823 WARNING WalterMart 'hand soap': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=hand+soap&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,867 WARNING WalterMart 'detergent powder': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=detergent+powder&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,918 WARNING WalterMart 'laundry detergent': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=laundry+detergent&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:57,969 WARNING WalterMart 'fabric conditioner': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=fabric+conditioner&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,015 WARNING WalterMart 'floor cleaner': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=floor+cleaner&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,056 WARNING WalterMart 'glass cleaner': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=glass+cleaner&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,097 WARNING WalterMart 'toilet bowl cleaner': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=toilet+bowl+cleaner&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,136 WARNING WalterMart 'all purpose cleaner': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=all+purpose+cleaner&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,182 WARNING WalterMart 'degreaser': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=degreaser&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,224 WARNING WalterMart 'disinfecting wipes': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=disinfecting+wipes&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,265 WARNING WalterMart 'air freshener': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=air+freshener&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,308 WARNING WalterMart 'diffuser oil': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=diffuser+oil&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,351 WARNING WalterMart 'garbage bag': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=garbage+bag&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,396 WARNING WalterMart 'paper towel': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=paper+towel&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,442 WARNING WalterMart 'table napkin': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=table+napkin&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,487 WARNING WalterMart 'tissue': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=tissue&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,544 WARNING WalterMart 'paper cup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=paper+cup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,585 WARNING WalterMart 'plastic cup': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=plastic+cup&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,623 WARNING WalterMart 'drinking straw': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=drinking+straw&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,666 WARNING WalterMart 'disposable gloves': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=disposable+gloves&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,705 WARNING WalterMart 'cling wrap': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=cling+wrap&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,745 WARNING WalterMart 'aluminum foil': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=aluminum+foil&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,791 WARNING WalterMart 'freezer bags': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=freezer+bags&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,838 WARNING WalterMart 'stretch film': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=stretch+film&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:58,888 WARNING WalterMart 'food container': 400 Client Error: Bad Request for url: https://api.freshop.ncrcloud.com/1/products?app_key=walter_mart&q=food+container&store_id=7638&token=8c48869d25a9cee51686e04945dd7fbe&limit=100&fields=id%2Cname%2Csize%2Cunit_price%2Cprice%2Csale_price%2Csale_start_date%2Csale_finish_date%2Cstatus%2Ccanonical_url%2Cpromotion_text&sort=relevance
+2026-10-21 09:54:59,018 WARNING Landmark 'eden cheese' (HTTP): 403 Client Error: Forbidden for url: https://www.landmark.ph/api/products/search-page/v4?substoreAlias=mkt&searchKeywords=eden+cheese
+2026-10-21 09:54:59,061 WARNING Landmark 'magnolia cheese' (HTTP): 403 Client Error: Forbidden for url: https://www.landmark.ph/api/products/search-page/v4?substoreAlias=mkt&searchKeywords=magnolia+cheese
+2026-10-21 09:54:59,061 INFO Landmark rejects direct API calls — trying with the browser…
+2026-10-21 09:55:01,086 INFO Landmark 'eden cheese' (browser): 200 products
+2026-10-21 09:55:04,819 INFO Landmark 'magnolia cheese' (browser): 200 products
+2026-10-21 09:55:08,532 INFO Landmark 'cheddar cheese' (browser): 200 products
+2026-10-21 09:55:11,522 INFO Landmark 'mozzarella' (browser): 11 products
+2026-10-21 09:55:15,068 INFO Landmark 'cream cheese' (browser): 200 products
+2026-10-21 09:55:17,981 INFO Landmark 'parmesan' (browser): 26 products
+2026-10-21 09:55:20,858 INFO Landmark 'grated parmesan' (browser): 24 products
+2026-10-21 09:55:24,744 INFO Landmark 'all purpose cream' (browser): 200 products
+2026-10-21 09:55:28,389 INFO Landmark 'whipping cream' (browser): 200 products
+2026-10-21 09:55:31,786 INFO Landmark 'heavy cream' (browser): 200 products
+2026-10-21 09:55:35,324 INFO Landmark 'cooking cream' (browser): 200 products
+2026-10-21 09:55:38,207 INFO Landmark 'ever whip' (browser): 13 products
+2026-10-21 09:55:41,479 INFO Landmark 'anchor butter' (browser): 200 products
+2026-10-21 09:55:44,447 INFO Landmark 'dari creme' (browser): 28 products
+2026-10-21 09:55:47,895 INFO Landmark 'butter' (browser): 200 products
+2026-10-21 09:55:51,302 INFO Landmark 'unsalted butter' (browser): 200 products
+2026-10-21 09:55:54,147 INFO Landmark 'margarine' (browser): 21 products
+2026-10-21 09:55:57,682 INFO Landmark 'fresh milk' (browser): 200 products
+2026-10-21 09:56:01,411 INFO Landmark 'full cream milk' (browser): 200 products
+2026-10-21 09:56:04,879 INFO Landmark 'evaporated milk' (browser): 200 products
+2026-10-21 09:56:08,520 INFO Landmark 'condensed milk' (browser): 200 products
+2026-10-21 09:56:12,010 INFO Landmark 'oat milk' (browser): 200 products
+2026-10-21 09:56:15,412 INFO Landmark 'barista milk' (browser): 200 products
+2026-10-21 09:56:18,418 INFO Landmark 'ideal spaghetti' (browser): 116 products
+2026-10-21 09:56:21,721 INFO Landmark 'del monte spaghetti' (browser): 197 products
+2026-10-21 09:56:24,688 INFO Landmark 'spaghetti' (browser): 131 products
+2026-10-21 09:56:27,909 INFO Landmark 'penne' (browser): 15 products
+2026-10-21 09:56:30,823 INFO Landmark 'macaroni' (browser): 50 products
+2026-10-21 09:56:34,330 INFO Landmark 'white sugar' (browser): 199 products
+2026-10-21 09:56:37,465 INFO Landmark 'brown sugar' (browser): 199 products
+2026-10-21 09:56:40,341 INFO Landmark 'muscovado' (browser): 13 products
+2026-10-21 09:56:43,368 INFO Landmark 'syrup' (browser): 115 products
+2026-10-21 09:56:46,701 INFO Landmark 'honey' (browser): 156 products
+2026-10-21 09:56:50,283 INFO Landmark 'vegetable oil' (browser): 200 products
+2026-10-21 09:56:53,653 INFO Landmark 'cooking oil' (browser): 200 products
+2026-10-21 09:56:57,033 INFO Landmark 'canola oil' (browser): 200 products
+2026-10-21 09:57:00,579 INFO Landmark 'olive oil' (browser): 200 products
+2026-10-21 09:57:04,447 INFO Landmark 'pomace olive oil' (browser): 200 products
+2026-10-21 09:57:07,778 INFO Landmark 'all purpose flour' (browser): 198 products
+2026-10-21 09:57:11,251 INFO Landmark 'pancake mix' (browser): 200 products
+2026-10-21 09:57:14,869 INFO Landmark 'baking powder' (browser): 200 products
+2026-10-21 09:57:17,791 INFO Landmark 'baking soda' (browser): 71 products
+2026-10-21 09:57:20,652 INFO Landmark 'cornstarch' (browser): 19 products
+2026-10-21 09:57:23,706 INFO Landmark 'potato starch' (browser): 103 products
+2026-10-21 09:57:27,060 INFO Landmark 'cocoa powder' (browser): 200 products
+2026-10-21 09:57:30,423 INFO Landmark 'peanut butter' (browser): 200 products
+2026-10-21 09:57:33,804 INFO Landmark 'hazelnut spread' (browser): 175 products
+2026-10-21 09:57:36,721 INFO Landmark 'jam' (browser): 91 products
+2026-10-21 09:57:40,168 INFO Landmark 'strawberry jam' (browser): 200 products
+2026-10-21 09:57:43,565 INFO Landmark 'rice 25kg' (browser): 200 products
+2026-10-21 09:57:47,004 INFO Landmark 'jasmine rice' (browser): 200 products
+2026-10-21 09:57:49,921 INFO Landmark 'dinorado' (browser): 6 products
+2026-10-21 09:57:52,738 INFO Landmark 'sinandomeng' (browser): 9 products
+2026-10-21 09:57:55,889 INFO Landmark 'coffee beans' (browser): 200 products
+2026-10-21 09:57:58,920 INFO Landmark 'ground coffee' (browser): 200 products
+2026-10-21 09:58:01,990 INFO Landmark 'espresso' (browser): 13 products
+2026-10-21 09:58:05,857 INFO Landmark 'chocolate syrup' (browser): 200 products
+2026-10-21 09:58:09,398 INFO Landmark 'chocolate sauce' (browser): 200 products
+2026-10-21 09:58:12,695 INFO Landmark 'caramel syrup' (browser): 149 products
+2026-10-21 09:58:16,383 INFO Landmark 'caramel sauce' (browser): 200 products
+2026-10-21 09:58:19,407 INFO Landmark 'hazelnut syrup' (browser): 145 products
+2026-10-21 09:58:22,723 INFO Landmark 'vanilla syrup' (browser): 200 products
+2026-10-21 09:58:26,416 INFO Landmark 'white chocolate sauce' (browser): 200 products
+2026-10-21 09:58:29,863 INFO Landmark 'frappe powder' (browser): 200 products
+2026-10-21 09:58:33,379 INFO Landmark 'black tea' (browser): 200 products
+2026-10-21 09:58:36,876 INFO Landmark 'green tea' (browser): 200 products
+2026-10-21 09:58:40,218 INFO Landmark 'assam tea' (browser): 200 products
+2026-10-21 09:58:43,429 INFO Landmark 'matcha powder' (browser): 200 products
+2026-10-21 09:58:47,126 INFO Landmark 'milk tea powder' (browser): 200 products
+2026-10-21 09:58:50,593 INFO Landmark 'coffee jelly' (browser): 200 products
+2026-10-21 09:58:53,811 INFO Landmark 'nata de coco' (browser): 200 products
+2026-10-21 09:58:56,622 INFO Landmark 'tapioca pearls' (browser): 19 products
+2026-10-21 09:59:00,071 INFO Landmark 'orange juice' (browser): 199 products
+2026-10-21 09:59:03,627 INFO Landmark 'pineapple juice' (browser): 198 products
+2026-10-21 09:59:07,020 INFO Landmark 'mango juice' (browser): 200 products
+2026-10-21 09:59:10,473 INFO Landmark 'juice 1l' (browser): 199 products
+2026-10-21 09:59:13,798 INFO Landmark 'mccormick' (browser): 200 products
+2026-10-21 09:59:17,059 INFO Landmark 'ground onion' (browser): 142 products
+2026-10-21 09:59:20,629 INFO Landmark 'onion powder' (browser): 200 products
+2026-10-21 09:59:24,067 INFO Landmark 'ground garlic' (browser): 200 products
+2026-10-21 09:59:27,672 INFO Landmark 'garlic powder' (browser): 200 products
+2026-10-21 09:59:30,786 INFO Landmark 'black pepper' (browser): 200 products
+2026-10-21 09:59:33,786 INFO Landmark 'paprika' (browser): 15 products
+2026-10-21 09:59:36,618 INFO Landmark 'cinnamon' (browser): 22 products
+2026-10-21 09:59:39,520 INFO Landmark 'oregano' (browser): 10 products
+2026-10-21 09:59:42,910 INFO Landmark 'chili powder' (browser): 200 products
+2026-10-21 09:59:45,835 INFO Landmark 'turmeric' (browser): 27 products
+2026-10-21 09:59:48,920 INFO Landmark 'basil' (browser): 26 products
+2026-10-21 09:59:51,718 INFO Landmark 'parsley' (browser): 9 products
+2026-10-21 09:59:54,837 INFO Landmark 'salt' (browser): 200 products
+2026-10-21 09:59:58,134 INFO Landmark 'iodized salt' (browser): 200 products
+2026-10-21 10:00:02,031 INFO Landmark 'sea salt' (browser): 200 products
+2026-10-21 10:00:05,131 INFO Landmark 'mayonnaise' (browser): 60 products
+2026-10-21 10:00:08,278 INFO Landmark 'dressing' (browser): 145 products
+2026-10-21 10:00:11,714 INFO Landmark 'del monte dip' (browser): 175 products
+2026-10-21 10:00:15,135 INFO Landmark 'mccormick dip' (browser): 200 products
+2026-10-21 10:00:18,062 INFO Landmark 'salsa' (browser): 17 products
+2026-10-21 10:00:21,589 INFO Landmark 'soy sauce' (browser): 200 products
+2026-10-21 10:00:25,246 INFO Landmark 'oyster sauce' (browser): 200 products
+2026-10-21 10:00:28,504 INFO Landmark 'vinegar' (browser): 148 products
+2026-10-21 10:00:31,434 INFO Landmark 'ketchup' (browser): 39 products
+2026-10-21 10:00:35,193 INFO Landmark 'tomato sauce' (browser): 200 products
+2026-10-21 10:00:39,316 INFO Landmark 'pasta sauce' (browser): 200 products
+2026-10-21 10:00:42,980 INFO Landmark 'hot sauce' (browser): 200 products
+2026-10-21 10:00:47,005 INFO Landmark 'sweet chili sauce' (browser): 200 products
+2026-10-21 10:00:50,610 INFO Landmark 'liquid seasoning' (browser): 200 products
+2026-10-21 10:00:54,016 INFO Landmark 'teriyaki sauce' (browser): 200 products
+2026-10-21 10:00:57,388 INFO Landmark 'black olives' (browser): 200 products
+2026-10-21 10:01:00,246 INFO Landmark 'capers' (browser): 13 products
+2026-10-21 10:01:03,306 INFO Landmark 'spanish sardines' (browser): 123 products
+2026-10-21 10:01:06,185 INFO Landmark 'crushed tomatoes' (browser): 43 products
+2026-10-21 10:01:09,649 INFO Landmark 'tomato paste' (browser): 200 products
+2026-10-21 10:01:12,523 INFO Landmark 'baguette' (browser): 2 products
+2026-10-21 10:01:15,805 INFO Landmark 'sliced bread' (browser): 136 products
+2026-10-21 10:01:18,785 INFO Landmark 'burger buns' (browser): 22 products
+2026-10-21 10:01:21,801 INFO Landmark 'loaf bread' (browser): 127 products
+2026-10-21 10:01:24,878 INFO Landmark 'bacon' (browser): 79 products
+2026-10-21 10:01:27,895 INFO Landmark 'smoked bacon' (browser): 79 products
+2026-10-21 10:01:31,362 INFO Landmark 'bacon 1kg' (browser): 200 products
+2026-10-21 10:01:34,376 INFO Landmark 'tocino' (browser): 37 products
+2026-10-21 10:01:37,377 INFO Landmark 'longganisa' (browser): 48 products
+2026-10-21 10:01:40,609 INFO Landmark 'ham' (browser): 152 products
+2026-10-21 10:01:44,247 INFO Landmark 'beef tapa' (browser): 200 products
+2026-10-21 10:01:47,566 INFO Landmark 'corned beef' (browser): 200 products
+2026-10-21 10:01:51,007 INFO Landmark 'luncheon meat' (browser): 166 products
+2026-10-21 10:01:53,888 INFO Landmark 'french fries' (browser): 47 products
+2026-10-21 10:01:56,815 INFO Landmark 'frozen fries' (browser): 43 products
+2026-10-21 10:01:59,759 INFO Landmark 'mixed vegetables' (browser): 87 products
+2026-10-21 10:02:03,404 INFO Landmark 'cream dory' (browser): 200 products
+2026-10-21 10:02:06,425 INFO Landmark 'fish fillet' (browser): 81 products
+2026-10-21 10:02:09,876 INFO Landmark 'chicken breast' (browser): 200 products
+2026-10-21 10:02:13,106 INFO Landmark 'chicken thigh' (browser): 200 products
+2026-10-21 10:02:16,843 INFO Landmark 'whole chicken' (browser): 200 products
+2026-10-21 10:02:20,183 INFO Landmark 'chicken wings' (browser): 200 products
+2026-10-21 10:02:23,341 INFO Landmark 'pork belly' (browser): 143 products
+2026-10-21 10:02:26,780 INFO Landmark 'ground pork' (browser): 196 products
+2026-10-21 10:02:30,167 INFO Landmark 'pork chop' (browser): 142 products
+2026-10-21 10:02:33,482 INFO Landmark 'pork shoulder' (browser): 156 products
+2026-10-21 10:02:36,873 INFO Landmark 'ground beef' (browser): 200 products
+2026-10-21 10:02:40,355 INFO Landmark 'beef brisket' (browser): 200 products
+2026-10-21 10:02:43,719 INFO Landmark 'beef cubes' (browser): 200 products
+2026-10-21 10:02:46,572 INFO Landmark 'sirloin' (browser): 5 products
+2026-10-21 10:02:50,098 INFO Landmark 'dishwashing liquid' (browser): 200 products
+2026-10-21 10:02:53,013 INFO Landmark 'bleach' (browser): 30 products
+2026-10-21 10:02:55,958 INFO Landmark 'zonrox' (browser): 22 products
+2026-10-21 10:02:58,939 INFO Landmark 'disinfectant' (browser): 172 products
+2026-10-21 10:03:02,047 INFO Landmark 'sanitizer' (browser): 87 products
+2026-10-21 10:03:05,104 INFO Landmark 'ethyl alcohol' (browser): 57 products
+2026-10-21 10:03:08,379 INFO Landmark 'hand soap' (browser): 200 products
+2026-10-21 10:03:11,714 INFO Landmark 'detergent powder' (browser): 200 products
+2026-10-21 10:03:15,209 INFO Landmark 'laundry detergent' (browser): 200 products
+2026-10-21 10:03:18,628 INFO Landmark 'fabric conditioner' (browser): 200 products
+2026-10-21 10:03:21,562 INFO Landmark 'floor cleaner' (browser): 73 products
+2026-10-21 10:03:24,581 INFO Landmark 'glass cleaner' (browser): 77 products
+2026-10-21 10:03:27,709 INFO Landmark 'toilet bowl cleaner' (browser): 94 products
+2026-10-21 10:03:31,113 INFO Landmark 'all purpose cleaner' (browser): 200 products
+2026-10-21 10:03:34,092 INFO Landmark 'degreaser' (browser): 0 products
+2026-10-21 10:03:36,996 INFO Landmark 'disinfecting wipes' (browser): 65 products
+2026-10-21 10:03:40,044 INFO Landmark 'air freshener' (browser): 103 products
+2026-10-21 10:03:43,499 INFO Landmark 'diffuser oil' (browser): 200 products
+2026-10-21 10:03:46,826 INFO Landmark 'garbage bag' (browser): 177 products
+2026-10-21 10:03:49,863 INFO Landmark 'paper towel' (browser): 108 products
+2026-10-21 10:03:52,789 INFO Landmark 'table napkin' (browser): 51 products
+2026-10-21 10:03:55,769 INFO Landmark 'tissue' (browser): 149 products
+2026-10-21 10:03:59,035 INFO Landmark 'paper cup' (browser): 142 products
+2026-10-21 10:04:02,374 INFO Landmark 'plastic cup' (browser): 105 products
+2026-10-21 10:04:05,879 INFO Landmark 'drinking straw' (browser): 200 products
+2026-10-21 10:04:08,753 INFO Landmark 'disposable gloves' (browser): 23 products
+2026-10-21 10:04:11,728 INFO Landmark 'cling wrap' (browser): 36 products
+2026-10-21 10:04:14,571 INFO Landmark 'aluminum foil' (browser): 31 products
+2026-10-21 10:04:17,421 INFO Landmark 'freezer bags' (browser): 55 products
+2026-10-21 10:04:20,376 INFO Landmark 'stretch film' (browser): 2 products
+2026-10-21 10:04:23,630 INFO Landmark 'food container' (browser): 175 products
+2026-10-21 10:04:30,899 INFO 11729 products scanned, 5733 matched the watchlist (+0 stored)
+🔔 *Price alerts*
+
+*Samyang Buldak Original Hot Sauce 200g* — S&R [Sauces & condiments]
+₱166.00 · 830 ₱/kg
+• Store discount 10% (₱185.00 → ₱166.00)
+https://www.snrshopping.com/product/samyang-buldak-original-hot-sauce-200g
+
+*Samyang Buldak Carbonara Hot Chili Sauce 200g* — S&R [Sauces & condiments]
+₱185.00 · 925 ₱/kg
+• Store discount 10% (₱205.00 → ₱185.00)
+https://www.snrshopping.com/product/samyang-buldak-carbonara-hot-chili-sauce-200g
+
+*Gold Gourmet Foods Caesar Dressing 500mL* — S&R [Mayo, dressings & dips]
+₱309.00 · 618 ₱/L
+• Store discount 12% (₱349.00 → ₱309.00)
+https://www.snrshopping.com/product/gold-gourmet-foods-caesar-dressing-500ml
+
+*Gold Gourmet Foods Blue Cheese Sauce 500mL* — S&R [Mayo, dressings & dips]
+₱489.00 · 978 ₱/L
+• Store discount 6% (₱519.00 → ₱489.00)
+https://www.snrshopping.com/product/gold-gourmet-foods-blue-cheese-sauce-500ml
+
+*Member's Value Creamy Sesame Dressing 769mL* — S&R [Mayo, dressings & dips]
+₱294.00 · 382 ₱/L
+• Store discount 5% (₱309.00 → ₱294.00)
+https://www.snrshopping.com/product/members-value-creamy-sesame-dressing-769ml
+
+*Ricos Condensed Cheddar Aged Cheddar Cheese Sauce 3.03kg* — S&R [Mayo, dressings & dips]
+₱729.00 · 241 ₱/kg
+• Store discount 17% (₱879.00 → ₱729.00)
+https://www.snrshopping.com/product/ricos-condensed-cheddar-aged-cheddar-cheese-sauce-303kg
+
+*Gold Gourmet Foods Pepper Mayo 500ml* — S&R [Mayo, dressings & dips]
+₱469.00 · 938 ₱/L
+• Store discount 4% (₱489.00 → ₱469.00)
+https://www.snrshopping.com/product/gold-gourmet-foods-pepper-mayo-500ml
+
+*Oralife Swiss Cheese Slices 227g* — S&R [Cheese]
+₱239.00 · 1,053 ₱/kg
+• Store discount 19% (₱295.00 → ₱239.00)
+https://www.snrshopping.com/product/oralife-swiss-cheese-slices-227g
+
+*Oralife Smoked Gouda Cheese Slices 227g* — S&R [Cheese]
+₱229.00 · 1,009 ₱/kg
+• Store discount 19% (₱284.00 → ₱229.00)
+https://www.snrshopping.com/product/oralife-smoked-gouda-cheese-slices-227g
+
+*Ora Life Mozarella Cheese Slices 8s 227g* — S&R [Cheese]
+₱199.00 · 877 ₱/kg
+• Store discount 17% (₱239.00 → ₱199.00)
+https://www.snrshopping.com/product/ora-life-mozarella-cheese-slices-8s-227g
+
+*Quezon's Best Coconut Jam 560g* — S&R [Spreads & jams]
+₱224.00 · 400 ₱/kg
+• Store discount 10% (₱249.00 → ₱224.00)
+https://www.snrshopping.com/product/quezons-best-coconut-jam-560g
+
+*Nutella Hazelnut Spread with Cocoa 900g* — S&R [Spreads & jams]
+₱549.00 · 610 ₱/kg
+• Store discount 8% (₱599.00 → ₱549.00)
+https://www.snrshopping.com/product/nutella-hazelnut-spread-with-cocoa-900g
+
+*Member's Value 80% Ground Pork approx. 1.7kg* — S&R [Pork cuts]
+₱525.30 · 309 ₱/kg
+• Store discount 14% (₱610.30 → ₱525.30)
+https://www.snrshopping.com/product/members-value-80-ground-pork-approx-17kg-1
+
+*Member's Value 90% Ground Pork approx. 1.7kg* — S&R [Pork cuts]
+₱559.30 · 329 ₱/kg
+• Store discount 13% (₱644.30 → ₱559.30)
+https://www.snrshopping.com/product/members-value-90-ground-pork-approx-17kg-1
+
+*Member's Value Pork Pigue Skin-on Boneless approx. 2kg* — S&R [Pork cuts]
+₱578.00 · 289 ₱/kg
+• Store discount 9% (₱638.00 → ₱578.00)
+https://www.snrshopping.com/product/members-value-pork-pigue-skin-on-boneless-approx-2kg-1
+
+*Ranch House American Cut Steak Chuck Rib approx 950g* — S&R [Mayo, dressings & dips]
+₱949.05 · 999 ₱/kg
+• Store discount 50% (₱1,899.05 → ₱949.05)
+https://www.snrshopping.com/product/ranch-house-american-cut-steak-chuck-rib-approx-950g
+
+*Bio Home Lavender and Bergamot Dishwashing Liquid 900mL* — S&R [Dishwashing liquid]
+₱150.00 · 167 ₱/L
+• Store discount 11% (₱169.00 → ₱150.00)
+https://www.snrshopping.com/product/bio-home-lavender-and-bergamot-dishwashing-liquid-900ml
+
+*Wizard Solid Air Freshener Morning Mist 221g* — S&R [Disinfecting wipes & air fresheners]
+₱99.00 · 448 ₱/kg
+• Store discount 38% (₱159.00 → ₱99.00)
+https://www.snrshopping.com/product/wizard-solid-air-freshener-morning-mist-221g
+
+*Wizard Solid Air Freshener Hawaiian Retreat 221g* — S&R [Disinfecting wipes & air fresheners]
+₱99.00 · 448 ₱/kg
+• Store discount 38% (₱159.00 → ₱99.00)
+https://www.snrshopping.com/product/wizard-solid-air-freshener-hawaiian-retreat-221g
+
+*Farcent Fridge Deodorizer 150g* — S&R [Disinfecting wipes & air fresheners]
+₱199.00 · 1,327 ₱/kg
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/farcent-fridge-deodorizer-150g
+
+*Farcent Pure Charcoal Deodorizer 350mL* — S&R [Disinfecting wipes & air fresheners]
+₱120.00 · 343 ₱/L
+• Store discount 17% (₱144.00 → ₱120.00)
+https://www.snrshopping.com/product/farcent-pure-charcoal-deodorizer-350ml
+
+*Farcent Shoe Cabinet Deodorizer 60g x 2* — S&R [Disinfecting wipes & air fresheners]
+₱199.00 · 1,658 ₱/kg
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/farcent-shoe-cabinet-deodorizer-60g-x-2
+
+*Lysol Disinfecting Wipes 4 packs* — S&R [Disinfecting wipes & air fresheners]
+₱1,140.00 · 285 ₱/pcs
+• Store discount 9% (₱1,249.00 → ₱1,140.00)
+https://www.snrshopping.com/product/lysol-disinfecting-wipes-4-packs
+
+*Sprouts Farmers Market 2-ply Facial Tissue 70 pulls* — S&R [Paper towels & tissue]
+₱54.00
+• Store discount 22% (₱69.00 → ₱54.00)
+https://www.snrshopping.com/product/sprouts-farmers-market-2-ply-facial-tissue-70-pulls
+
+*Pampanga's Best Fatless Tocino 1kg* — S&R [Tocino, longganisa & ham]
+₱356.00 · 356 ₱/kg
+• Store discount 8% (₱386.00 → ₱356.00)
+https://www.snrshopping.com/product/pampangas-best-fatless-tocino-1kg
+
+*La Brea Bakery French Baguette 298g* — S&R [Bread & baguettes]
+₱169.00 · 567 ₱/kg
+• Store discount 15% (₱199.00 → ₱169.00)
+https://www.snrshopping.com/product/la-brea-bakery-french-baguette-298g
+
+*Kirkland Signature Maintenance Cat Chicken and Rice Formula Cat Food 11.34kg* — S&R [Rice]
+₱2,259.00 · 199 ₱/kg
+• Store discount 6% (₱2,399.00 → ₱2,259.00)
+https://www.snrshopping.com/product/kirkland-signature-maintenance-cat-chicken-and-rice-formula-cat-food-1134kg
+
+*Yuban Gold Original Medium Roast Ground Coffee 1.3kg* — S&R [Coffee]
+₱1,759.00 · 1,353 ₱/kg
+• Store discount 2% (₱1,799.00 → ₱1,759.00)
+https://www.snrshopping.com/product/yuban-gold-original-medium-roast-ground-coffee-13kg
+
+*Tide Simply Refreshing Breeze Liquid Laundry Detergent 3.46L* — S&R [Laundry detergent]
+₱999.00 · 289 ₱/L
+• Store discount 38% (₱1,599.00 → ₱999.00)
+https://www.snrshopping.com/product/tide-simply-refreshing-breeze-liquid-laundry-detergent-346l
+
+*Quezon's Best Organic Coconut Sweetener 1kg* — S&R [Sugar & syrups]
+₱359.00 · 359 ₱/kg
+• Store discount 10% (₱399.00 → ₱359.00)
+https://www.snrshopping.com/product/quezons-best-organic-coconut-sweetener-1kg
+
+*Bibigo Korean Style Fried Rice Kimchi Cheese Flavour 510g* — S&R [Cheese, Rice]
+₱269.00 · 527 ₱/kg
+• Store discount 10% (₱299.00 → ₱269.00)
+https://www.snrshopping.com/product/bibigo-korean-style-fried-rice-kimchi-cheese-flavour-510g
+
+*Ariel Liquid Detergent Concentrado Color 5L* — S&R [Laundry detergent]
+₱1,090.00 · 218 ₱/L
+• Store discount 9% (₱1,199.00 → ₱1,090.00)
+https://www.snrshopping.com/product/ariel-liquid-detergent-concentrado-color-5l
+
+*Loving Pets Deli-Licious Corned Beef Dog Treats 170g* — S&R [Corned beef & luncheon meat]
+₱329.00 · 1,935 ₱/kg
+• Store discount 6% (₱349.00 → ₱329.00)
+https://www.snrshopping.com/product/loving-pets-deli-licious-corned-beef-dog-treats-170g
+
+*Lotte Sweet Corn Ice Cream Sandwich (140mL x 5pcs)* — S&R [Frozen fries, vegetables & fish]
+₱219.00 · 1,564 ₱/L
+• Store discount 8% (₱239.00 → ₱219.00)
+https://www.snrshopping.com/product/lotte-sweet-corn-ice-cream-sandwich-140ml-x-5pcs
+
+*Sugar Bowl Bakery Brownie Bites 454g* — S&R [Sugar & syrups]
+₱659.00 · 1,452 ₱/kg
+• Store discount 6% (₱699.00 → ₱659.00)
+https://www.snrshopping.com/product/sugar-bowl-bakery-brownie-bites-454g
+
+*Nautica Home Kitchen Towel 6 pieces* — S&R [Paper towels & tissue]
+₱999.00 · 166 ₱/pcs
+• Store discount 33% (₱1,499.00 → ₱999.00)
+https://www.snrshopping.com/product/nautica-home-kitchen-towel-6-pieces
+
+*Cornitos Nacho Crisps Cheese and Herbs 150g* — S&R [Cheese]
+₱99.00 · 660 ₱/kg
+• Store discount 23% (₱129.00 → ₱99.00)
+https://www.snrshopping.com/product/cornitos-nacho-crisps-cheese-and-herbs-150g
+
+*S&Co Home Mikasa Kitchen Towels 17x28in 6pcs assorted* — S&R [Paper towels & tissue]
+₱699.00 · 116 ₱/pcs
+• Store discount 22% (₱899.00 → ₱699.00)
+https://www.snrshopping.com/product/sco-home-mikasa-kitchen-towels-17x28in-6pcs-assorted
+
+*S&R Red Velvet & Cream Cheese Brownies* — S&R [Cheese]
+₱299.00
+• Store discount 14% (₱349.00 → ₱299.00)
+https://www.snrshopping.com/product/sr-red-velvet-cream-cheese-brownies
+
+*Caressa Kitchen Home Kitchen Towels 16x26in 6pcs assorted* — S&R [Paper towels & tissue]
+₱299.00 · 50 ₱/pcs
+• Store discount 25% (₱399.00 → ₱299.00)
+https://www.snrshopping.com/product/caressa-kitchen-home-kitchen-towels-16x26in-6pcs-assorted
+
+*Tsaio Ruby Black Tea Repairing Conditioner 430mL* — S&R [Tea & matcha]
+₱329.00 · 765 ₱/L
+• Store discount 23% (₱429.00 → ₱329.00)
+https://www.snrshopping.com/product/tsaio-ruby-black-tea-repairing-conditioner-430ml
+
+*Tylr Smart Robot Vacuum & Mop TYL-VCB7700* — S&R [Floor, glass & toilet cleaners]
+₱7,995.00
+• Store discount 11% (₱8,995.00 → ₱7,995.00)
+https://www.snrshopping.com/product/tylr-smart-robot-vacuum-mop-tyl-vcb7700
+
+*Stouffer's Cheesy Chicken & Broccoli Pasta Bake 1.13kg* — S&R [Pasta]
+₱639.00 · 565 ₱/kg
+• Store discount 10% (₱709.00 → ₱639.00)
+https://www.snrshopping.com/product/stouffers-cheesy-chicken-broccoli-pasta-bake-113kg
+
+*Monster Jam Dirt Arena Set* — S&R [Spreads & jams]
+₱1,999.00
+• Store discount 20% (₱2,499.00 → ₱1,999.00)
+https://www.snrshopping.com/product/monster-jam-dirt-arena-set
+
+*Dunkin' Decaf Medium Roast Decaffeinated Ground Coffee 1.13kg* — S&R [Coffee]
+₱1,799.00 · 1,592 ₱/kg
+• Store discount 10% (₱1,999.00 → ₱1,799.00)
+https://www.snrshopping.com/product/dunkin-decaf-medium-roast-decaffeinated-ground-coffee-113kg
+
+*S&R Nutella Muffin 4 pieces* — S&R [Spreads & jams]
+₱219.00 · 55 ₱/pcs
+• Store discount 19% (₱269.00 → ₱219.00)
+https://www.snrshopping.com/product/sr-nutella-muffin-4-pieces
+
+*Kirkland Signature Chicken, Rice & Vegetable Dog Food for Small Breed 9kg* — S&R [Rice]
+₱1,699.00 · 189 ₱/kg
+• Store discount 6% (₱1,799.00 → ₱1,699.00)
+https://www.snrshopping.com/product/kirkland-signature-chicken-rice-vegetable-dog-food-for-small-breed-9kg
+
+*Perwoll Black Liquid Detergent with Black Fixant 2L* — S&R [Laundry detergent]
+₱623.00 · 312 ₱/L
+• Store discount 5% (₱656.00 → ₱623.00)
+https://www.snrshopping.com/product/perwoll-black-liquid-detergent-with-black-fixant-2l
+
+*Coco Natura Organic Sugar 1kg* — S&R [Sugar & syrups]
+₱356.00 · 356 ₱/kg
+• Store discount 10% (₱395.00 → ₱356.00)
+https://www.snrshopping.com/product/coco-natura-organic-sugar-1kg
+
+*S&R Cinnamon Raisin Bagels 6pcs* — S&R [Basic spices (any brand)]
+₱189.00 · 32 ₱/pcs
+• Store discount 10% (₱209.00 → ₱189.00)
+https://www.snrshopping.com/product/sr-cinnamon-raisin-bagels-6pcs
+
+*Tide Simply Clean and Fresh Daybreak Fresh Liquid Detergent 3.46L* — S&R [Laundry detergent]
+₱999.00 · 289 ₱/L
+• Store discount 38% (₱1,599.00 → ₱999.00)
+https://www.snrshopping.com/product/tide-simply-clean-and-fresh-daybreak-fresh-liquid-detergent-346l
+
+*Marby White Bread Superloaf 600g* — S&R [Bread & baguettes]
+₱85.00 · 142 ₱/kg
+• Store discount 5% (₱89.50 → ₱85.00)
+https://www.snrshopping.com/product/marby-white-bread-superloaf-600g
+
+*S&R Assorted Mini Croissants 8pcs* — S&R [Bread & baguettes]
+₱169.00 · 21 ₱/pcs
+• Store discount 11% (₱189.00 → ₱169.00)
+https://www.snrshopping.com/product/sr-assorted-mini-croissants-8pcs
+
+*Natural Honey Cuidado Delicado Aloe Vera Shower Gel 650mL* — S&R [Sugar & syrups]
+₱349.00 · 537 ₱/L
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/natural-honey-cuidado-delicado-aloe-vera-shower-gel-650ml
+
+*Softlete Cleansing Wipes 100 wipes* — S&R [Disinfecting wipes & air fresheners]
+₱109.00
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/softlete-cleansing-wipes-100-wipes
+
+*Diablo Chocolate Chips and Cranberry Cookies 135g* — S&R [Flour, baking & toppings]
+₱299.00 · 2,215 ₱/kg
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/diablo-chocolate-chips-and-cranberry-cookies-135g
+
+*Ocean Spray Cran Apple Juice Drink 1.89L* — S&R [Juice]
+₱399.00 · 211 ₱/L
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/ocean-spray-cran-apple-juice-drink-189l
+
+*Jaf Tea Black Tea Forest Fruit 20 tea bags* — S&R [Tea & matcha]
+₱129.00
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/jaf-tea-black-tea-forest-fruit-20-tea-bags
+
+*Lav 3-piece Square Food Container with Lid Set* — S&R [Take-out containers]
+₱999.00
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/lav-3-piece-square-food-container-with-lid-set
+
+*Nescafe Tradicao Forte Instant Coffee 200g* — S&R [Coffee]
+₱619.00 · 3,095 ₱/kg
+• Buy 1 Take 1 — effectively half price
+https://www.snrshopping.com/product/nescafe-tradicao-forte-instant-coffee-200g
+☕ *Brew & Savour — daily price digest* (21 Oct 2026)
 
 *DAIRY*
 *Cheese*
+• 133 ₱/kg — Argentina Cheesedog Loaf 150g (Landmark, ₱20.00)
 • 167 ₱/kg — Star Corned Beef Chunky Cheese Save P5 150g 2s (Landmark, ₱50.00)
-• 190 ₱/kg — Golden French Fries Cheese 1kg (Landmark, ₱190.00)
-• 196 ₱/kg — Super Crunch Cheese 55g (Landmark, ₱10.80)
+• 187 ₱/kg — Frabelle Bossing Cheesedog 1kg (Landmark, ₱187.00)
 *Cream*
+• 150 ₱/L — Alaska All Purpose Creamer 250ml x 2s (Save P15) (WalterMart, ₱75.00)
 • 156 ₱/L — Angel Kremdensada Sweetened All Purpose Cream 410ml (WalterMart, ₱64.00)
-• 180 ₱/L — Jersey All Purpose Cream 250ml (WalterMart, ₱45.00)
-• 189 ₱/L — Jersey All Purpose Cream 250ml (Landmark, ₱47.25)
+• 157 ₱/L — Alaska 2-in-1 Crema-Asada Sweetened Thick Creamer 370ml (WalterMart, ₱58.00)
 *Butter & Margarine*
 • 106 ₱/kg — Magnolia All Purpose Flour 800g w/ Free Star Classi Margarine 30g (Landmark, ₱85.00)
 • 157 ₱/kg — Khong Guan Dansk Butter Shortcake 300g (Landmark, ₱47.00)
 • 176 ₱/kg — Maya Flour Butter Scotch Brownies 500g (WalterMart, ₱88.00)
 *Milk*
+• 74 ₱/L — Milk Magic Sterilized Milk 1L (Landmark, ₱73.50)
 • 80 ₱/L — Milk Magic Low Fat Milk 1L (Landmark, ₱80.35)
 • 82 ₱/L — Angel Evaporada Liquid Creamer 410ml (Landmark, ₱33.50)
-• 84 ₱/L — Angel Evaporada 410ml Buy 3 Save 8 (WalterMart, ₱103.00)
 
 *PANTRY*
 *Pasta*
-• 79 ₱/kg — Member's Value Spaghetti 1kg (S&R, ₱79.00)
+• 68 ₱/kg — Papa Sweet-Sarap Spaghetti Pack 1.7kg (WalterMart, ₱115.00)
 • 79 ₱/kg — Member's Value Spaghetti 1kg (S&R, ₱79.00)
 • 79 ₱/kg — El Real Elbow Macaroni 1kg (Landmark, ₱79.00)
 *Sugar & syrups*
+• 18 ₱/kg — Everyday Sugar Brown 1/2kg (WalterMart, ₱35.00)
+• 18 ₱/kg — Mana Brown Sugar 1/2kg (WalterMart, ₱36.50)
 • 19 ₱/kg — Sugar Depot Premium Raw Sugar 1/2kg (Landmark, ₱38.95)
-• 20 ₱/kg — Sugar Depot Refined Sugar 1/2kg (Landmark, ₱40.00)
-• 21 ₱/kg — Hermano Refined Sugar 1/2kg (Landmark, ₱42.20)
 *Cooking oil*
+• 109 ₱/L — Jolly Prito King Vegetable Oil Sup 900ml x 2s (WalterMart, ₱196.00)
+• 109 ₱/L — Everyday Palm Oil Sup 1L (WalterMart, ₱109.00)
 • 111 ₱/L — Jolly Vegetable Oil Prito King 900ml Buy 2 Save P10 (Landmark, ₱199.40)
-• 113 ₱/L — Prito King Vegetable Oil Sup 1.8L (Landmark, ₱204.10)
-• 117 ₱/L — Jolly Vegetable Oil Prito King 900ml (Landmark, ₱105.00)
 *Flour, baking & toppings*
 • 70 ₱/kg — Coles Baking Soda 1kg (Landmark, ₱69.95)
 • 70 ₱/kg — Master Chef Baking Soda 500g (S&R, ₱35.00)
@@ -48,18 +1283,44 @@
 • 65 ₱/kg — Hiraya Sinandomeng Rice 10kg (S&R, ₱646.00)
 *Coffee*
 • 263 ₱/kg — Great Taste Brown Barako Twin Pack 52g (Landmark, ₱13.70)
+• 275 ₱/kg — UCC Black Roasted Coffee 185g (Landmark, ₱50.85)
 • 297 ₱/kg — Great Taste Brown Barako 30g (Landmark, ₱8.90)
-• 471 ₱/kg — San Mig Coffee 3N1 Barako 17g (Landmark, ₱8.00)
+*Olives, capers, sardines & canned tomato*
+• 96 ₱/kg — Jolly Diced Tomatoes 3000g (Landmark, ₱288.70)
+• 133 ₱/kg — Doña Elena Crushed Tomato 2550g (Landmark, ₱338.60)
+• 136 ₱/kg — Molina Sunbest Diced Tomato 400g (Landmark, ₱54.20)
+*Bread & baguettes*
+• 32 ₱/kg — Marby Hotdog Buns 300g 6s (Landmark, ₱58.00)
+• 98 ₱/kg — Tiffany's Pinoy Tasty Bread 450g (Landmark, ₱44.00)
+• 118 ₱/kg — Tiffany's Super Loaf Bread Thick Slice 720g (Landmark, ₱85.00)
+
+*COUNTER*
+*Chocolate, caramel & coffee syrups*
+• 405 ₱/L — Clara Ole Chocolate Syrup 355ml (Landmark, ₱143.75)
+• 406 ₱/L — Goya Chocolate Syrup 350ml (Landmark, ₱142.00)
+• 406 ₱/L — Goya Chocolate Caramel Syrup 350ml (Landmark, ₱142.00)
+*Tea & matcha*
+• 336 ₱/kg — O-Puff Matcha Green Tea 84g (Landmark, ₱28.25)
+• 540 ₱/kg — Tean's Gourmet Assam Paste For Seafood 200g (Landmark, ₱108.00)
+• 548 ₱/kg — Ito En Matcha Green Tea Lemon Grass 20x30g (Landmark, ₱329.00)
+*Coffee jelly & toppings*
+• 47 ₱/kg — Jiggels Juicy Snack Jelly with Nata de Coco Apple Flavor 225g (Landmark, ₱10.50)
+• 128 ₱/kg — Mega Prime Nata de Coco Pandan 425g (Landmark, ₱54.60)
+• 142 ₱/kg — Erasao Tapioca Pearl 1kg (Landmark, ₱141.60)
+*Juice*
+• 55 ₱/L — Smart C+ Juice Drink Orange Crush 1L (Landmark, ₱54.55)
+• 56 ₱/L — Minute Maid Juice Drink Mango 10x180ml (Landmark, ₱100.00)
+• 66 ₱/L — Smart C+ Juice Drink Orange Crush 500ml (Landmark, ₱33.00)
 
 *SPICES & SAUCES*
 *McCormick range*
 • 50 ₱/kg — McCormick Iodized Salt Pouch 1kg (Landmark, ₱49.75)
 • 56 ₱/kg — McCormick Iodized Salt Pouch 500g (Landmark, ₱28.25)
-• 61 ₱/kg — McCormick Iodized Salt 500g (WalterMart, ₱30.50)
+• 77 ₱/kg — McCormick Iodized Salt Pouch 150g (Landmark, ₱11.50)
 *Basic spices (any brand)*
 • 330 ₱/kg — J & Y Garlic Powder 500g (Landmark, ₱164.90)
 • 331 ₱/kg — Member's Value Garlic Salt 450g (S&R, ₱149.00)
-• 331 ₱/kg — Member's Value Garlic Salt 450g (S&R, ₱149.00)
+• 332 ₱/kg — J & Y Turmeric Powder 500g (Landmark, ₱166.20)
 *Salt*
 • 0 ₱/kg — Lasap Iodized Salt 500kg (Landmark, ₱15.00)
 • 23 ₱/kg — Lasap Rock Salt 1kg (Landmark, ₱23.00)
@@ -71,19 +1332,37 @@
 *Sauces & condiments*
 • 66 ₱/kg — UFC Tamis Anghang Banana Ketchup 4kg (S&R, ₱263.00)
 • 74 ₱/kg — Ram Spanish Style Tomato Sauce 1kg (Landmark, ₱73.95)
-• 75 ₱/kg — Ram Filipino Tomato Sauce 1kg Free Tomato Sauce 70g (Landmark, ₱75.45)
+• 75 ₱/kg — UFC Tamis Anghang Banana Ketchup 1kg (WalterMart, ₱75.00)
+
+*PROCESSED MEAT & FROZEN*
+*Bacon*
+• 311 ₱/kg — Marty's Cracklin' Baconette Strips 90g (Landmark, ₱28.00)
+• 317 ₱/kg — Nissin Pasta Express Cheesy Ham &amp; Bacon 60g (Landmark, ₱19.00)
+• 418 ₱/kg — King Sue Bacon Cubes 220g (Landmark, ₱92.00)
+*Tocino, longganisa & ham*
+• 118 ₱/kg — Argentina Meat Loaf Tocino Style 170g (Landmark, ₱20.00)
+• 280 ₱/kg — Vida Sweet Ham 9 slices 250g (Landmark, ₱70.00)
+• 288 ₱/kg — Winner Cooked Ham 250g (Landmark, ₱72.00)
+*Corned beef & luncheon meat*
+• 118 ₱/kg — Argentina Meat Loaf Tocino Style 170g (Landmark, ₱20.00)
+• 134 ₱/kg — Argentina Beef Loaf 250g (Landmark, ₱33.50)
+• 135 ₱/kg — CDO Beef Loaf 2x150g Save P3 (Landmark, ₱40.50)
+*Frozen fries, vegetables & fish*
+• 67 ₱/kg — Jolly Mixed Vegetables w/ Mushrooms 425g (Landmark, ₱28.65)
+• 68 ₱/kg — Member's Value Whole Green Peas 425g (S&R, ₱29.00)
+• 92 ₱/kg — Member's Value Sweet Corn 425g (S&R, ₱39.00)
 
 *CHICKEN*
 *Chicken cuts*
 • 165 ₱/kg — Member's Value Chicken Leg Quarter approx. 15kg (S&R, ₱2,475.00)
 • 165 ₱/kg — Member's Value Chicken Drumsticks approx. 15kg (S&R, ₱2,475.00)
-• 165 ₱/kg — Member's Value Chicken Leg Quarter approx. 15kg (S&R, ₱2,475.00)
+• 169 ₱/kg — S&R 15-piece Whole Chicken Wholesale approx. 21kg (S&R, ₱3,549.00)
 
 *PORK*
 *Pork cuts*
 • 269 ₱/kg — Member's Value Ground Pork approx. 5kg (S&R, ₱1,345.00)
-• 269 ₱/kg — Member's Value Ground Pork approx. 5kg (S&R, ₱1,345.00)
 • 289 ₱/kg — Member's Value Pork Pigue Skin-on Boneless approx. 2kg (S&R, ₱578.00) 🏷️
+• 309 ₱/kg — Member's Value 80% Ground Pork approx. 1.7kg (S&R, ₱525.30) 🏷️
 
 *BEEF*
 *Beef cuts*
@@ -97,33 +1376,45 @@
 • 53 ₱/L — Bubble Queen Liquid Dishwashing Calamansi 2x990ml for P99 (Landmark, ₱105.00)
 • 53 ₱/L — Bubble Queen Liquid Dishwashing Lemon 2x990ml for P99 (Landmark, ₱105.00)
 *Bleach*
-• 44 ₱/L — Zonrox Bleach Original 3785ml (WalterMart, ₱166.00)
-• 45 ₱/L — Zonrox Bleach Lemon 3785ml (WalterMart, ₱172.00)
-• 46 ₱/L — Zonrox Bleach Floral 3785ml (WalterMart, ₱176.00)
+• 49 ₱/L — Zonrox Bleach Original 1L (Landmark, ₱48.60)
+• 51 ₱/L — Zonrox Bleach 1892 ml (Landmark, ₱95.80)
+• 52 ₱/L — Zonrox Bleach Fresh Scent 1L (Landmark, ₱52.20)
 *Disinfectant, alcohol & hand soap*
-• 147 ₱/L — Green Cross Daily Care Sanitizer with Skin Vitamins 500ml (Landmark, ₱73.50)
-• 152 ₱/L — Lysol Disinfectant Multi-Action Cleaner Lavender 2L (WalterMart, ₱305.00)
-• 152 ₱/L — Lysol Disinfectant Multi-Action Cleaner Marine 2L (WalterMart, ₱305.00)
+• 74 ₱/L — Clean Pro Warm Shea Butter Scent Liquid Hand Soap 4L (Landmark, ₱296.65)
+• 74 ₱/L — Clean Pro Green Apple Hand soap 4L (Landmark, ₱296.65)
+• 99 ₱/L — Uni Antibac Hand Soap Green Apple 1L (Landmark, ₱99.00)
+*Laundry detergent*
+• 68 ₱/kg — Speed Detergent Bar Blue 360g (Landmark, ₱24.55)
+• 68 ₱/kg — Speed Detergent Bar Kalamansi 360g (Landmark, ₱24.55)
+• 68 ₱/kg — Speed Detergent Bar Spreckled Blue 360g (Landmark, ₱24.55)
+*Floor, glass & toilet cleaners*
+• 70 ₱/L — On1 Glass Cleaner 5L (S&R, ₱349.00)
+• 74 ₱/L — On1 Floor Cleaner 5L (S&R, ₱369.00)
+• 121 ₱/L — Zip All Purpose Cleaner Lavender 3.3L (S&R, ₱399.00)
+*Disinfecting wipes & air fresheners*
+• 199 ₱/kg — Arm & Hammer Fresh Sensations Island Mist Carpet Odor Eliminator 850g (S&R, ₱169.00)
+• 377 ₱/kg — GT Crystal Beads Fridge Deodorizer 130g (Landmark, ₱49.00)
+• 387 ₱/kg — Charcoal Refrigerator Deodorizer 150g (Landmark, ₱58.00)
 *Garbage bags*
 • 2 ₱/pcs — Member's Value Trash Bag Black Small 100pcs (S&R, ₱159.00)
 • 2 ₱/pcs — Member's Value Trash Bag Clear Small 100pcs (S&R, ₱159.00)
-• 2 ₱/pcs — Member's Value Trash Bag Black Small 100pcs (S&R, ₱159.00)
+• 2 ₱/pcs — Member's Value Trash Bag Black Medium 100pcs (S&R, ₱249.00)
 *Paper towels & tissue*
-• 0 ₱/pcs — Sm Bonus Flat Table Napkin 100pcs (WalterMart, ₱37.75)
-• 7 ₱/pcs — Tisyu 2ply Bathroom Tissue Twin Coreless Compact 2pcs (WalterMart, ₱14.25)
-• 9 ₱/pcs — Jade Bathroom Tissue 2 ply 12pcs (WalterMart, ₱110.25)
+• 13 ₱/pcs — Velvety 2-Ply Soft Facial Tissue 15 packs (S&R, ₱199.00)
+• 17 ₱/pcs — Kleenex Regular Poly Facial Tissue 5 Packs (Landmark, ₱84.30)
+• 30 ₱/pcs — Kleenex Poly Facial tissue Large 5packs (Landmark, ₱150.60)
 
 *CAFÉ SUPPLIES*
 *Cups, lids & straws*
 • 1 ₱/pcs — Member's Value Paper Straws 250pcs (S&R, ₱204.00)
-• 1 ₱/pcs — Member's Value Paper Straws 250pcs (S&R, ₱204.00)
 • 3 ₱/pcs — Picnic Perks Salad Dressing Disposable Plastic Cup 50pcs (S&R, ₱139.00)
+• 4 ₱/pcs — Melitta Original 1x4 Paper Coffee Filters 40pcs (S&R, ₱159.00)
 *Gloves, wraps & bags*
 • 1 ₱/pcs — Member's Value Sandwich Bags Double Zipper 200pcs (S&R, ₱269.00)
-• 1 ₱/pcs — Member's Value Sandwich Bags Double Zipper 200pcs (S&R, ₱269.00)
-• 1 ₱/pcs — Member's Value Sandwich Bags Double Zipper 200pcs (S&R, ₱269.00)
+• 2 ₱/pcs — Ziploc Seal Top Sandwich Bags 145pcs (S&R, ₱279.00)
+• 3 ₱/pcs — Member's Value Large Industrial Disposable Nitrile Gloves 100pcs (S&R, ₱349.00)
 *Take-out containers*
 • 10 ₱/L — Carnival Microwavable Black Food Container 25pcs x 1L (S&R, ₱259.00)
 • 12 ₱/L — Carnival Microwavable Food Container 5pcs x 2000mL (S&R, ₱119.00)
-• 92 ₱/L — Carnival Food Container 3000mL 10pcs (S&R, ₱275.00)
-2026-10-20 09:45:45,941 INFO Panel written → reports/price-watch.html
+• 26 ₱/L — Greenware 4-Com Lunch Box w/ Lid 1340ml 10s (Landmark, ₱345.00)
+2026-10-21 10:04:32,780 INFO Panel written → reports/price-watch.html

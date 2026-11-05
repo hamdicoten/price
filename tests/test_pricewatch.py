@@ -594,3 +594,16 @@ def test_snr_unpriced_watchlist_hits_get_price_from_product_page(monkeypatch):
 ])
 def test_inventory_items(name, expected):
     assert match(name, ITEMS) == expected
+
+
+def test_old_search_results_are_pruned(tmp_path):
+    # Raw search rows for every day made prices.db pass GitHub's 100 MB limit (push failed 3 Nov 2026)
+    db = DB(str(tmp_path / "p.db"))
+    hit = {("snr", "salt"): [Product("snr", "u1", "Master Chef Iodized Salt 1kg", 24.0)]}
+    for d in (date(2026, 11, 1), date(2026, 11, 2), date(2026, 11, 3)):
+        db.save_searches(d, hit)
+        db.record(hit[("snr", "salt")][0], ["salt"], d)
+    db.compact()
+    days = [r[0] for r in db.conn.execute("select distinct day from search_hits order by day")]
+    assert days == ["2026-11-02", "2026-11-03"]
+    assert db.conn.execute("select count(*) from prices").fetchone()[0] == 3   # price history kept

@@ -163,7 +163,7 @@ def main(argv: list[str] | None = None) -> None:
     for p in tracked[reused:]:  # alerts for stored ones were raised on the first scan
         fired += alerts.evaluate(p, db, settings, today)  # check history first…
         db.record(p, groups_of[p.url], today)               # …then store today
-    db.commit()
+    db.compact()
 
     notify.send(alerts.format_alerts(fired, groups_of, items))
     if args.digest:

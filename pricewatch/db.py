@@ -43,6 +43,9 @@ CREATE TABLE IF NOT EXISTS search_hits (   -- what each store search returned th
 """
 
 
+SEARCH_DAYS = 2  # days of raw store-search results kept in the database
+
+
 class DB:
     def __init__(self, path: str):
         self.conn = sqlite3.connect(path)
@@ -108,6 +111,10 @@ class DB:
         """hits: {(store, query): [Product, ...]}. Replaces that day's rows for the stores given;
         a query with no results is kept as a row with pos -1 so empty searches stay visible."""
         d = day.isoformat()
+        # Raw search results are only needed for the panel's "Store searches" check, not for price
+        # history. Keeping every day made the database outgrow GitHub's 100 MB file limit.
+        keep_from = date.fromordinal(day.toordinal() - (SEARCH_DAYS - 1)).isoformat()
+        self.conn.execute("DELETE FROM search_hits WHERE day < ?", (keep_from,))
         for store in {s for s, _ in hits}:
             self.conn.execute("DELETE FROM search_hits WHERE day=? AND store=?", (d, store))
         for (store, query), prods in hits.items():
@@ -120,3 +127,8 @@ class DB:
 
     def commit(self) -> None:
         self.conn.commit()
+
+    def compact(self) -> None:
+        """Gives deleted space back to the file system so the saved file stays small."""
+        self.conn.commit()
+        self.conn.execute("VACUUM")
